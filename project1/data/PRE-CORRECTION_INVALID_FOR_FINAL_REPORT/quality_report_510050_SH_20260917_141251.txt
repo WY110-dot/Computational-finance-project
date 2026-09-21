@@ -1,0 +1,42 @@
+============================================================
+Data Quality Report
+============================================================
+Security: 510050.SH
+Check Time: 2026-09-17 14:12:51
+Total Records: 1627
+Status: PASS_WITH_WARNINGS
+Total Errors: 0
+Total Warnings: 1
+============================================================
+
+Detailed Checks:
+------------------------------------------------------------
+
+Basic Info: PASS
+  Details: 1627 records, 13 columns
+
+Missing Values: PASS
+  Details: No missing values
+
+Duplicate Dates: PASS
+  Details: No duplicates
+
+Date Continuity: WARNING
+  Details: Range: 20200102 to 20260916, 4 large gaps
+
+Price Validity: PASS
+  Details: All prices positive
+
+Volume Validity: PASS
+  Details: Volume data valid
+
+Price Relationships: PASS
+  Details: All relationships valid
+
+Outlier Detection: PASS
+  Details: 0 extreme changes
+
+============================================================
+Warnings:
+------------------------------------------------------------
+     [WARNING] Found 4 gaps larger than 10 days

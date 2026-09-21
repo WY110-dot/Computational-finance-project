@@ -1,0 +1,19 @@
+{
+    "download_time": "2026-09-19T22:40:49.977908",
+    "data_source": "Tushare Pro",
+    "api_name": [
+        "fund_daily",
+        "fund_adj"
+    ],
+    "asset_universe_version": "v1_25_etfs",
+    "start_date": "20190101",
+    "end_date": "20260918",
+    "row_count": 38407,
+    "files": [
+        {
+            "file_name": "prices_daily.parquet",
+            "checksum": "d22c3f92a39df0912bb7666ceb46e35aa460a606f34008d27c62f967e41516fe",
+            "data_version": "1.0"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "assets": ["XLB", "XLE", "XLF", "XLI", "XLK", "XLP", "XLU", "XLV", "XLY"],
+  "start": "2015-01-01",
+  "end": "2024-12-31",
+  "initial_cash": 1000000,
+  "buy_fee": 0.001,
+  "sell_fee": 0.001,
+  "invest_fraction": 0.99,
+  "top_n": 3,
+  "factor_windows": {"momentum": 20, "reversal": 5, "low_volatility": 20},
+  "label_horizon": 5,
+  "groups": 3,
+  "min_assets": 6,
+  "annualization": 252,
+  "daily_risk_free": 0.0,
+  "adv_window": 20,
+  "participation": 0.001,
+  "max_stale_days": 5,
+  "source_repo": "miguel-merlin/etf-directional-forecasting",
+  "source_commit": "b3b583b10cce9a29cb97ab65d08f5854c0ffd001"
+}

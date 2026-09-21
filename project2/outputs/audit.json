@@ -1,0 +1,56 @@
+{
+  "momentum_weekly": {
+    "returns": 0.0,
+    "compound": 1.3322676295501878e-15,
+    "valuation": 4.656612873077393e-10,
+    "cost": 2.2737367544323206e-13,
+    "cash_ledger": 1.8571881810203195e-09,
+    "position_ledger": 9.094947017729282e-12,
+    "position_valuation": 0.0
+  },
+  "momentum_monthly": {
+    "returns": 0.0,
+    "compound": 5.329070518200751e-15,
+    "valuation": 4.656612873077393e-10,
+    "cost": 4.547473508864641e-13,
+    "cash_ledger": 3.92901711165905e-10,
+    "position_ledger": 7.275957614183426e-12,
+    "position_valuation": 0.0
+  },
+  "reversal_weekly": {
+    "returns": 0.0,
+    "compound": 5.551115123125783e-15,
+    "valuation": 2.3283064365386963e-10,
+    "cost": 2.2737367544323206e-13,
+    "cash_ledger": 8.694769348949194e-10,
+    "position_ledger": 1.4551915228366852e-11,
+    "position_valuation": 0.0
+  },
+  "low_vol_weekly": {
+    "returns": 0.0,
+    "compound": 8.881784197001252e-16,
+    "valuation": 4.656612873077393e-10,
+    "cost": 2.2737367544323206e-13,
+    "cash_ledger": 7.34871719032526e-10,
+    "position_ledger": 1.0913936421275139e-11,
+    "position_valuation": 0.0
+  },
+  "momentum_liquidity": {
+    "returns": 0.0,
+    "compound": 6.661338147750939e-16,
+    "valuation": 4.656612873077393e-10,
+    "cost": 2.2737367544323206e-13,
+    "cash_ledger": 1.8080754671245813e-09,
+    "position_ledger": 1.2732925824820995e-11,
+    "position_valuation": 0.0
+  },
+  "equal_weight_monthly": {
+    "returns": 0.0,
+    "compound": 1.1102230246251565e-14,
+    "valuation": 4.656612873077393e-10,
+    "cost": 7.105427357601002e-15,
+    "cash_ledger": 3.710738383233547e-10,
+    "position_ledger": 0.0,
+    "position_valuation": 0.0
+  }
+}

@@ -1,0 +1,19 @@
+
+test_cash_and_actual_fees (test_research.ResearchTests.test_cash_and_actual_fees) ... ok
+test_constant_ic_is_nan_and_average_ties (test_research.ResearchTests.test_constant_ic_is_nan_and_average_ties) ... ok
+test_corrupted_ledger_rejected (test_research.ResearchTests.test_corrupted_ledger_rejected) ... ok
+test_factor_hand_calculation (test_research.ResearchTests.test_factor_hand_calculation) ... ok
+test_future_prefix_and_current_open_order (test_research.ResearchTests.test_future_prefix_and_current_open_order) ... ok
+test_groups_do_not_depend_on_label (test_research.ResearchTests.test_groups_do_not_depend_on_label) ... ok
+test_infinite_capacity_recovers_baseline (test_research.ResearchTests.test_infinite_capacity_recovers_baseline) ... ok
+test_initial_drawdown_included (test_research.ResearchTests.test_initial_drawdown_included) ... ok
+test_lagged_capacity_and_repeatability (test_research.ResearchTests.test_lagged_capacity_and_repeatability) ... ok
+test_missing_open_freezes_and_audits (test_research.ResearchTests.test_missing_open_freezes_and_audits) ... ok
+test_next_open_label (test_research.ResearchTests.test_next_open_label) ... ok
+test_partial_fills (test_research.ResearchTests.test_partial_fills) ... ok
+test_unfilled_order_no_fee (test_research.ResearchTests.test_unfilled_order_no_fee) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.218s
+
+OK

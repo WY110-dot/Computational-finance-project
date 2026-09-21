@@ -1,0 +1,49 @@
+{
+    "run_id": "experiment_weekly_20260918_210415",
+    "git_commit": "dbe68517c2a8f9147d0a3476e09721ed2d2eb903",
+    "config_hash": "11dc691d00a7e735c80d7e11c7b03c5db8c20b6845dc96ad12676ac5d0749e7a",
+    "data_version": "v1_25_etfs",
+    "data_checksum": "7b0dbcdb622e91c7aeeec1857df341f8f253bb2e7600dd51a0779009b69081ef",
+    "python_version": "3.13.15",
+    "dependency_versions": {
+        "pandas": "3.0.5",
+        "numpy": "2.5.3",
+        "yaml": "6.0.3"
+    },
+    "start_time": "2026-09-18T21:04:15.756524",
+    "end_time": "2026-09-18T21:04:16.157357",
+    "random_seed": 42,
+    "config": {
+        "start_date": "20190102",
+        "end_date": "20240918",
+        "asset_universe": "data/processed/universe_daily.parquet",
+        "factor": "MOM20",
+        "rebalance_frequency": "W",
+        "holding_count": 5,
+        "buy_fee_rate": 0.0003,
+        "sell_fee_rate": 0.0003,
+        "slippage": 0.0,
+        "missing_policy": "hold",
+        "suspension_policy": "hold",
+        "initial_cash": 1000000.0,
+        "benchmark_asset": "510050.SH"
+    },
+    "metrics": {
+        "Trading Days": 1387,
+        "Net Cumulative Return (%)": 63.18634164368193,
+        "Net Annualized Return (%)": 9.305471717362824,
+        "Gross Cumulative Return (%)": 70.96795772698255,
+        "Gross Annualized Return (%)": 10.234515958033263,
+        "Benchmark Cumulative Return (%)": 10.001792206904248,
+        "Benchmark Annualized Return (%)": 1.7470443550991588,
+        "Annualized Volatility (%)": 20.945818833943207,
+        "Sharpe Ratio": 0.4229061489514749,
+        "Maximum Drawdown (%)": -23.488081466043763,
+        "Total Turnover (RMB)": 311676395.8903349,
+        "Annualized Turnover (x)": 36.916759023876146,
+        "Total Cost (RMB)": 93502.91876710046,
+        "Total Trade Count": 1994,
+        "Average Holdings Count": 4.917087238644557,
+        "Max Single Asset Weight (%)": 21.97055179300457
+    }
+}

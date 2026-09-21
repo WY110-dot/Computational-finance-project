@@ -1,0 +1,19 @@
+============================================================
+回测统计指标
+============================================================
+
+initial_capital: 1000000.0000
+commission_rate: 0.0003
+trading_days: 1627
+final_equity_strategy: 785059.1374
+total_return_strategy: -21.4941
+final_equity_benchmark: 967218.4356
+total_return_benchmark: -3.2782
+excess_return: -18.2159
+total_trades: 116
+buy_trades: 58
+sell_trades: 58
+total_cost_pct: 3.4800
+hold_days: 773
+empty_days: 854
+hold_pct: 47.5108

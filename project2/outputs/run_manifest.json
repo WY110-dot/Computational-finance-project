@@ -1,0 +1,57 @@
+{
+  "config": {
+    "assets": [
+      "XLB",
+      "XLE",
+      "XLF",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XLY"
+    ],
+    "start": "2015-01-01",
+    "end": "2024-12-31",
+    "initial_cash": 1000000,
+    "buy_fee": 0.001,
+    "sell_fee": 0.001,
+    "invest_fraction": 0.99,
+    "top_n": 3,
+    "factor_windows": {
+      "momentum": 20,
+      "reversal": 5,
+      "low_volatility": 20
+    },
+    "label_horizon": 5,
+    "groups": 3,
+    "min_assets": 6,
+    "annualization": 252,
+    "daily_risk_free": 0.0,
+    "adv_window": 20,
+    "participation": 0.001,
+    "max_stale_days": 5,
+    "source_repo": "miguel-merlin/etf-directional-forecasting",
+    "source_commit": "b3b583b10cce9a29cb97ab65d08f5854c0ffd001"
+  },
+  "python": "3.13.7",
+  "numpy": "2.3.5",
+  "pandas": "2.3.3",
+  "code_sha256": {
+    "run.py": "2a2b5524741561c90c0548d5d4dc99087bc0f83f18aebfea20cc4ae4a4efeb84",
+    "download_data.py": "59016f9b1f7a58ee2529dfad4d4808e70bbb2b0b417d5bf6277d723937e0cdaa",
+    "config.json": "519cfb51ecce1e411894cf6894a95da88dd9c4ff8fbdbf4b71b3f661047a7da3",
+    "pyproject.toml": "7c3031edbde159d17a67ac8d189dae7ec9c95b914c965a1a50f670d1bd078db0",
+    "uv.lock": "424db8bfe3810bbc1ff36f6c4ff5a0bdc02b30f0f86ab40ddce7d832e2b312bf",
+    "RESEARCH_PROTOCOL.md": "26097ecf71ae3f0ee43877a0e9268e0b3def96a3f22905cb1e9a9f2e3a5b4623",
+    "src/backtest.py": "55fd598fa8c647a569f4c61a331207c1208e4ba7a5963c6aa838bcbaf3381b67",
+    "src/data.py": "3724e1357b351af6bb7e596b536c981bfad35753ac94c22598e1c8f2a45a89fd",
+    "src/factors.py": "012a44acbafe2984f5c2a102e8ed8da6c59b879c8d08dd8153fab36846cc2981",
+    "src/__init__.py": "20b3f2c95ebc2bc56f0b1ca829e344c3b1069a0645267669b27b67d787c33d8a"
+  },
+  "source_manifest_sha256": "c0080a3a7a8832eb5c1810011112943cecbb7b01072f6df4e5afd73dabf86c25",
+  "research_days": 2516,
+  "research_start": "2015-01-02",
+  "research_end": "2024-12-31",
+  "runtime_seconds": 15.9848688999773
+}

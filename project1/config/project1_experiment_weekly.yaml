@@ -1,0 +1,15 @@
+# MA216 Project 1: Weekly Rebalance Experiment Configuration (Section 29)
+start_date: "20190102"
+end_date: "20260918"
+asset_universe: "data/processed/universe_daily.parquet"
+factor: "MOM20"
+rebalance_frequency: "W"  # Weekly rebalancing (Controlled variation)
+holding_count: 5          # Top 5 assets
+buy_fee_rate: 0.0003      # 3 bps
+sell_fee_rate: 0.0003     # 3 bps
+slippage: 0.0000          # 0 bps
+missing_policy: "hold"    # Hold if missing
+suspension_policy: "hold" # Hold if suspended
+initial_cash: 1000000.0   # 1,000,000 RMB
+benchmark_asset: "510050.SH" # Section 27 Benchmark
+

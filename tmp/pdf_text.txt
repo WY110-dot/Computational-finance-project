@@ -1,0 +1,244 @@
+===== PAGE 1 =====
+ज़ӱ Project ሹফ
+൐Ⴈ AI๧ሧҦ੻b
+ྏ໙ี
+P1ࡏ࣮
+P2ݔࢲ֥ࢠ
+P3ᄹਈྐ༏
+P4ࣉڿ
+P5࠹
+Project 1 | Project ଢѓ 1 / 19
+===== PAGE 2 =====
+Project 1 ଢѓğAIࡏ
+۱གྷaॖঔᅚ௜෻b
+ଢѓ ඪૼ
+ປᆜ֥ࢤ
+ᆞಒၬ
+གྷݔࢲ
+ॖঔᅚ࿃ Project৫ᄝЧՑ Projectഈ
+Project 1 | Project ଢѓ 2 / 19
+===== PAGE 3 =====
+ሹফ
+ඔऌ
+აॹᅶ
+ၹሰ /ݼ
+ϜॖႨྐ༏ሇӮᆷѓ
+ކ
+ଢѓಃᇗ
+൤
+ག
+ᆴ
+གᆷѓ
+ҩ /ࢌ
+ೆӮЧ
+Project 1 | Project ଢѓ 3 / 19
+===== PAGE 4 =====
+ࡏ
+•ܒࡏݺ
+•௜෻ğऊॺa૜ॽaBigQuant
+• षჷս઒९ğBacktraderaalphalensaQlib
+Project 1 | Project ଢѓ 4 / 19
+===== PAGE 5 =====
+ೆඔऌ
+•ຶğರ௔ඔऌটჷb
+• ඔऌॹᅶğ཮ဒᆴb
+•གྷೆ१ğॖ
+ཚཬဢЧb
+Project 1 | ඔऌଆॶ 5 / 19
+===== PAGE 6 =====
+Ұ
+੣ၛ ರ௹ × ሧӁս઒ၬЌӻ၂ᇁb
+ඪૼ
+ਈĠᇿૼ௔ੱაֆ໊b
+ၬაཋᇅb
+აဢЧඔਈb
+ğඔਈbၳӈ
+ԩ৘ླඪૼჰၹđಌാᆴ҂๤၂แਬb
+Project 1 | ඔऌଆॶ 6 / 19
+===== PAGE 7 =====
+၂ᇁ
+b
+Ⴎ 20 эູ 10Ⴎ 1эູ 2ᆴ҂эb
+P adj
+i,t = P raw
+i,t
+ai,t
+ai,τ
+ğP rawđaಃၹሰđτҕॉರb
+•Ќӻ၂ᇁb
+•۬ࡎ֥
+b
+Project 1 | ඔऌଆॶ 7 / 19
+===== PAGE 8 =====
+ၹሰ
+ၹሰb
+م
+20ਈ Ci,t/Ci,t−20 − 1іགྷॖିӻ࿃b
+5ሇ −(Ci,t/Ci,t−5 − 1)b
+20׮− std(ri,t−19, . . . , ri,t)іགྷb
+Project 1 | ၹሰଆॶ 8 / 19
+===== PAGE 9 =====
+ෘაყԩ৘
+•ၹሰ၂ᅦवğཟaಌാԩ৘
+აॖିാི౦ྙb
+• ๤၂ൻԛğdate, asset, factor, valueൔ
+৖b
+•ཟğđѩඪૼ
+ჰၹb
+• ၹሰყԩ৘ğᆴb
+Project 1 | ၹሰଆॶ 9 / 19
+===== PAGE 10 =====
+ၞӮЧ
+• ൻೆğaҦ੻ҕඔაӮЧҕඔb
+• ஥ᇂğ֥
+ԩ৘b
+• ൻԛğॖᇗྍᄎྛb
+Costt = cbBt + csSt
+Bt, StĠcb, csb
+Project 1 |ҩଆॶ 10 / 19
+===== PAGE 11 =====
+Ұ
+ଽಸ
+ੱაൌဒඪૼ၂ᇁb
+b
+b
+੣b
+ᄝലૼಸҵଽ၂ᇁb
+Project 1 |ҩଆॶ 11 / 19
+===== PAGE 12 =====
+ğIC ა Rank IC
+ӻႵ௹ཋ hྙӮರ tކࠢS(h)
+tෘğ
+IC (h)
+t = Corri∈S(h)
+t
+(
+fi,t, y(h)
+i,t
+)
+RankIC (h)
+t = Corri∈S(h)
+t
+(
+rank(fi,t), rank(y(h)
+i,t )
+)
+• ICğPearson༢ĠRank IC ğSpearmanਈஆ྽ି
+৯đѩਙҐႨ௜नᇇb
+•ࠣIC྽ਙaनᆴაѓሙ
+ҵĠRank ICb
+•Ӯ 0b
+ሹĠIC = 0.05 ҂іൕ൬ၭູ 5%đ္҂іൕყҩᆞಒੱູ
+55%b
+Project 1 |༅ଆॶ 12 / 19
+===== PAGE 13 =====
+Ĥ
+ູ Kֻ1ֻKb
+R(h)
+k,t = 1
+#Gk,t
+∑
+i∈Gk,t
+y(h)
+i,t , Spread(h)
+t = R(h)
+K,t − R(h)
+1,t
+Gk,tֻkಃb
+•նཬb
+•Ⴕི
+ቆb
+•ቆ 1.2%ቆ 0.3%ҵູ 0.9֩
+ॢ൬ၭb
+љᅚൕb
+Project 1 |༅ଆॶ 13 / 19
+===== PAGE 14 =====
+ੱა Sharpe
+ູᇶbVtᆴđN ູರ൬ၭඔđAၞರඔĠ
+Rt = Vt/Vt−1 − 1đet = Rt − rf
+t đrf
+tག൬ၭb
+໙ี
+൬ၭ VN /V0 − 1ഒĤ
+൬ၭ (VN /V0)A/N − 1ഒĤ
+ੱ
+√
+A std(Rt)նĤ
+߄Sharpe
+√
+A mean(et)/ std(et)БĤ
+Project 1 |༅ଆॶ 14 / 19
+===== PAGE 15 =====
+൭აӮЧ
+b
+Ht = max
+0≤s≤t
+Vs, DD t = 1 − Vt
+Ht
+, M DD = max
+t
+DDt
+ᆴ 1 → 1.2 → 0.9Ӝູ 1 − 0.9/1.2 = 25 %b
+քĤ
+Turnovert = Bt + St
+V −
+t
+, TotalCost =
+∑
+t
+Costt
+V −
+tb
+•ၞՑඔb
+•ҩb
+Project 1 |༅ଆॶ 15 / 19
+===== PAGE 16 =====
+ۡ
+ᇶေၹ෍b
+Ќӻ၂ᇁb
+ᆣऌ
+ଆཋᇅb
+གაӮЧᆷѓb
+൤ҵၳĤ
+Ұൻԛb
+ѓ
+b
+Project 1 |༅ଆॶ 16 / 19
+===== PAGE 17 =====
+ሱᇶຉᅚ
+ቔ ဒ൬ᆣऌ
+b
+b
+ྟཋ
+ᇅ
+ҵၳb
+ག௜
+ࡎ
+ྟb
+थਔ൉હऎุ໙
+ีb
+Project 1 | ሱᇶຉᅚ 17 / 19
+===== PAGE 18 =====
+ࡎ
+Ԥ 80ٳ+ ሱᇶຉᅚ 20Ġ҂ഡ൬ၭaSharpeࠇICb
+Ԥ
+•b
+•b
+•༅b
+•b
+ࡎ
+•ᆴb
+•ೆ༢๤b
+•ᅶb
+•൤აअཋb
+૫ඔਈЧദ҂
+b
+Project 1 | ሱᇶຉᅚ 18 / 19
+===== PAGE 19 =====
+ҋਘაဆൕေ౰
+• ॖᄎྛս઒ğ၇ঠaREADMEေ໓ሳඪૼᆯᄳa
+१ა౼ചb
+•གྷЇğࠆ
+౼ඪૼb
+•ğၰ 6–10 ် PDFᅶaअཋა༯၂҄b
+Project 1 | ሱᇶຉᅚ 19 / 19
