@@ -1,0 +1,27 @@
+{
+  "average_pairwise_correlation_daily": 0.6087493620347474,
+  "average_pairwise_correlation_monthly": 0.563998517411278,
+  "min_pairwise_correlation_monthly": 0.24729164200421466,
+  "market_equal_weight": {
+    "mean_monthly": 0.007673528828916165,
+    "t_mean": 3.1721613371241713,
+    "n": 300,
+    "ann_return_arith": 0.092082345946994,
+    "ann_vol": 0.1500875831690936,
+    "sharpe_monthly": 0.6135240770933794
+  },
+  "signal_long_bias": {
+    "1": 0.5922222222222222,
+    "3": 0.6559259259259259,
+    "6": 0.6907407407407408,
+    "12": 0.7392592592592593,
+    "24": 0.7866512345679012
+  },
+  "ex_ante_portfolio_vol": {
+    "mean": 0.17601044298964977,
+    "min": 0.02652243176227035,
+    "max": 0.3589073592820904,
+    "realized_monthly_ann_vol": 0.18185686386106548
+  },
+  "note": "Correlations and the equal-weight market use the same fixed nine-ETF snapshot. Long bias is the share of asset-month observations with a positive trailing-return sign."
+}

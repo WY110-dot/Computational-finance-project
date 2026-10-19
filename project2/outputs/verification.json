@@ -1,0 +1,419 @@
+{
+  "started_utc": "2026-10-19T15:12:07.048161+00:00",
+  "tests": {
+    "command": "C:\\Users\\mzh06\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m unittest discover -s tests -v",
+    "returncode": 0,
+    "seconds": 1.469,
+    "stdout_tail": [],
+    "stderr_tail": [
+      "test_mean_tstat_and_sharpe (test_stats.TestStats.test_mean_tstat_and_sharpe) ... ok",
+      "test_nw_regression (test_stats.TestStats.test_nw_regression) ... ok",
+      "test_ex_ante_vol_and_rescale (test_weights.TestWeights.test_ex_ante_vol_and_rescale) ... ok",
+      "test_formula (test_weights.TestWeights.test_formula) ... ok",
+      "test_gross_cap (test_weights.TestWeights.test_gross_cap) ... ok",
+      "test_min_assets (test_weights.TestWeights.test_min_assets) ... ok",
+      "test_no_lookahead (test_weights.TestWeights.test_no_lookahead) ... ok",
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 31 tests in 0.189s",
+      "",
+      "OK"
+    ]
+  },
+  "rerun": {
+    "command": "C:\\Users\\mzh06\\AppData\\Local\\Programs\\Python\\Python313\\python.exe run.py --config config.json --out outputs_verify",
+    "returncode": 0,
+    "seconds": 30.767,
+    "stdout_tail": [
+      "strategy                                                     description  annual_return  annual_vol    sharpe  sharpe_monthly  monthly_ann_return  monthly_ann_vol  max_drawdown    calmar  worst_month  hit_rate_monthly   total_cost  cost_drag_annual  annual_turnover  avg_gross_exposure  avg_net_exposure  avg_long_assets  avg_short_assets  rebalance_days  terminal_nav  days",
+      "  tsmom_diversified_longonly                            Diagnostic: long leg only, net 10 bp       0.112776    0.231618  0.578256        0.655716            0.125701         0.191700      0.435103  0.259194    -0.191847          0.623333 1.239055e+06          0.008891         8.182657            1.704334          1.704334         7.982986          0.000000             300     14.393532  6289",
+      "                benchmark_ew                      Equal-weight nine ETFs, monthly, net 10 bp       0.083381    0.183680  0.528129        0.609730            0.091568         0.150178      0.535092  0.155826    -0.168981          0.636667 1.980802e+04          0.000314         0.343841            1.000028          1.000028         9.000000          0.000000             300      7.379262  6289",
+      "                   tsmom_12m                                       12-month TSMOM, net 10 bp       0.099256    0.284451  0.476195        0.527773            0.121236         0.229713      0.624838  0.158850    -0.216753          0.586667 1.145873e+06          0.008015         7.252541            2.376656          1.528454         6.659882          2.340118             300     10.608996  6289",
+      "                  tsmom_12_1 Extension: 12-month signal skipping the latest month, net 10 bp       0.084650    0.301476  0.421429        0.463595            0.109331         0.235833      0.652944  0.129644    -0.289559          0.573333 8.003905e+05          0.008219         7.257705            2.372399          1.509989         6.625537          2.345842             300      7.598074  6289",
+      "     tsmom_diversified_gross                                    Diversified TSMOM, zero fees       0.043607    0.212937  0.307587        0.325152            0.059151         0.181917      0.613655  0.071062    -0.158364          0.546667 0.000000e+00          0.000000        15.098394            1.679964          1.033311         6.179679          2.820321             300      2.901472  6289",
+      "          tsmom_multihorizon           Extension: average sign at 1/3/6/12 months, net 10 bp       0.039470    0.215330  0.288148        0.301060            0.055963         0.185886      0.627701  0.062880    -0.162206          0.550000 8.453849e+05          0.013900        13.366854            1.650945          1.090217         5.614406          2.046271             300      2.627635  6289",
+      "           tsmom_diversified                       Diversified 1/3/12-month TSMOM, net 10 bp       0.027999    0.213156  0.236795        0.242354            0.044074         0.181857      0.654569  0.042775    -0.159286          0.543333 8.186423e+05          0.015678        15.103802            1.682149          1.034618         6.179679          2.820321             300      1.992036  6289",
+      "tsmom_diversified_volscale12       Diagnostic: diversified TSMOM rescaled to 12% ex-ante vol       0.004945    0.100008  0.099478        0.099829            0.008853         0.088681      0.455509  0.010855    -0.085776          0.536667 3.259828e+05          0.010539        10.431473            0.982522          0.474697         6.004134          2.995866             300      1.130992  6289",
+      " tsmom_diversified_shortonly                           Diagnostic: short leg only, net 10 bp      -0.090408    0.166307 -0.486957       -0.557372           -0.083215         0.149299      0.926208 -0.097611    -0.135551          0.356667 9.390689e+04          0.007093         7.522163            0.677703         -0.677703         0.000000          5.269359             300      0.093965  6289",
+      "",
+      "COMPLETE 9 strategies; 29.27s"
+    ],
+    "stderr_tail": []
+  },
+  "csv": {
+    "alpha_tests.csv": {
+      "ok": true,
+      "rows": 7,
+      "columns": 7,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "benchmark_ew_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "benchmark_ew_trades.csv": {
+      "ok": true,
+      "rows": 2700,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "clean_panel.csv": {
+      "ok": true,
+      "rows": 58932,
+      "columns": 7,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "extreme_months.csv": {
+      "ok": true,
+      "rows": 5,
+      "columns": 7,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "monthly_returns.csv": {
+      "ok": true,
+      "rows": 300,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "predictive_regressions.csv": {
+      "ok": true,
+      "rows": 50,
+      "columns": 9,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "sensitivity_cost.csv": {
+      "ok": true,
+      "rows": 5,
+      "columns": 6,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "sensitivity_lookback.csv": {
+      "ok": true,
+      "rows": 5,
+      "columns": 8,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "sensitivity_risk_free.csv": {
+      "ok": true,
+      "rows": 2,
+      "columns": 6,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "sensitivity_subperiods.csv": {
+      "ok": true,
+      "rows": 3,
+      "columns": 24,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "sensitivity_vol_target.csv": {
+      "ok": true,
+      "rows": 3,
+      "columns": 6,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "signal_diagnostics.csv": {
+      "ok": true,
+      "rows": 5,
+      "columns": 11,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "signals.csv": {
+      "ok": true,
+      "rows": 14085,
+      "columns": 4,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "strategy_summary.csv": {
+      "ok": true,
+      "rows": 9,
+      "columns": 22,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_12_1_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_12_1_trades.csv": {
+      "ok": true,
+      "rows": 2691,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_12m_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_12m_trades.csv": {
+      "ok": true,
+      "rows": 2700,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_gross_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_gross_trades.csv": {
+      "ok": true,
+      "rows": 2700,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_longonly_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_longonly_trades.csv": {
+      "ok": true,
+      "rows": 2575,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_shortonly_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_shortonly_trades.csv": {
+      "ok": true,
+      "rows": 2051,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_diversified_trades.csv": {
+      "ok": true,
+      "rows": 2700,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_multihorizon_daily.csv": {
+      "ok": true,
+      "rows": 6289,
+      "columns": 15,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "tsmom_multihorizon_trades.csv": {
+      "ok": true,
+      "rows": 2626,
+      "columns": 10,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "weight_diagnostics.csv": {
+      "ok": true,
+      "rows": 313,
+      "columns": 9,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "weight_diagnostics_longonly.csv": {
+      "ok": true,
+      "rows": 313,
+      "columns": 9,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "weight_diagnostics_shortonly.csv": {
+      "ok": true,
+      "rows": 313,
+      "columns": 9,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "weight_diagnostics_volscale12.csv": {
+      "ok": true,
+      "rows": 313,
+      "columns": 9,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    },
+    "weights.csv": {
+      "ok": true,
+      "rows": 11268,
+      "columns": 4,
+      "max_abs_diff": 0.0,
+      "bad_columns": [],
+      "error": null
+    }
+  },
+  "json": {
+    "quality_report.json": {
+      "ok": true,
+      "max_abs_diff": 0.0,
+      "problems": []
+    },
+    "diagnostics.json": {
+      "ok": true,
+      "max_abs_diff": 0.0,
+      "problems": []
+    },
+    "audit.json": {
+      "ok": true,
+      "max_abs_diff": 0.0,
+      "problems": []
+    },
+    "run_manifest.json": {
+      "ok": true,
+      "differing_keys": []
+    }
+  },
+  "figures": {
+    "ok": true,
+    "present": {
+      "architecture.png": true,
+      "exposure.png": true,
+      "extreme.png": true,
+      "gross_net.png": true,
+      "nav.png": true,
+      "predictability.png": true,
+      "sensitivity_cost.png": true,
+      "sensitivity_lookback.png": true
+    }
+  },
+  "data_hashes": {
+    "ok": true,
+    "files": [
+      {
+        "asset": "XLB",
+        "ok": true,
+        "expected": "8a791971ec1fb82868146b06ebfda267c13fafd909017e4347e3d057c2464320",
+        "actual": "8a791971ec1fb82868146b06ebfda267c13fafd909017e4347e3d057c2464320"
+      },
+      {
+        "asset": "XLE",
+        "ok": true,
+        "expected": "ad0deb56c6f966ff838a9bab5da83ae35c3bf62fa4ca6437d258c363f00e7821",
+        "actual": "ad0deb56c6f966ff838a9bab5da83ae35c3bf62fa4ca6437d258c363f00e7821"
+      },
+      {
+        "asset": "XLF",
+        "ok": true,
+        "expected": "36a99ee87505f1ae3f21a58ddf249d08c95277ce2dd34d6069e068216d9a0339",
+        "actual": "36a99ee87505f1ae3f21a58ddf249d08c95277ce2dd34d6069e068216d9a0339"
+      },
+      {
+        "asset": "XLI",
+        "ok": true,
+        "expected": "954c7ac7815f35b422803d50745ed9c5ddd92d5beb39f1bc5c1c4602b52535a9",
+        "actual": "954c7ac7815f35b422803d50745ed9c5ddd92d5beb39f1bc5c1c4602b52535a9"
+      },
+      {
+        "asset": "XLK",
+        "ok": true,
+        "expected": "05ff8f45ad1bfc983a400111964fa758c9b7536f5ea6b6883e428797081b83bb",
+        "actual": "05ff8f45ad1bfc983a400111964fa758c9b7536f5ea6b6883e428797081b83bb"
+      },
+      {
+        "asset": "XLP",
+        "ok": true,
+        "expected": "79aebfbad3509a5f22f4637664fcef28ebd67e1f3492b22390fb55d59ca9eca4",
+        "actual": "79aebfbad3509a5f22f4637664fcef28ebd67e1f3492b22390fb55d59ca9eca4"
+      },
+      {
+        "asset": "XLU",
+        "ok": true,
+        "expected": "4991b1d55f69bfe9dee5956d7502793d526162eed81938f0162c1db5b4998073",
+        "actual": "4991b1d55f69bfe9dee5956d7502793d526162eed81938f0162c1db5b4998073"
+      },
+      {
+        "asset": "XLV",
+        "ok": true,
+        "expected": "e23edbaf0fdc39f46b486be154cce826f82689ae934c69e2726639d3a0f26892",
+        "actual": "e23edbaf0fdc39f46b486be154cce826f82689ae934c69e2726639d3a0f26892"
+      },
+      {
+        "asset": "XLY",
+        "ok": true,
+        "expected": "3dcaa347f34ffedce2997fcacd0ca93383df472d77e29c1d9b94d68ca4ac8a31",
+        "actual": "3dcaa347f34ffedce2997fcacd0ca93383df472d77e29c1d9b94d68ca4ac8a31"
+      }
+    ]
+  },
+  "audit": {
+    "ok": true,
+    "max_error": 1.6763806343078613e-08,
+    "threshold": 1e-05,
+    "strategies": 9
+  },
+  "status": "PASS",
+  "failures": [],
+  "finished_utc": "2026-10-19T15:12:39.699727+00:00"
+}
