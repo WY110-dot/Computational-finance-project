@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "bytes": 20820,
+      "logical_name": "fund_adj",
+      "path": "../raw_20260921/adjustment_raw.parquet",
+      "sha256": "eafb49f384289e00ed48f2934d2d8838f1d6a33c96c10ea132e93f870e35d89b"
+    },
+    {
+      "bytes": 1534760,
+      "logical_name": "fund_daily",
+      "path": "../raw_20260921/prices_raw.parquet",
+      "sha256": "f2f84274cf2d58f7523063875128ee43547e25eff27e04b2658a0b3328851c20"
+    }
+  ],
+  "metadata": {
+    "api_names": [
+      "fund_daily",
+      "fund_adj"
+    ],
+    "assets": [
+      "510050.SH",
+      "510300.SH",
+      "510500.SH",
+      "511010.SH",
+      "511220.SH",
+      "511260.SH",
+      "512000.SH",
+      "512010.SH",
+      "512100.SH",
+      "512200.SH",
+      "512480.SH",
+      "512660.SH",
+      "512690.SH",
+      "512880.SH",
+      "513050.SH",
+      "513100.SH",
+      "513500.SH",
+      "515030.SH",
+      "515050.SH",
+      "515700.SH",
+      "518880.SH"
+    ],
+    "end": "20260921",
+    "start": "20190101",
+    "unit_convention": {
+      "amount": "thousand CNY",
+      "vol": "hands (100 fund units)"
+    }
+  },
+  "schema_version": 1,
+  "source": "Tushare Pro"
+}
