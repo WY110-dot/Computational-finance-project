@@ -12,6 +12,9 @@ dependencies = [
   "tushare>=1.4,<2",
   "python-dotenv>=1,<2",
   "reportlab>=4.2,<5",
+  "openpyxl>=3.1.5",
+  "pypdf>=6.21.2",
+  "pymupdf>=2.0",
 ]
 
 [dependency-groups]

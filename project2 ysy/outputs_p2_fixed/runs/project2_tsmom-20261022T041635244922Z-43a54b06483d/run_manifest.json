@@ -1,0 +1,262 @@
+{
+  "artifacts": [
+    {
+      "metadata": {},
+      "path": "asset_class_removal_attribution.csv",
+      "role": "attribution",
+      "sha256": "76ab0300765efff137296e67b8eb09b2c4d3d6ed1a58fbbaf82e3135874946d6",
+      "size_bytes": 1402
+    },
+    {
+      "metadata": {},
+      "path": "asset_class_variance_decomposition.csv",
+      "role": "variance_decomposition",
+      "sha256": "33e4659922d624b2db4b9d0c42c26dd6ac5c660c8e59ecffc5b9aea53cfd070a",
+      "size_bytes": 722
+    },
+    {
+      "metadata": {},
+      "path": "difference_experiments.csv",
+      "role": "experiments",
+      "sha256": "582f87f4fe1f64364f5ac098cf61b33d1b4e5d45a56c6364e27908f0d24c985f",
+      "size_bytes": 3991
+    },
+    {
+      "metadata": {},
+      "path": "experiments_inventory.csv",
+      "role": "inventory",
+      "sha256": "d2856245507fe5e109b799446e379e52ed803dd7c2cfdb9af6ca6defe2892e2f",
+      "size_bytes": 4426
+    },
+    {
+      "metadata": {},
+      "path": "key_result_trace.csv",
+      "role": "trace",
+      "sha256": "82a02b0523d956d10bc615adb32f5a84e1aaa5c17df788058c63bac4e31681c7",
+      "size_bytes": 3142
+    },
+    {
+      "metadata": {},
+      "path": "metrics.json",
+      "role": "metrics",
+      "sha256": "4cc764f343e715f4767e1dd7721af02b4c8d0caa5a1a923fececc97df1703ff0",
+      "size_bytes": 29
+    },
+    {
+      "metadata": {},
+      "path": "original_vs_replication.csv",
+      "role": "comparison",
+      "sha256": "1a32246656c120c7cf3ce0aef199d9fdc1f1c87cb1180833b4a6b189dae341b4",
+      "size_bytes": 2338
+    },
+    {
+      "metadata": {},
+      "path": "strategy_summary.csv",
+      "role": "summary",
+      "sha256": "2c7ca60450ca95e847a9860cb58419d2f334a12f43ea38422806660bb1ee6f94",
+      "size_bytes": 5730
+    }
+  ],
+  "completed_at": "2026-10-22T04:17:11.784426Z",
+  "config": {
+    "author": "袁思扬",
+    "data": {
+      "adjustment_reference_date": "2026-09-18",
+      "adjustment_snapshot": "data/raw/adjustment_raw.parquet",
+      "assets": [
+        "510050.SH",
+        "510300.SH",
+        "510500.SH",
+        "511010.SH",
+        "511220.SH",
+        "511260.SH",
+        "512000.SH",
+        "512010.SH",
+        "512100.SH",
+        "512200.SH",
+        "512480.SH",
+        "512660.SH",
+        "512690.SH",
+        "512880.SH",
+        "513050.SH",
+        "513100.SH",
+        "513500.SH",
+        "515030.SH",
+        "515050.SH",
+        "515700.SH",
+        "518880.SH"
+      ],
+      "calendar": "union",
+      "end": "2026-09-18",
+      "evaluation_end": "2026-08-31",
+      "evaluation_start": "2020-01-01",
+      "holding_end": "2026-08-31",
+      "holding_start": "2020-02-01",
+      "manifest": "data/manifests/source_manifest.json",
+      "min_active_coverage": 0.95,
+      "prices_snapshot": "data/raw/prices_raw.parquet",
+      "require_manifest": true,
+      "source": "tushare",
+      "start": "2019-01-01",
+      "warmup_calendar_days": 420
+    },
+    "execution": {
+      "adv_window": 20,
+      "allow_fractional_units": true,
+      "buy_fee": 0.0003,
+      "capacity_limited": false,
+      "end": "2026-08-31",
+      "execution_time": "next_open",
+      "initial_cash": 1000000.0,
+      "invest_fraction": 0.99,
+      "max_stale_days": 5,
+      "participation_rate": 0.001,
+      "sell_fee": 0.0003,
+      "signal_time": "close",
+      "slippage_bps": 0.0,
+      "start": "2020-02-03"
+    },
+    "experiments": {
+      "asset_subsets": {
+        "broad_market_core": [
+          "510050.SH",
+          "510300.SH",
+          "510500.SH"
+        ]
+      },
+      "cost_levels": [
+        0.0,
+        0.0003,
+        0.001
+      ],
+      "subperiods": [
+        {
+          "end": "2022-12-31",
+          "name": "2020-2022",
+          "start": "2020-02-01"
+        },
+        {
+          "end": "2026-08-31",
+          "name": "2023-2026",
+          "start": "2023-01-01"
+        }
+      ]
+    },
+    "metrics": {
+      "annualization_daily": 252,
+      "annualization_monthly": 12,
+      "daily_risk_free": 0.0,
+      "monthly_risk_free": 0.0
+    },
+    "project_name": "CF2026 Project 2 - Time Series Momentum Replication & Extension",
+    "random_seed": 20261022,
+    "student_id": "12411852",
+    "tsmom": {
+      "horizons": [
+        3,
+        6,
+        12
+      ],
+      "min_eligible_assets": 6,
+      "multi_horizon_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "primary_horizon": 12,
+      "target_volatility": 0.4,
+      "volatility_annualization": 261,
+      "volatility_decay": 0.9836065573770492,
+      "volatility_min_days": 252
+    }
+  },
+  "data_files": [
+    {
+      "path": "adjustment_snapshot",
+      "sha256": "dacda1b36dc0e6130175bade9726ac31a9073e63e9370472811375277f35d9af",
+      "size_bytes": 73847
+    },
+    {
+      "path": "aqr_excel",
+      "sha256": "91bdbae6366ccb0693581b690236dc14862562a98ee83052c4f440f8b6ae0db8",
+      "size_bytes": 40014
+    },
+    {
+      "path": "prices_snapshot",
+      "sha256": "2b1821608563a5b531e287097497099f4bca20fdb291fe0fc146bd3f6d8bacd4",
+      "size_bytes": 1524786
+    }
+  ],
+  "duration_seconds": 36.539504,
+  "environment": {
+    "executable_name": "python.exe",
+    "implementation": "CPython",
+    "packages": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "pyarrow": "22.0.0",
+      "python-dotenv": "1.2.3",
+      "reportlab": "4.5.1",
+      "scipy": "1.17.1",
+      "tushare": "1.4.29"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.16"
+  },
+  "experiment_fingerprint": "43a54b06483dc2bb8bda772adcfec4289dd9e4c96d31f335e660885ca7d9ee14",
+  "hashes": {
+    "config_sha256": "b84912223fc977fde78f240eb520a32f18fc772137803e160ae4e3c854ffdead",
+    "data_sha256": "d2e1360d7549f7dbd362602737d16752b32c51cf8c82e5f6c80901b28fd75d34",
+    "environment_sha256": "97e66e460c7e05a2248d675cd193696c448163492b7f7ae8519a8902a37a1cda",
+    "source_sha256": "12d047323f4ace2ad70f2786d5f1aaae95b243ba1581257eefddd27d806d9317"
+  },
+  "metrics_file": "metrics.json",
+  "run_id": "project2_tsmom-20261022T041635244922Z-43a54b06483d",
+  "run_name": "project2_tsmom",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "path": "build_report_project2.py",
+      "sha256": "7e6ea82cde71a5cbf50d054a566d6bcac0da87e12454390c59c4d079b2b4a760",
+      "size_bytes": 774
+    },
+    {
+      "path": "pipeline_p2.py",
+      "sha256": "6d6d309b28e490d4d2d1917854c8737be1d2c896b05583aa122965cd8d9b7d7a",
+      "size_bytes": 74557
+    },
+    {
+      "path": "portfolio.py",
+      "sha256": "422b997dd8eb51d58f61272592cd13e27c7ee58b74e83466736fbd086ca7ff98",
+      "size_bytes": 14634
+    },
+    {
+      "path": "reference_data.py",
+      "sha256": "b208e37736f8c3de0ace7ead5a1c8816a2b24883230cba4eb50e773c4f7ca39d",
+      "size_bytes": 6702
+    },
+    {
+      "path": "report_p2.py",
+      "sha256": "1a0d7799dc7b07820be80f917e77f0d182f2de824fa0cfbe9c27dcb6c3cac882",
+      "size_bytes": 58265
+    },
+    {
+      "path": "research_backtest.py",
+      "sha256": "ea179ee3b3b5191cf026b9887a3a0befbb0894ecc9c698c532a2edb314d67631",
+      "size_bytes": 14210
+    },
+    {
+      "path": "run_project2.py",
+      "sha256": "0d6f78624b221412f50862916ff5f4d65b3cf930a2b26556e711876b11b2c12c",
+      "size_bytes": 1223
+    },
+    {
+      "path": "tsmom.py",
+      "sha256": "63f9dbcf439d91ce5e408c473aa33dfda873262fa069818410bc65ad2bacfc5e",
+      "size_bytes": 13106
+    }
+  ],
+  "started_at": "2026-10-22T04:16:35.244922Z",
+  "status": "completed"
+}

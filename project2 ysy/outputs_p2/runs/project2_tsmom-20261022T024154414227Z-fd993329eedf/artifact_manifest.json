@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "metadata": {},
+      "path": "asset_class_removal_attribution.csv",
+      "role": "attribution",
+      "sha256": "7b15b07ea4081bc930aa023cd18c9794b436cae3dc651a21485664badded12f6",
+      "size_bytes": 1359
+    },
+    {
+      "metadata": {},
+      "path": "difference_experiments.csv",
+      "role": "experiments",
+      "sha256": "01a2e518f7c52f0621b06c0dc4932daf28ce9f7638677665aa9d6e1d6ba7734c",
+      "size_bytes": 3118
+    },
+    {
+      "metadata": {},
+      "path": "experiments_inventory.csv",
+      "role": "inventory",
+      "sha256": "f0f157e1af1b352fc25975a9f991394084fda38ecc062f7a6bd63194ea3a54da",
+      "size_bytes": 4425
+    },
+    {
+      "metadata": {},
+      "path": "key_result_trace.csv",
+      "role": "trace",
+      "sha256": "8cb632ade3ce0e61e413763ba5402b1dd671074207838d1ac6098d489c8902fd",
+      "size_bytes": 3070
+    },
+    {
+      "metadata": {},
+      "path": "metrics.json",
+      "role": "metrics",
+      "sha256": "4cc764f343e715f4767e1dd7721af02b4c8d0caa5a1a923fececc97df1703ff0",
+      "size_bytes": 29
+    },
+    {
+      "metadata": {},
+      "path": "original_vs_replication.csv",
+      "role": "comparison",
+      "sha256": "a2d118de2e00fcd54485181e8bbaac72c95fa3752ebc02bf5529d906d58555f3",
+      "size_bytes": 2026
+    },
+    {
+      "metadata": {},
+      "path": "strategy_summary.csv",
+      "role": "summary",
+      "sha256": "1eb3d409a685c29db1b6f2e4f9b99b9806bda0dac3375475163de9630f2593ce",
+      "size_bytes": 5710
+    }
+  ],
+  "run_id": "project2_tsmom-20261022T024154414227Z-fd993329eedf",
+  "schema_version": 1
+}

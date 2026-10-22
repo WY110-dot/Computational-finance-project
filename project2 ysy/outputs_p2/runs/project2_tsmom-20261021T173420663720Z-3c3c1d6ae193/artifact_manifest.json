@@ -1,0 +1,34 @@
+{
+  "artifacts": [
+    {
+      "metadata": {},
+      "path": "difference_experiments.csv",
+      "role": "experiments",
+      "sha256": "0a158eba282d6a4c4e6a6cefbbbd27c686022aa2c4710a6de0aceb601fa6e122",
+      "size_bytes": 3354
+    },
+    {
+      "metadata": {},
+      "path": "metrics.json",
+      "role": "metrics",
+      "sha256": "4cc764f343e715f4767e1dd7721af02b4c8d0caa5a1a923fececc97df1703ff0",
+      "size_bytes": 29
+    },
+    {
+      "metadata": {},
+      "path": "original_vs_replication.csv",
+      "role": "comparison",
+      "sha256": "c91f706520b92508ad4b83e9b725b4d08fc9b2d2639a892c999d45dcc26e0197",
+      "size_bytes": 1956
+    },
+    {
+      "metadata": {},
+      "path": "strategy_summary.csv",
+      "role": "summary",
+      "sha256": "d781fc700b88cabf6daec2f8331bf7db81aaee069f831bf1aee094e4089c2c5b",
+      "size_bytes": 5720
+    }
+  ],
+  "run_id": "project2_tsmom-20261021T173420663720Z-3c3c1d6ae193",
+  "schema_version": 1
+}

@@ -1,0 +1,30 @@
+{
+  "all_matched": true,
+  "tolerance": 1e-05,
+  "files_checked": {
+    "strategy_summary.csv": {
+      "match": true,
+      "rows": 18,
+      "cols": 19,
+      "max_numeric_abs_diff": 0.0
+    },
+    "difference_experiments.csv": {
+      "match": true,
+      "rows": 7,
+      "cols": 14,
+      "max_numeric_abs_diff": 0.0
+    },
+    "key_result_trace.csv": {
+      "match": true,
+      "rows": 12,
+      "cols": 13,
+      "max_numeric_abs_diff": 0.0
+    },
+    "experiments_inventory.csv": {
+      "match": true,
+      "rows": 18,
+      "cols": 14,
+      "max_numeric_abs_diff": 0.0
+    }
+  }
+}

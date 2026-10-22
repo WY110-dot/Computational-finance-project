@@ -1,0 +1,112 @@
+{
+  "author": "袁思扬",
+  "data": {
+    "adjustment_reference_date": "2026-09-18",
+    "adjustment_snapshot": "data/raw/adjustment_raw.parquet",
+    "assets": [
+      "510050.SH",
+      "510300.SH",
+      "510500.SH",
+      "511010.SH",
+      "511220.SH",
+      "511260.SH",
+      "512000.SH",
+      "512010.SH",
+      "512100.SH",
+      "512200.SH",
+      "512480.SH",
+      "512660.SH",
+      "512690.SH",
+      "512880.SH",
+      "513050.SH",
+      "513100.SH",
+      "513500.SH",
+      "515030.SH",
+      "515050.SH",
+      "515700.SH",
+      "518880.SH"
+    ],
+    "calendar": "union",
+    "end": "2026-09-18",
+    "evaluation_end": "2026-08-31",
+    "evaluation_start": "2020-01-01",
+    "holding_end": "2026-08-31",
+    "holding_start": "2020-02-01",
+    "manifest": "data/manifests/source_manifest.json",
+    "min_active_coverage": 0.95,
+    "prices_snapshot": "data/raw/prices_raw.parquet",
+    "require_manifest": true,
+    "source": "tushare",
+    "start": "2019-01-01",
+    "warmup_calendar_days": 420
+  },
+  "execution": {
+    "adv_window": 20,
+    "allow_fractional_units": true,
+    "buy_fee": 0.0003,
+    "capacity_limited": false,
+    "end": "2026-08-31",
+    "execution_time": "next_open",
+    "initial_cash": 1000000.0,
+    "invest_fraction": 0.99,
+    "max_stale_days": 5,
+    "participation_rate": 0.001,
+    "sell_fee": 0.0003,
+    "signal_time": "close",
+    "slippage_bps": 0.0,
+    "start": "2020-02-03"
+  },
+  "experiments": {
+    "asset_subsets": {
+      "broad_market_core": [
+        "510050.SH",
+        "510300.SH",
+        "510500.SH"
+      ]
+    },
+    "cost_levels": [
+      0.0,
+      0.0003,
+      0.001
+    ],
+    "subperiods": [
+      {
+        "end": "2022-12-31",
+        "name": "2020-2022",
+        "start": "2020-02-01"
+      },
+      {
+        "end": "2026-08-31",
+        "name": "2023-2026",
+        "start": "2023-01-01"
+      }
+    ]
+  },
+  "metrics": {
+    "annualization_daily": 252,
+    "annualization_monthly": 12,
+    "daily_risk_free": 0.0,
+    "monthly_risk_free": 0.0
+  },
+  "project_name": "CF2026 Project 2 - Time Series Momentum Replication & Extension",
+  "random_seed": 20261022,
+  "student_id": "12411852",
+  "tsmom": {
+    "horizons": [
+      3,
+      6,
+      12
+    ],
+    "min_eligible_assets": 6,
+    "multi_horizon_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "primary_horizon": 12,
+    "target_volatility": 0.4,
+    "volatility_annualization": 261,
+    "volatility_decay": 0.9836065573770492,
+    "volatility_min_days": 252
+  }
+}

@@ -1,0 +1,37 @@
+================================================================================
+Project 2 Independent Reproduction and Verification Log
+Timestamp: 2026-10-22T10:45:47.259633
+Platform: Windows (Python 3.11, uv managed virtual environment)
+Working Directory: F:\金融数学\计算金融\Project\project2 ysy
+================================================================================
+
+1. Verification Execution Command:
+uv run --locked python run_project2.py --config config/project2_tsmom.json --out outputs_p2_verification --offline
+
+Result: Exited with code 0.
+Log output:
+Launching Project 2 pipeline with config=config/project2_tsmom.json, out=outputs_p2_verification, offline=True...
+Project 2 pipeline completed successfully with full trace, inventory, and attribution tables!
+Project 2 pipeline finished successfully.
+
+2. Deterministic Reproducibility Check:
+Tolerance: 1e-5
+Files Compared:
+  - strategy_summary.csv: 18 rows, max abs diff = 0.00000000 (Exact Match)
+  - difference_experiments.csv: 7 rows, max abs diff = 0.00000000 (Exact Match)
+  - key_result_trace.csv: 12 rows, max abs diff = 0.00000000 (Exact Match)
+  - experiments_inventory.csv: 18 rows, max abs diff = 0.00000000 (Exact Match)
+
+All key metrics match with zero deviation across independent runs.
+
+3. Unit Test Verification:
+uv run --locked pytest
+Result: 47 passed in 0.40s.
+
+4. Report Generation:
+uv run --locked python build_report_project2.py --out outputs_p2
+Result: 6-page report_en.pdf (2.1MB), report_en.md, summary_zh.md, report_en.html generated cleanly.
+
+5. Directory Integrity:
+final_project directory remains 100% untouched.
+================================================================================

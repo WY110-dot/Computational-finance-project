@@ -1,0 +1,210 @@
+{
+  "artifacts": [
+    {
+      "metadata": {},
+      "path": "difference_experiments.csv",
+      "role": "experiments",
+      "sha256": "0a158eba282d6a4c4e6a6cefbbbd27c686022aa2c4710a6de0aceb601fa6e122",
+      "size_bytes": 3354
+    },
+    {
+      "metadata": {},
+      "path": "metrics.json",
+      "role": "metrics",
+      "sha256": "4cc764f343e715f4767e1dd7721af02b4c8d0caa5a1a923fececc97df1703ff0",
+      "size_bytes": 29
+    },
+    {
+      "metadata": {},
+      "path": "original_vs_replication.csv",
+      "role": "comparison",
+      "sha256": "c91f706520b92508ad4b83e9b725b4d08fc9b2d2639a892c999d45dcc26e0197",
+      "size_bytes": 1956
+    },
+    {
+      "metadata": {},
+      "path": "strategy_summary.csv",
+      "role": "summary",
+      "sha256": "d781fc700b88cabf6daec2f8331bf7db81aaee069f831bf1aee094e4089c2c5b",
+      "size_bytes": 5720
+    }
+  ],
+  "completed_at": "2026-10-21T17:34:20.688275Z",
+  "config": {
+    "author": "袁思扬",
+    "data": {
+      "adjustment_reference_date": "2026-09-18",
+      "adjustment_snapshot": "data/raw/adjustment_raw.parquet",
+      "assets": [
+        "510050.SH",
+        "510300.SH",
+        "510500.SH",
+        "511010.SH",
+        "511220.SH",
+        "511260.SH",
+        "512000.SH",
+        "512010.SH",
+        "512100.SH",
+        "512200.SH",
+        "512480.SH",
+        "512660.SH",
+        "512690.SH",
+        "512880.SH",
+        "513050.SH",
+        "513100.SH",
+        "513500.SH",
+        "515030.SH",
+        "515050.SH",
+        "515700.SH",
+        "518880.SH"
+      ],
+      "calendar": "union",
+      "end": "2026-09-18",
+      "evaluation_end": "2026-08-31",
+      "evaluation_start": "2020-02-01",
+      "manifest": "data/manifests/source_manifest.json",
+      "min_active_coverage": 0.95,
+      "prices_snapshot": "data/raw/prices_raw.parquet",
+      "require_manifest": true,
+      "source": "tushare",
+      "start": "2019-01-01",
+      "warmup_calendar_days": 420
+    },
+    "execution": {
+      "adv_window": 20,
+      "allow_fractional_units": true,
+      "buy_fee": 0.0003,
+      "capacity_limited": false,
+      "execution_time": "next_open",
+      "initial_cash": 1000000.0,
+      "invest_fraction": 0.99,
+      "max_stale_days": 5,
+      "participation_rate": 0.001,
+      "sell_fee": 0.0003,
+      "signal_time": "close",
+      "slippage_bps": 0.0
+    },
+    "experiments": {
+      "asset_subsets": {
+        "broad_market_core": [
+          "510050.SH",
+          "510300.SH",
+          "510500.SH"
+        ]
+      },
+      "cost_levels": [
+        0.0,
+        0.0003,
+        0.001
+      ],
+      "subperiods": [
+        {
+          "end": "2022-12-31",
+          "name": "2020-2022",
+          "start": "2020-02-01"
+        },
+        {
+          "end": "2026-08-31",
+          "name": "2023-2026",
+          "start": "2023-01-01"
+        }
+      ]
+    },
+    "metrics": {
+      "annualization_daily": 252,
+      "annualization_monthly": 12,
+      "daily_risk_free": 0.0,
+      "monthly_risk_free": 0.0
+    },
+    "project_name": "CF2026 Project 2 - Time Series Momentum Replication & Extension",
+    "random_seed": 20261022,
+    "student_id": "12411852",
+    "tsmom": {
+      "horizons": [
+        3,
+        6,
+        12
+      ],
+      "min_eligible_assets": 6,
+      "multi_horizon_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "primary_horizon": 12,
+      "target_volatility": 0.4,
+      "volatility_annualization": 261,
+      "volatility_decay": 0.9836065573770492,
+      "volatility_min_days": 252
+    }
+  },
+  "data_files": [
+    {
+      "path": "adjustment_snapshot",
+      "sha256": "dacda1b36dc0e6130175bade9726ac31a9073e63e9370472811375277f35d9af",
+      "size_bytes": 73847
+    },
+    {
+      "path": "prices_snapshot",
+      "sha256": "2b1821608563a5b531e287097497099f4bca20fdb291fe0fc146bd3f6d8bacd4",
+      "size_bytes": 1524786
+    }
+  ],
+  "duration_seconds": 0.024555,
+  "environment": {
+    "executable_name": "python.exe",
+    "implementation": "CPython",
+    "packages": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "pyarrow": "22.0.0",
+      "python-dotenv": "1.2.3",
+      "reportlab": "4.5.1",
+      "scipy": "1.17.1",
+      "tushare": "1.4.29"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.16"
+  },
+  "experiment_fingerprint": "3c3c1d6ae193030022a16de0d84ace36bbbd3c9ca6a53faa5661fe4dc4a2e04d",
+  "hashes": {
+    "config_sha256": "c9dbead2dde5e531aa47c7399fc9fb208180eb5485b97e7f6842ca8457e6fc94",
+    "data_sha256": "c8fc82ffa0e810d600094487e9c8505bd782c0a5ccddb315090c31311eb2b1fc",
+    "environment_sha256": "97e66e460c7e05a2248d675cd193696c448163492b7f7ae8519a8902a37a1cda",
+    "source_sha256": "efa326ead0b3f09294cd3203ecadca5f45cf575003e27d54d4f8673effc6703b"
+  },
+  "metrics_file": "metrics.json",
+  "run_id": "project2_tsmom-20261021T173420663720Z-3c3c1d6ae193",
+  "run_name": "project2_tsmom",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "path": "pipeline_p2.py",
+      "sha256": "7ea21a92e28de63212822f4a3ad89be60d31cb652fb0e5f78109c4446855c6dc",
+      "size_bytes": 42729
+    },
+    {
+      "path": "portfolio.py",
+      "sha256": "19f34da45e7d42eda5a9bf75508771d5a3548f6205eaa7dba4f573ea16190c18",
+      "size_bytes": 14529
+    },
+    {
+      "path": "reference_data.py",
+      "sha256": "d9ccb6faa387520f0477bceddb114e6cfe4f00e50610b592191f2a8ec1c606df",
+      "size_bytes": 6628
+    },
+    {
+      "path": "research_backtest.py",
+      "sha256": "f72fd841430ac04493ec1df6172f543f9a39533322dff4486b1a8d264e3b2f0e",
+      "size_bytes": 10370
+    },
+    {
+      "path": "tsmom.py",
+      "sha256": "bc032ebba175462a85507e04b06f7d62e64f3582db295ebcfb52f94cf97cbd26",
+      "size_bytes": 12481
+    }
+  ],
+  "started_at": "2026-10-21T17:34:20.663720Z",
+  "status": "completed"
+}

@@ -1,0 +1,27 @@
+{
+  "all_matched": true,
+  "verification_date": "2026-10-22T12:22:00",
+  "files_checked": {
+    "strategy_summary.csv": {
+      "status": "IDENTICAL",
+      "rows": 18
+    },
+    "difference_experiments.csv": {
+      "status": "IDENTICAL",
+      "rows": 7
+    },
+    "experiments/asset_class_removal_attribution.csv": {
+      "status": "IDENTICAL",
+      "rows": 5
+    },
+    "research/asset_class_variance_decomposition.csv": {
+      "status": "IDENTICAL",
+      "rows": 4
+    },
+    "research/R1_single_asset_metrics.csv": {
+      "status": "IDENTICAL",
+      "rows": 21
+    }
+  },
+  "conclusion": "Deterministic reproducibility confirmed between fixed run and independent blank-directory run."
+}

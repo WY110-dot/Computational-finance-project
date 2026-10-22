@@ -259,10 +259,118 @@ class TargetPortfolioGenerator:
         return generate_target_weights(scores, calendar=calendar, config=self.config)
 
 
+def generate_tsmom_long_cash_targets(
+    signals_df: pd.DataFrame,
+    calendar: Iterable[object] | pd.Index,
+    strategy_mode: str = "tsmom12",
+    invest_fraction: float = 0.99,
+    min_eligible_assets: int = 6,
+    start: object | None = None,
+    end: object | None = None,
+    universe_assets: Iterable[str] | None = None,
+) -> pd.DataFrame:
+    """Generate Long/Cash target weights for execution in Backtest broker.
+    
+    Adheres strictly to Section 6.4:
+    - Inverse volatility budgets: b_{i,m} = 0.99 * (1/sigma_i) / sum(1/sigma_j).
+    - Long/Cash target weights: w_{i,m} = b_{i,m} * max(s_i, 0).
+    - Negative signals remain in cash (target weight 0.0).
+    - When eligible assets < min_eligible_assets or all signals negative,
+      emits target weight 0.0 for liquidation to 100% cash.
+    - Includes explicit 0.0 targets for exiting assets.
+    """
+    dates = _calendar_index(calendar)
+    date_pos = {d: i for i, d in enumerate(dates)}
+
+    start_date = None if start is None else pd.Timestamp(start).normalize()
+    end_date = None if end is None else pd.Timestamp(end).normalize()
+
+    all_assets = sorted(set(signals_df["asset"].unique()) if universe_assets is None else universe_assets)
+
+    signal_dates = sorted(pd.to_datetime(signals_df["date"]).unique())
+    rows: list[dict[str, object]] = []
+
+    for s_date in signal_dates:
+        s_ts = pd.Timestamp(s_date).normalize()
+        if s_ts not in date_pos:
+            continue
+        pos = date_pos[s_ts]
+        if pos + 1 >= len(dates):
+            continue
+        exec_ts = dates[pos + 1]
+
+        if start_date is not None and exec_ts < start_date:
+            continue
+        if end_date is not None and exec_ts > end_date:
+            continue
+
+        dt_df = signals_df[pd.to_datetime(signals_df["date"]) == s_date].copy()
+        formation_col = "formation_eligible" if "formation_eligible" in dt_df.columns else "is_eligible"
+        valid_mask = (
+            dt_df[formation_col]
+            & dt_df["sigma_ewma"].notnull()
+            & (dt_df["sigma_ewma"] > 0)
+        )
+        eligible_df = dt_df[valid_mask].copy()
+        n_eligible = len(eligible_df)
+
+        if n_eligible < min_eligible_assets:
+            for asset in all_assets:
+                rows.append({
+                    "signal_date": s_ts,
+                    "execution_date": exec_ts,
+                    "asset": str(asset),
+                    "target_weight": 0.0,
+                    "rank": 0,
+                    "score": 0.0,
+                })
+            continue
+
+        inv_vols = 1.0 / eligible_df["sigma_ewma"].values
+        sum_inv = float(np.sum(inv_vols))
+        budgets = invest_fraction * (inv_vols / sum_inv) if sum_inv > 0 else np.zeros(n_eligible)
+
+        if strategy_mode == "tsmom12":
+            raw_s = eligible_df["s12"].values
+            active_s = np.maximum(raw_s, 0.0)
+        elif strategy_mode == "multi_horizon":
+            raw_s = eligible_df["signal_multi"].values
+            active_s = np.maximum(raw_s, 0.0)
+        elif strategy_mode == "passive_long":
+            raw_s = np.ones(n_eligible, dtype=float)
+            active_s = raw_s
+        else:
+            raise ValueError(f"Unknown execution strategy_mode: {strategy_mode}")
+
+        weights = budgets * active_s
+        target_map = {row.asset: float(w) for row, w in zip(eligible_df.itertuples(index=False), weights)}
+        score_map = {row.asset: float(s) for row, s in zip(eligible_df.itertuples(index=False), raw_s)}
+
+        for asset in all_assets:
+            tw = target_map.get(asset, 0.0)
+            sc = score_map.get(asset, 0.0)
+            rows.append({
+                "signal_date": s_ts,
+                "execution_date": exec_ts,
+                "asset": str(asset),
+                "target_weight": tw,
+                "rank": 1 if tw > 0 else 0,
+                "score": sc,
+            })
+
+    columns = ["signal_date", "execution_date", "asset", "target_weight", "rank", "score"]
+    if not rows:
+        return pd.DataFrame(columns=columns)
+
+    res_df = pd.DataFrame(rows, columns=columns)
+    return res_df.sort_values(["execution_date", "asset"], kind="mergesort").reset_index(drop=True)
+
+
 __all__ = [
     "PortfolioConfig",
     "TargetPortfolioGenerator",
     "generate_equal_weight_targets",
     "generate_target_weights",
+    "generate_tsmom_long_cash_targets",
     "signal_execution_pairs",
 ]
