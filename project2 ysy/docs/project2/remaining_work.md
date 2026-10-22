@@ -1,5 +1,10 @@
 # Project 2 任务完成状态与待办追踪清单 (Remaining Work & Status)
 
+> [!NOTE] 历史阶段开发计划归档说明 (Historical Planning Document)
+> **本文档为项目前期开发阶段的待办追踪与历史计划记录（记载了基准测试 47 项、旧输出目录 `outputs_p2/` 等历史背景）。**  
+> 当前现行交付状态、定点收尾答复及最终复验结果已全面更新至 **[P2_CLOSING_RESPONSE.md](../../P2_CLOSING_RESPONSE.md)** 与 **[README_PROJECT2.md](../../README_PROJECT2.md)**。  
+> 当前生产交付目录统一为 `outputs_p2_fixed/`，全套测试套件已扩充至 58+ 项并通过，子区间持有切片与各类别收益贡献已完成定点修复并复核一致。本文档仅作历史开发演进过程归档备查。
+
 **编制日期**: 2026-10-22  
 **作者**: 袁思扬 (学号: 12411852)  
 **依据文档**: `CF2026_Project2_Next_Development_Instructions_20261022.md`  

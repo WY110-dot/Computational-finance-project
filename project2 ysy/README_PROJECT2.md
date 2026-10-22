@@ -39,22 +39,26 @@ docs/project2/
   platform_changes.md             # Project 1 reuse vs Project 2 new components
   data_dictionary.md              # 21-ETF universe definitions and variable dictionary
   method_checks.md                # Independent analytical hand-calculation audit trail
-outputs_p2/
+outputs_p2_fixed/                 # Current primary delivery output directory
   resolved_config.json            # Exact configuration used for runs
   strategy_summary.csv            # Comprehensive metrics across all 18 strategy configurations
   original_vs_replication.csv     # Side-by-side comparison with original paper figures & tables
   difference_experiments.csv      # 7 single-factor controlled attribution experiments
+  experiments_inventory.csv       # Standardized inventory of all 18 experimental runs
+  key_result_trace.csv            # Numerical trace connecting report claims to raw files
   report_en.md                    # Full English research report in Markdown
   report_en.html                  # Styled self-contained HTML report
   report_en.pdf                   # Publication-ready PDF report with embedded figures
   summary_zh.md                   # Concise Chinese executive summary
+  reproducibility_check.json      # Verification log confirming zero-drift reproducibility
   figures/                        # High-resolution charts (Fig 2, Fig 3, Multi-horizon, Exec, Exposures)
-  research/                       # Monthly portfolio returns, weights, and contributions for R1-R4
+  research/                       # Monthly portfolio returns, weights, contributions, subperiods
   backtests/                      # Daily ledgers, orders, fills, and holdings for T1-T3
   reference/                      # AQR official factor recalculations
   runs/                           # Exact experiment fingerprints, source hashes, and run manifests
 PROJECT_LOG.md                    # Chronological step-by-step modification and verification log
 DEMO_P2.md                        # Presentation guide and script
+P2_CLOSING_RESPONSE.md            # Final closing verification and response report
 README_PROJECT2.md                # This file
 ```
 
@@ -104,7 +108,7 @@ uv run --locked python build_report_project2.py --out outputs_p2_fixed
 | **O1_aqr_reference** | Reference | AQR Official Paper Factor (1985-2009)| 17.08% | 12.33% | 1.385 | 17.60% | -15.23% | 67.33% |
 
 ### Core Takeaways:
-1. **Single-Asset Pervasiveness**: 17 of 21 ETFs (81.0%) demonstrate positive Sharpe ratios under 12M TSMOM, confirming Moskowitz et al.'s finding across an independent ETF asset class.
+1. **Single-Asset Pervasiveness**: 17 of 21 ETFs (81.0%) demonstrate positive Sharpe ratios under 12M TSMOM, providing partial empirical support in a different ETF sample for Moskowitz et al.'s directional finding (where 58 of 58 global contracts were positive, and 52 of 58 were significant at 5%, p. 236).
 2. **Surrogate Universe Differences**: Bond and gold ETFs experienced a prolonged upward drift, which elevated passive long carry; whereas equity ETFs suffered from policy-driven sharp reversals where short positions generated negative carry.
-3. **Multi-Horizon Improvement**: Under realistic execution constraints, the multi-horizon strategy achieved a higher Sharpe ratio (**1.332 vs 1.279**) and a lower maximum drawdown (**-3.38% vs -4.25%**) than the single 12-month lookback.
+3. **Multi-Horizon Improvement**: Under realistic execution constraints with 3 bps transaction fees, the multi-horizon strategy achieved a higher Sharpe ratio (**T2 1.350 vs T1 1.303**; 1.279 under 10 bps friction) and a lower maximum drawdown (**-3.38% vs -4.25%**) than the single 12-month lookback.
 

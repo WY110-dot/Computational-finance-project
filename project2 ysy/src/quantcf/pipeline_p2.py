@@ -42,6 +42,7 @@ from quantcf.reference_data import (
     load_aqr_reference_factors,
 )
 from quantcf.research_backtest import (
+    ResearchBacktestResult,
     calculate_monthly_metrics,
     run_research_backtest,
 )
@@ -148,11 +149,17 @@ def compute_asset_class_contributions(
     """Group asset return contributions by broad asset class."""
     df = df_contrib.copy()
     df["asset_class"] = df["asset"].apply(get_asset_class)
-    class_contrib = df.groupby(["date", "asset_class"])["contrib"].sum().unstack().fillna(0.0)
+    date_col = "holding_end_date" if "holding_end_date" in df.columns else "date"
+    class_contrib = df.groupby([date_col, "asset_class"])["contrib"].sum().unstack().fillna(0.0)
     
     # Ensure port_ret matches exactly
     class_contrib["total_portfolio_return"] = class_contrib.sum(axis=1)
-    class_contrib = class_contrib.reset_index().rename(columns={"date": "formation_date"})
+    class_contrib = class_contrib.reset_index().rename(columns={date_col: "holding_end_date"})
+    if "date" in df.columns:
+        form_map = df.drop_duplicates(subset=[date_col]).set_index(date_col)["date"]
+        class_contrib["formation_date"] = class_contrib["holding_end_date"].map(form_map)
+    else:
+        class_contrib["formation_date"] = class_contrib["holding_end_date"]
     return class_contrib
 
 
@@ -197,9 +204,12 @@ def compute_asset_class_removal_attribution(
     """
     df = df_contrib.copy()
     df["asset_class"] = df["asset"].apply(get_asset_class)
-    class_contrib = df.groupby(["date", "asset_class"])["contrib"].sum().unstack().fillna(0.0)
+    date_col = "holding_end_date" if "holding_end_date" in df.columns else "date"
+    class_contrib = df.groupby([date_col, "asset_class"])["contrib"].sum().unstack().fillna(0.0)
+    class_contrib.index = pd.to_datetime(class_contrib.index)
 
-    port_rets = df_port.set_index("formation_date")["portfolio_return"]
+    port_date_col = "holding_end_date" if "holding_end_date" in df_port.columns else "formation_date"
+    port_rets = pd.Series(df_port["portfolio_return"].values, index=pd.to_datetime(df_port[port_date_col]))
     baseline_m = calculate_monthly_metrics(port_rets)
 
     rows = []
@@ -327,6 +337,11 @@ def build_experiments_inventory(
     for _, row in summary_df.iterrows():
         sid = row["strategy_id"]
         run_id, exp_type, signal, sample, weighting, cost = type_map.get(sid, (sid, "Other", sid, "21 ETFs", "Standard", "0 bps"))
+        if str(sid).startswith("R1_sub_"):
+            s_yr = str(row.get("sample_start", ""))[:4]
+            e_yr = str(row.get("sample_end", ""))[:4]
+            if s_yr and e_yr:
+                sample = f"All 21 ETFs ({s_yr}-{e_yr})"
         rows.append({
             "run_id": run_id,
             "strategy_id": sid,
@@ -768,6 +783,87 @@ def generate_pipeline_figures(
     plt.close(fig)
 
 
+def slice_research_subperiod(
+    res_base: ResearchBacktestResult,
+    start_date: str,
+    end_date: str,
+    name: str,
+) -> ResearchBacktestResult:
+    """Slice a baseline research backtest result strictly by holding_end_date.
+    
+    start_date and end_date represent holding period boundaries.
+    Validates that start_date <= end_date and resulting slice is non-empty.
+    Recomputes summary_metrics with proper DatetimeIndex.
+    """
+    start_dt = pd.to_datetime(start_date)
+    end_dt = pd.to_datetime(end_date)
+    if start_dt > end_dt:
+        raise ValueError(f"Subperiod start date {start_date} is after end date {end_date}")
+    
+    df_port = res_base.monthly_portfolio.copy()
+    if df_port.empty:
+        raise ValueError("Cannot slice an empty baseline portfolio")
+    
+    holding_dts = pd.to_datetime(df_port["holding_end_date"])
+    mask = (holding_dts >= start_dt) & (holding_dts <= end_dt)
+    sliced_port = df_port[mask].reset_index(drop=True)
+    
+    if sliced_port.empty:
+        raise ValueError(
+            f"Subperiod {name} [{start_date}, {end_date}] yielded no holding months. "
+            f"Available holding range: {df_port['holding_end_date'].min()} to {df_port['holding_end_date'].max()}"
+        )
+    
+    # Calculate monthly metrics with DatetimeIndex
+    s_ret = pd.Series(
+        sliced_port["portfolio_return"].values,
+        index=pd.DatetimeIndex(sliced_port["holding_end_date"]),
+        name="portfolio_return",
+    )
+    summary_m = calculate_monthly_metrics(s_ret, strict_continuity=True)
+    
+    # Slice associated tables if available
+    sliced_weights = pd.DataFrame()
+    if res_base.monthly_weights is not None and not res_base.monthly_weights.empty:
+        w_dts = pd.to_datetime(res_base.monthly_weights["holding_end_date"])
+        sliced_weights = res_base.monthly_weights[(w_dts >= start_dt) & (w_dts <= end_dt)].reset_index(drop=True)
+        
+    sliced_contrib = pd.DataFrame()
+    if res_base.asset_contributions is not None and not res_base.asset_contributions.empty:
+        c_dts = pd.to_datetime(res_base.asset_contributions["holding_end_date"])
+        sliced_contrib = res_base.asset_contributions[(c_dts >= start_dt) & (c_dts <= end_dt)].reset_index(drop=True)
+        
+    sliced_single = pd.DataFrame()
+    if res_base.single_asset_returns is not None and not res_base.single_asset_returns.empty:
+        s_dts = pd.to_datetime(res_base.single_asset_returns["holding_end_date"])
+        sliced_single = res_base.single_asset_returns[(s_dts >= start_dt) & (s_dts <= end_dt)].reset_index(drop=True)
+
+    single_metrics_records = []
+    if not sliced_single.empty:
+        for asset, grp in sliced_single.groupby("asset"):
+            grp_sorted = grp.sort_values("holding_end_date")
+            asset_ret = pd.Series(
+                grp_sorted["single_strategy_return"].values,
+                index=pd.DatetimeIndex(grp_sorted["holding_end_date"]),
+                name="single_strategy_return",
+            )
+            m = calculate_monthly_metrics(asset_ret, strict_continuity=True)
+            m["asset"] = asset
+            single_metrics_records.append(m)
+    sliced_single_metrics = pd.DataFrame(single_metrics_records) if single_metrics_records else pd.DataFrame()
+
+    return ResearchBacktestResult(
+        strategy_name=name,
+        mode=res_base.mode,
+        monthly_portfolio=sliced_port,
+        monthly_weights=sliced_weights,
+        asset_contributions=sliced_contrib,
+        single_asset_returns=sliced_single,
+        single_asset_metrics=sliced_single_metrics,
+        summary_metrics=summary_m,
+    )
+
+
 def run_p2_pipeline(
     config_path: str | Path = "config/project2_tsmom.json",
     out_dir: str | Path = "outputs_p2",
@@ -790,35 +886,98 @@ def run_p2_pipeline(
     horizons = cfg.get("tsmom", {}).get("horizons", [3, 6, 12])
     if horizons != [3, 6, 12]:
         raise ValueError(f"Unsupported tsmom horizons {horizons}; must be [3, 6, 12] for equal multi-horizon extension.")
+
+    primary_horizon = cfg.get("tsmom", {}).get("primary_horizon", 12)
+    if primary_horizon != 12:
+        raise ValueError(f"Unsupported primary_horizon {primary_horizon}; must be 12.")
+
     mh_weights = cfg.get("tsmom", {}).get("multi_horizon_weights", [1/3, 1/3, 1/3])
-    if len(mh_weights) != 3 or abs(sum(mh_weights) - 1.0) > 1e-4:
-        raise ValueError(f"multi_horizon_weights must sum to 1.0; got {mh_weights}")
+    if len(mh_weights) != 3:
+        raise ValueError(f"multi_horizon_weights must have length 3, got {len(mh_weights)}")
+    for w in mh_weights:
+        if not np.isfinite(w) or w < 0 or abs(w - 1.0 / 3.0) > 1e-3:
+            raise ValueError(
+                f"Unsupported multi_horizon_weights: {mh_weights}. "
+                "This implementation strictly requires equal multi-horizon weights [1/3, 1/3, 1/3]."
+            )
+
+    vol_ann = cfg.get("tsmom", {}).get("volatility_annualization", 261)
+    if vol_ann != 261:
+        raise ValueError(f"Unsupported volatility_annualization {vol_ann}; must be 261 per Moskowitz et al. (2012).")
+
+    ann_daily = cfg.get("metrics", {}).get("annualization_daily", 252)
+    if ann_daily != 252:
+        raise ValueError(f"Unsupported annualization_daily {ann_daily}; must be 252.")
+
+    ann_monthly = cfg.get("metrics", {}).get("annualization_monthly", 12)
+    if ann_monthly != 12:
+        raise ValueError(f"Unsupported annualization_monthly {ann_monthly}; must be 12.")
+
+    rf_daily = cfg.get("metrics", {}).get("daily_risk_free", 0.0)
+    rf_monthly = cfg.get("metrics", {}).get("monthly_risk_free", 0.0)
+    if rf_daily != 0.0 or rf_monthly != 0.0:
+        raise ValueError(f"Unsupported risk-free rates (daily={rf_daily}, monthly={rf_monthly}); must be 0.0 for gross replication.")
+
+    cost_levels = cfg.get("experiments", {}).get("cost_levels", [0.0, 0.0003, 0.0010])
+    if cost_levels != [0.0, 0.0003, 0.0010]:
+        raise ValueError(f"Unsupported cost_levels {cost_levels}; must be [0.0, 0.0003, 0.0010].")
+
+    base_buy_fee = cfg.get("execution", {}).get("buy_fee", 0.0003)
+    base_sell_fee = cfg.get("execution", {}).get("sell_fee", 0.0003)
+    if base_buy_fee != 0.0003 or base_sell_fee != 0.0003:
+        raise ValueError(f"Execution base fees must match 3 bps (0.0003); got buy={base_buy_fee}, sell={base_sell_fee}")
 
     if not offline:
         fetch_project2_sources(force_download=False)
 
-    # 2. Ingest market prices panel
-    prices_df, data_audit, data_hashes = load_panel(".", cfg["data"])
-
-    # Extract date boundaries driven by configuration
+    # Extract date boundaries driven dynamically by configuration
     formation_start = cfg.get("data", {}).get("evaluation_start", "2020-01-01")
-    formation_end = "2026-07-31"  # 79th formation month
     holding_start = cfg.get("data", {}).get("holding_start", "2020-02-01")
     holding_end = cfg.get("data", {}).get("holding_end", "2026-08-31")
     exec_start = cfg.get("execution", {}).get("start", "2020-02-03")
     exec_end = cfg.get("execution", {}).get("end", "2026-08-31")
 
-    prices_path = Path(cfg["data"].get("prices_snapshot", "data/raw/prices_raw.parquet"))
-    prices_snapshot_hash = hashlib.sha256(prices_path.read_bytes()).hexdigest()[:16] if prices_path.exists() else "N/A"
+    # Dynamically derive formation_end as the calendar month-end immediately preceding holding_end
+    h_end_dt = pd.to_datetime(holding_end)
+    prev_month_end = h_end_dt.replace(day=1) - pd.Timedelta(days=1)
+    formation_end = prev_month_end.strftime("%Y-%m-%d")
 
-    # 2.1 Start ExperimentRecorder early to capture entire study lifecycle
+    # Date order consistency validations
+    if pd.to_datetime(formation_start) >= pd.to_datetime(formation_end):
+        raise ValueError(f"formation_start ({formation_start}) must be strictly before formation_end ({formation_end})")
+    if pd.to_datetime(holding_start) >= pd.to_datetime(holding_end):
+        raise ValueError(f"holding_start ({holding_start}) must be strictly before holding_end ({holding_end})")
+    if pd.to_datetime(exec_start) >= pd.to_datetime(exec_end):
+        raise ValueError(f"exec_start ({exec_start}) must be strictly before exec_end ({exec_end})")
+
+    # Subperiods dynamically read from config (representing holding period boundaries)
+    subperiods = cfg.get("experiments", {}).get("subperiods", [])
+    if len(subperiods) >= 2:
+        sub1_start = subperiods[0].get("start", "2020-02-01")
+        sub1_end = subperiods[0].get("end", "2022-12-31")
+        sub2_start = subperiods[1].get("start", "2023-01-01")
+        sub2_end = subperiods[1].get("end", holding_end)
+    else:
+        sub1_start, sub1_end = "2020-02-01", "2022-12-31"
+        sub2_start, sub2_end = "2023-01-01", holding_end
+
+    if pd.to_datetime(sub1_start) >= pd.to_datetime(sub1_end):
+        raise ValueError(f"sub1_start ({sub1_start}) must be strictly before sub1_end ({sub1_end})")
+    if pd.to_datetime(sub2_start) >= pd.to_datetime(sub2_end):
+        raise ValueError(f"sub2_start ({sub2_start}) must be strictly before sub2_end ({sub2_end})")
+
+    prices_path = Path(cfg["data"].get("prices_snapshot", "data/raw/prices_raw.parquet"))
+    adj_path = Path(cfg["data"].get("adjustment_snapshot", "data/raw/adjustment_raw.parquet"))
+    aqr_ref_path = Path("data/reference/Time-Series-Momentum-Original-Paper-Data.xlsx")
+
+    # 1.1 Start ExperimentRecorder early (BEFORE data loading) to capture entire study lifecycle
     recorder = ExperimentRecorder(
         runs_root=out_path / "runs",
         config=cfg,
         data_paths={
-            "prices_snapshot": Path("data/raw/prices_raw.parquet"),
-            "adjustment_snapshot": Path("data/raw/adjustment_raw.parquet"),
-            "aqr_excel": Path("data/reference/Time-Series-Momentum-Original-Paper-Data.xlsx"),
+            "prices_snapshot": prices_path,
+            "adjustment_snapshot": adj_path,
+            "aqr_excel": aqr_ref_path,
         },
         source_paths={
             "tsmom.py": Path("src/quantcf/tsmom.py"),
@@ -829,6 +988,9 @@ def run_p2_pipeline(
             "report_p2.py": Path("src/quantcf/report_p2.py"),
             "run_project2.py": Path("run_project2.py"),
             "build_report_project2.py": Path("build_report_project2.py"),
+            "protocol.md": Path("docs/project2/protocol.md"),
+            "pyproject.toml": Path("pyproject.toml"),
+            "uv.lock": Path("uv.lock"),
         },
         run_name="project2_tsmom",
         overwrite=True,
@@ -836,6 +998,10 @@ def run_p2_pipeline(
     recorder.start()
 
     try:
+        # 2. Ingest market prices panel (recorded within study lifecycle)
+        prices_df, data_audit, data_hashes = load_panel(".", cfg["data"])
+        prices_snapshot_hash = hashlib.sha256(prices_path.read_bytes()).hexdigest()[:16] if prices_path.exists() else "N/A"
+
         # 3. Build monthly TSMOM signals and volatility dataset
         dataset = build_monthly_tsmom_dataset(
             prices_df,
@@ -843,8 +1009,10 @@ def run_p2_pipeline(
             evaluation_end=holding_end,
             min_vol_days=cfg["tsmom"]["volatility_min_days"],
             vol_decay=cfg["tsmom"]["volatility_decay"],
+            vol_ann_factor=float(vol_ann),
             target_volatility=cfg["tsmom"]["target_volatility"],
             min_eligible_assets=cfg["tsmom"]["min_eligible_assets"],
+            multi_horizon_weights=mh_weights,
         )
         signals_df = dataset["signals_df"]
 
@@ -895,18 +1063,8 @@ def run_p2_pipeline(
             min_eligible_assets=cfg["tsmom"]["min_eligible_assets"],
             evaluation_start=formation_start, evaluation_end=formation_end,
         )
-        res_sub1 = run_research_backtest(
-            signals_df, strategy_mode="tsmom12",
-            target_volatility=cfg["tsmom"]["target_volatility"],
-            min_eligible_assets=cfg["tsmom"]["min_eligible_assets"],
-            evaluation_start=formation_start, evaluation_end="2022-11-30",
-        )
-        res_sub2 = run_research_backtest(
-            signals_df, strategy_mode="tsmom12",
-            target_volatility=cfg["tsmom"]["target_volatility"],
-            min_eligible_assets=cfg["tsmom"]["min_eligible_assets"],
-            evaluation_start="2022-12-01", evaluation_end=formation_end,
-        )
+        res_sub1 = slice_research_subperiod(res_r1, sub1_start, sub1_end, "R1_sub_2020_2022")
+        res_sub2 = slice_research_subperiod(res_r1, sub2_start, sub2_end, "R1_sub_2023_2026")
         core_assets = cfg["experiments"]["asset_subsets"]["broad_market_core"]
         res_broad = run_research_backtest(
             signals_df, strategy_mode="tsmom12",
@@ -1028,8 +1186,8 @@ def run_p2_pipeline(
             ("R4_multi_horizon", "research", "3/6/12M Trend Combination", res_r4.summary_metrics, holding_start, holding_end),
             ("Bridge_long_only", "research", "Long-Only TSMOM (Bridge)", res_bridge.summary_metrics, holding_start, holding_end),
             ("R1_sample_vol", "research", "TSMOM with 252d rolling sample vol", res_sample_vol.summary_metrics, holding_start, holding_end),
-            ("R1_sub_2020_2022", "research", "TSMOM Subperiod 2020-2022", res_sub1.summary_metrics, "2020-02-01", "2022-12-31"),
-            ("R1_sub_2023_2026", "research", "TSMOM Subperiod 2023-2026", res_sub2.summary_metrics, "2023-01-01", holding_end),
+            ("R1_sub_2020_2022", "research", f"TSMOM Subperiod {sub1_start[:4]}-{sub1_end[:4]}", res_sub1.summary_metrics, sub1_start, sub1_end),
+            ("R1_sub_2023_2026", "research", f"TSMOM Subperiod {sub2_start[:4]}-{sub2_end[:4]}", res_sub2.summary_metrics, sub2_start, sub2_end),
             ("R1_broad_market", "research", "TSMOM Core Broad Market Subset", res_broad.summary_metrics, holding_start, holding_end),
         ]
 
@@ -1159,10 +1317,10 @@ def run_p2_pipeline(
             },
             {
                 "target": "Fig. 3 (Cumulative Performance)",
-                "source_page": "p. 239",
+                "source_page": "p. 239, Fig. 3",
                 "metric": "TSMOM Annualized Sharpe Ratio",
-                "original_value": "1.38 (Table 4, p. 236)",
-                "reference_recalculated": f"{aqr_metrics['sharpe']:.3f} (AQR O1 official factor recalculation)",
+                "original_value": "N/A (unlabeled in Figure 3; visual cumulative trajectory only)",
+                "reference_recalculated": f"{aqr_metrics['sharpe']:.3f} (AQR O1 official factor recalculation: Time-Series-Momentum-Original-Paper-Data.xlsx, Sheet 'TSMOM factors', 1985-01 to 2009-12)",
                 "own_result": f"{res_r1.summary_metrics['sharpe']:.3f}",
                 "unit": "Sharpe",
                 "frequency": "monthly",
@@ -1170,14 +1328,14 @@ def run_p2_pipeline(
                 "cost_basis": "gross (0 bps)",
                 "comparability": "Method-comparable, sample-different",
                 "comparable_difference": "N/A",
-                "reason": "Original paper covers 58 global commodities, currencies, bonds, equities; ETF sample has lower cross-asset independence",
+                "reason": "Figure 3 plots cumulative growth without labeling numerical Sharpe. 1.385 is independently recomputed from the public AQR factor dataset (not read from paper tables; Table 4 reports correlations).",
             },
             {
                 "target": "Fig. 3 (Cumulative Performance)",
-                "source_page": "p. 239",
+                "source_page": "p. 239, Fig. 3",
                 "metric": "TSMOM Annualized Return",
-                "original_value": "17.1% (Table 4, p. 236)",
-                "reference_recalculated": f"{aqr_metrics['ann_mean']*100:.2f}% (AQR O1 official factor recalculation)",
+                "original_value": "N/A (unlabeled in Figure 3; visual cumulative trajectory only)",
+                "reference_recalculated": f"{aqr_metrics['ann_mean']*100:.2f}% (AQR O1 official factor recalculation: Time-Series-Momentum-Original-Paper-Data.xlsx, Sheet 'TSMOM factors', 1985-01 to 2009-12)",
                 "own_result": f"{res_r1.summary_metrics['ann_mean']*100:.2f}%",
                 "unit": "percent",
                 "frequency": "monthly",
@@ -1185,7 +1343,7 @@ def run_p2_pipeline(
                 "cost_basis": "gross (0 bps)",
                 "comparability": "Method-comparable, sample-different",
                 "comparable_difference": "N/A",
-                "reason": "Different macroeconomic environment; 2020-2026 captures post-COVID rally, structural bond bull, and subsequent stock consolidation",
+                "reason": "Figure 3 plots cumulative growth without labeling numerical return. 17.08% is independently recomputed from public AQR factor data (ann_mean = 17.08%, vol = 12.33%).",
             },
             {
                 "target": "Fig. 3 (Cumulative Performance)",
@@ -1273,20 +1431,26 @@ def run_p2_pipeline(
             {
                 "experiment_id": "EXP_04_SUBPERIOD_STABILITY",
                 "baseline_id": "R1_sub_2020_2022",
-                "changed_setting": "Subperiod: 2020-2022 vs 2023-2026",
+                "changed_setting": f"Subperiod: {sub1_start[:4]}-{sub1_end[:4]} vs {sub2_start[:4]}-{sub2_end[:4]}",
                 "fixed_config_hash": compute_fixed_config_hash(cfg, ["experiments.subperiods"]),
-                "config_diff": "sample_window: 2020-02 to 2022-12 -> 2023-01 to 2026-08",
+                "config_diff": f"sample_window: {sub1_start[:7]} to {sub1_end[:7]} -> {sub2_start[:7]} to {sub2_end[:7]}",
                 "data_snapshot_hash": prices_snapshot_hash,
                 "effective_months_hash": effective_months_hash,
-                "sample_start": "2020-02 / 2023-01",
-                "sample_end": "2022-12 / 2026-08",
+                "sample_start": f"{sub1_start[:7]} / {sub2_start[:7]}",
+                "sample_end": f"{sub1_end[:7]} / {sub2_end[:7]}",
                 "n_months": f"{res_sub1.summary_metrics['n_months']} / {res_sub2.summary_metrics['n_months']}",
                 "metric": "Sharpe Ratio",
                 "baseline_value": f"{res_sub1.summary_metrics['sharpe']:.3f}",
                 "alternative_value": f"{res_sub2.summary_metrics['sharpe']:.3f}",
                 "difference": f"{res_sub2.summary_metrics['sharpe'] - res_sub1.summary_metrics['sharpe']:.3f}",
                 "evidence_path": f"{out_path.name}/strategy_summary.csv",
-                "interpretation": f"Historical regime comparison; 2020-2022 Sharpe was {res_sub1.summary_metrics['sharpe']:.3f} under lower volatility (16.45%), while 2023-2026 Sharpe declined to {res_sub2.summary_metrics['sharpe']:.3f} with higher volatility (28.65%) due to sharp equity whipsaws",
+                "interpretation": (
+                    f"Historical regime comparison; {sub1_start[:4]}-{sub1_end[:4]} Sharpe was "
+                    f"{res_sub1.summary_metrics['sharpe']:.3f} under lower volatility "
+                    f"({res_sub1.summary_metrics['ann_vol']*100:.2f}%), while {sub2_start[:4]}-{sub2_end[:4]} "
+                    f"Sharpe declined to {res_sub2.summary_metrics['sharpe']:.3f} with higher volatility "
+                    f"({res_sub2.summary_metrics['ann_vol']*100:.2f}%) due to sharp equity whipsaws"
+                ),
                 "limitation": "Historical regime split on surrogate sample, not an unseen out-of-sample forward test",
             },
             {

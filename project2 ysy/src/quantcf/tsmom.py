@@ -9,7 +9,7 @@ Implements pure mathematical functions according to Moskowitz, Ooi & Pedersen (2
 
 from __future__ import annotations
 
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 import numpy as np
 import pandas as pd
 
@@ -144,9 +144,36 @@ def calculate_momentum_sign(ret: float) -> int:
     return 0
 
 
-def calculate_multi_horizon_signal(s3: int, s6: int, s12: int) -> float:
-    """Combine 3m, 6m, 12m momentum signs into multi-horizon signal a_{i,m}."""
-    return float((s3 + s6 + s12) / 3.0)
+def calculate_multi_horizon_signal(
+    s3: float | int,
+    s6: float | int,
+    s12: float | int,
+    weights: Optional[Sequence[float]] = None,
+) -> float:
+    """Combine 3m, 6m, 12m momentum signs into multi-horizon signal a_{i,m}.
+    
+    Parameters
+    ----------
+    s3, s6, s12 : float or int
+        Momentum directions (+1, -1, 0) for 3m, 6m, 12m.
+    weights : Optional[Sequence[float]]
+        Weights for (s3, s6, s12). If provided, must be length 3, finite,
+        non-negative, and sum to 1.0 within 1e-4. Default is equal weighting [1/3, 1/3, 1/3].
+    """
+    if np.isnan(s3) or np.isnan(s6) or np.isnan(s12):
+        return np.nan
+    if weights is None:
+        return float((s3 + s6 + s12) / 3.0)
+    if len(weights) != 3:
+        raise ValueError(f"Multi-horizon weights must have length 3, got {len(weights)}")
+    w0, w1, w2 = float(weights[0]), float(weights[1]), float(weights[2])
+    if not (np.isfinite(w0) and np.isfinite(w1) and np.isfinite(w2)):
+        raise ValueError(f"Multi-horizon weights must be finite, got {weights}")
+    if w0 < 0 or w1 < 0 or w2 < 0:
+        raise ValueError(f"Multi-horizon weights must be non-negative, got {weights}")
+    if abs(w0 + w1 + w2 - 1.0) > 1e-4:
+        raise ValueError(f"Multi-horizon weights must sum to 1.0, got sum={w0+w1+w2}")
+    return float(w0 * s3 + w1 * s6 + w2 * s12)
 
 
 def extract_continuous_daily_returns_before_date(
@@ -186,8 +213,10 @@ def build_monthly_tsmom_dataset(
     evaluation_end: pd.Timestamp | str = "2026-08-31",
     min_vol_days: int = 252,
     vol_decay: float = LAMBDA_DEFAULT,
+    vol_ann_factor: float = ANN_FACTOR_VOL,
     target_volatility: float = 0.40,
     min_eligible_assets: int = 6,
+    multi_horizon_weights: Optional[Sequence[float]] = None,
 ) -> Dict[str, Any]:
     """Construct full monthly signals, volatilities, and eligibility panel.
     
@@ -196,6 +225,16 @@ def build_monthly_tsmom_dataset(
     daily_df : pd.DataFrame
         Daily panel containing ['date', 'asset', 'close_adj', 'open_adj', 'ret_total'].
     """
+    if multi_horizon_weights is not None:
+        if len(multi_horizon_weights) != 3:
+            raise ValueError(f"multi_horizon_weights must have length 3, got {len(multi_horizon_weights)}")
+        for w in multi_horizon_weights:
+            if not np.isfinite(w) or w < 0 or abs(w - 1.0 / 3.0) > 1e-3:
+                raise ValueError(
+                    f"Unsupported multi_horizon_weights: {multi_horizon_weights}. "
+                    "This research implementation strictly requires equal multi-horizon weights [1/3, 1/3, 1/3]."
+                )
+
     eval_start_dt = pd.to_datetime(evaluation_start)
     eval_end_dt = pd.to_datetime(evaluation_end)
 
@@ -278,7 +317,9 @@ def build_monthly_tsmom_dataset(
 
             # Multi-horizon signal
             if pd.notnull(rec["s3"]) and pd.notnull(rec["s6"]) and pd.notnull(rec["s12"]):
-                rec["signal_multi"] = calculate_multi_horizon_signal(rec["s3"], rec["s6"], rec["s12"])
+                rec["signal_multi"] = calculate_multi_horizon_signal(
+                    rec["s3"], rec["s6"], rec["s12"], weights=multi_horizon_weights
+                )
             else:
                 rec["signal_multi"] = np.nan
 
@@ -288,10 +329,10 @@ def build_monthly_tsmom_dataset(
                 cont_rets = extract_continuous_daily_returns_before_date(daily_s, m_date)
                 rec["n_daily_returns"] = len(cont_rets)
                 rec["sigma_ewma"] = calculate_ewma_volatility(
-                    cont_rets, decay=vol_decay, min_days=min_vol_days, ann_factor=ANN_FACTOR_VOL
+                    cont_rets, decay=vol_decay, min_days=min_vol_days, ann_factor=vol_ann_factor
                 )
                 rec["sigma_sample"] = calculate_sample_volatility(
-                    cont_rets, min_days=min_vol_days, ann_factor=ANN_FACTOR_VOL
+                    cont_rets, min_days=min_vol_days, ann_factor=vol_ann_factor
                 )
             else:
                 rec["n_daily_returns"] = 0

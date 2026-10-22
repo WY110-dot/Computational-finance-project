@@ -86,11 +86,32 @@ def calculate_monthly_metrics(
         is_continuous = False
         gap_reason = "Missing return observations (NaN) detected in monthly sequence."
     elif isinstance(returns_series.index, pd.DatetimeIndex):
-        periods = returns_series.index.to_period("M")
-        diffs = (periods[1:] - periods[:-1]).map(lambda x: x.n if hasattr(x, "n") else 1)
-        if len(diffs) > 0 and (diffs != 1).any():
+        if returns_series.index.has_duplicates:
             is_continuous = False
-            gap_reason = "Non-consecutive months detected in monthly DatetimeIndex."
+            gap_reason = "Duplicate dates detected in monthly DatetimeIndex."
+        elif not returns_series.index.is_monotonic_increasing:
+            is_continuous = False
+            gap_reason = "DatetimeIndex is not monotonically increasing."
+        else:
+            periods = returns_series.index.to_period("M")
+            if len(periods) > 1:
+                diffs = (periods[1:] - periods[:-1]).map(lambda x: x.n if hasattr(x, "n") else 1)
+                if (diffs != 1).any():
+                    is_continuous = False
+                    gap_reason = "Non-consecutive months detected in monthly DatetimeIndex."
+    else:
+        # If not already a DatetimeIndex, attempt to parse index if string dates; otherwise reject continuity
+        try:
+            parsed_idx = pd.to_datetime(returns_series.index)
+            periods = parsed_idx.to_period("M")
+            if len(periods) > 1:
+                diffs = (periods[1:] - periods[:-1]).map(lambda x: x.n if hasattr(x, "n") else 1)
+                if (diffs != 1).any():
+                    is_continuous = False
+                    gap_reason = "Non-consecutive months detected in parsed index."
+        except Exception:
+            is_continuous = False
+            gap_reason = "Series index is not a DatetimeIndex; monthly continuity cannot be verified."
 
     if not is_continuous and strict_continuity:
         cagr = np.nan
@@ -199,7 +220,7 @@ def run_research_backtest(
 
         if not is_qualified:
             # Active qualification rule: insufficient assets at formation date -> Hold 100% Cash
-            next_dt = dt_df["next_month_date"].iloc[0] if len(dt_df) > 0 else pd.NaT
+            next_dt = dt_df["next_month_date"].iloc[0] if (len(dt_df) > 0 and "next_month_date" in dt_df.columns and pd.notnull(dt_df["next_month_date"].iloc[0])) else ((pd.to_datetime(dt).to_period("M") + 1).to_timestamp(how="end").normalize())
             port_records.append({
                 "formation_date": dt,
                 "holding_end_date": next_dt,
@@ -244,7 +265,7 @@ def run_research_backtest(
         # Check whether any asset in the formation portfolio is missing its subsequent holding return
         missing_holding_assets = formation_df[formation_df["next_month_ret"].isnull()]["asset"].tolist()
         has_missing_holding = len(missing_holding_assets) > 0
-        next_dt = formation_df["next_month_date"].iloc[0] if ("next_month_date" in formation_df.columns and len(formation_df) > 0) else pd.NaT
+        next_dt = formation_df["next_month_date"].iloc[0] if ("next_month_date" in formation_df.columns and len(formation_df) > 0 and pd.notnull(formation_df["next_month_date"].iloc[0])) else ((pd.to_datetime(dt).to_period("M") + 1).to_timestamp(how="end").normalize())
 
         if has_missing_holding:
             # Cannot observe full portfolio holding return; do NOT shrink N_m or fill zero silently
@@ -263,6 +284,8 @@ def run_research_backtest(
             for _, row in formation_df.iterrows():
                 weight_records.append({
                     "date": dt,
+                    "formation_date": dt,
+                    "holding_end_date": next_dt,
                     "asset": row["asset"],
                     "weight": row["weight"],
                     "signal": row["signal_used"],
@@ -277,6 +300,8 @@ def run_research_backtest(
         for _, row in formation_df.iterrows():
             weight_records.append({
                 "date": dt,
+                "formation_date": dt,
+                "holding_end_date": next_dt,
                 "asset": row["asset"],
                 "weight": row["weight"],
                 "signal": row["signal_used"],
@@ -284,11 +309,15 @@ def run_research_backtest(
             })
             contrib_records.append({
                 "date": dt,
+                "formation_date": dt,
+                "holding_end_date": next_dt,
                 "asset": row["asset"],
                 "contrib": row["contrib"],
             })
             single_asset_records.append({
                 "date": dt,
+                "formation_date": dt,
+                "holding_end_date": next_dt,
                 "asset": row["asset"],
                 "single_strategy_return": row["single_strategy_return"],
                 "asset_raw_return": row["next_month_ret"],
@@ -319,7 +348,14 @@ def run_research_backtest(
 
     # Compute overall portfolio summary metrics
     if len(df_port) > 0:
-        summary_m = calculate_monthly_metrics(df_port["portfolio_return"])
+        df_port = df_port.sort_values("holding_end_date").reset_index(drop=True)
+        port_dates = pd.to_datetime(df_port["holding_end_date"])
+        port_ret_series = pd.Series(
+            df_port["portfolio_return"].values,
+            index=port_dates,
+            name="portfolio_return",
+        )
+        summary_m = calculate_monthly_metrics(port_ret_series)
         summary_m["mean_gross_exposure"] = float(df_port["gross_exposure"].mean())
         summary_m["mean_net_exposure"] = float(df_port["net_exposure"].mean())
         summary_m["mean_eligible_assets"] = float(df_port["n_eligible"].mean())
@@ -330,10 +366,22 @@ def run_research_backtest(
     single_metrics_list = []
     if len(df_single) > 0:
         for asset, grp in df_single.groupby("asset"):
-            m = calculate_monthly_metrics(grp["single_strategy_return"])
+            grp_sorted = grp.sort_values("holding_end_date").reset_index(drop=True)
+            holding_dates = pd.to_datetime(grp_sorted["holding_end_date"])
+            strat_series = pd.Series(
+                grp_sorted["single_strategy_return"].values,
+                index=holding_dates,
+                name="single_strategy_return",
+            )
+            m = calculate_monthly_metrics(strat_series)
             m["asset"] = asset
             # Also calculate passive buy-and-hold metrics
-            m_raw = calculate_monthly_metrics(grp["asset_raw_return"])
+            raw_series = pd.Series(
+                grp_sorted["asset_raw_return"].values,
+                index=holding_dates,
+                name="asset_raw_return",
+            )
+            m_raw = calculate_monthly_metrics(raw_series)
             m["raw_ann_mean"] = m_raw["ann_mean"]
             m["raw_ann_vol"] = m_raw["ann_vol"]
             m["raw_sharpe"] = m_raw["sharpe"]

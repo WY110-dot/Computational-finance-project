@@ -148,53 +148,26 @@ def load_aqr_reference_factors(excel_path: Optional[Path] = None) -> pd.DataFram
     df["date"] = pd.to_datetime(df["date"])
     df = df.sort_values("date").reset_index(drop=True)
     df["month"] = df["date"].dt.to_period("M")
+    df.index = pd.DatetimeIndex(df["date"])
     return df
 
 
 def calculate_reference_metrics(series_or_df: pd.Series | pd.DataFrame) -> Dict[str, Any]:
-    """Calculate standard monthly performance metrics for reference factor series."""
+    """Calculate standard monthly performance metrics for reference factor series.
+    
+    Verifies monthly calendar continuity over the factor series, preserving
+    proper drawdown, signed Calmar, and NaN handling if missing months exist.
+    """
     if isinstance(series_or_df, pd.DataFrame):
         results = {}
         for col in series_or_df.columns:
             if col not in ("date", "month"):
-                results[col] = calculate_reference_metrics(series_or_df[col])
+                s = series_or_df[col]
+                if "date" in series_or_df.columns and not isinstance(s.index, pd.DatetimeIndex):
+                    s = pd.Series(s.values, index=pd.to_datetime(series_or_df["date"]))
+                results[col] = calculate_reference_metrics(s)
         return results
 
-    s = series_or_df.dropna()
-    n_months = len(s)
-    if n_months == 0:
-        return {"n_months": 0}
-
-    mean_m = float(s.mean())
-    vol_m = float(s.std(ddof=1))
-    ann_mean = mean_m * 12.0
-    ann_vol = vol_m * np.sqrt(12.0)
-    sharpe = ann_mean / ann_vol if ann_vol > 1e-8 else 0.0
-
-    # Compounded cumulative wealth with initial capital 1.0 at index 0
-    cum_wealth = np.insert(np.cumprod(1.0 + s.values), 0, 1.0)
-    peak = np.maximum.accumulate(cum_wealth)
-    drawdown = (cum_wealth - peak) / peak
-    max_dd = float(np.min(drawdown))
-
-    # CAGR if ending wealth > 0
-    end_wealth = float(cum_wealth[-1])
-    cagr = (end_wealth ** (12.0 / n_months)) - 1.0 if end_wealth > 0 else np.nan
-
-    skew = float(s.skew())
-    pos_ratio = float((s > 0).mean())
-
-    return {
-        "n_months": n_months,
-        "mean_monthly": mean_m,
-        "ann_mean": ann_mean,
-        "vol_monthly": vol_m,
-        "ann_vol": ann_vol,
-        "sharpe": sharpe,
-        "cagr": cagr,
-        "max_drawdown": max_dd,
-        "skewness": skew,
-        "positive_ratio": pos_ratio,
-        "total_compound_return": end_wealth - 1.0,
-    }
+    from quantcf.research_backtest import calculate_monthly_metrics
+    return calculate_monthly_metrics(series_or_df)
 

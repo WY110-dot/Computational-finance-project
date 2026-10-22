@@ -1,27 +1,116 @@
 {
-  "all_matched": true,
-  "verification_date": "2026-10-22T12:22:00",
-  "files_checked": {
+  "audit_timestamp": "2026-10-22T07:21:28.804753+00:00",
+  "reference_dir": "outputs_p2_fixed",
+  "verification_dir": "outputs_p2_verification",
+  "overall_verdict": "PASS",
+  "detailed_comparisons": {
     "strategy_summary.csv": {
-      "status": "IDENTICAL",
-      "rows": 18
+      "shape": [
+        18,
+        19
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "original_vs_replication.csv": {
+      "shape": [
+        5,
+        13
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
     },
     "difference_experiments.csv": {
-      "status": "IDENTICAL",
-      "rows": 7
+      "shape": [
+        7,
+        17
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
     },
-    "experiments/asset_class_removal_attribution.csv": {
-      "status": "IDENTICAL",
-      "rows": 5
+    "experiments_inventory.csv": {
+      "shape": [
+        18,
+        14
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "key_result_trace.csv": {
+      "shape": [
+        12,
+        13
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "research/R1_tsmom12_monthly_portfolio.csv": {
+      "shape": [
+        79,
+        10
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "research/R1_sub_2020_2022_monthly_portfolio.csv": {
+      "shape": [
+        35,
+        10
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "research/R1_sub_2023_2026_monthly_portfolio.csv": {
+      "shape": [
+        44,
+        10
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "research/R1_asset_class_contributions.csv": {
+      "shape": [
+        79,
+        7
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
     },
     "research/asset_class_variance_decomposition.csv": {
-      "status": "IDENTICAL",
-      "rows": 4
+      "shape": [
+        4,
+        6
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
     },
-    "research/R1_single_asset_metrics.csv": {
-      "status": "IDENTICAL",
-      "rows": 21
+    "backtests/T1_base_3bps_ledger.csv": {
+      "shape": [
+        1599,
+        31
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
+    },
+    "backtests/T2_base_3bps_ledger.csv": {
+      "shape": [
+        1599,
+        31
+      ],
+      "max_numeric_absolute_difference": 0.0,
+      "content_identical": true,
+      "status": "PASS"
     }
-  },
-  "conclusion": "Deterministic reproducibility confirmed between fixed run and independent blank-directory run."
+  }
 }
