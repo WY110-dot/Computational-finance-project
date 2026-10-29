@@ -1,0 +1,15 @@
+{
+  "seed": 20261029,
+  "samples": {
+    "CN21": {"start": "2020-02-01", "end": "2026-08-31"},
+    "US9": {"start": "2000-01-01", "end": "2024-12-31"}
+  },
+  "common_start": "2020-02-01",
+  "common_end": "2024-12-31",
+  "portfolio_vol_target": 0.12,
+  "max_gross": 6.0,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_blocks": [3, 6, 12],
+  "funding_rates": [0.0, 0.02, 0.04, 0.06],
+  "interpretation": "Retrospective diagnostic settings; no untouched holdout or preregistration claimed."
+}

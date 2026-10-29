@@ -1,0 +1,2 @@
+# Preserve snapshot bytes and recorded SHA-256 across Windows/Linux checkouts.
+* -text

@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "杨皓博",
+    "袁思扬",
+    "缪梓航"
+  ],
+  "aqr_sharpe": 1.384885002503065,
+  "single_positive": 17,
+  "cn_r1_sharpe": 0.7918271183517306,
+  "cn_passive_sharpe": 0.9856147928717732,
+  "execution_monthly_sharpe": {
+    "T1_base_3bps": 1.4366072718174678,
+    "T1_zero_0bps": 1.4475991119055374,
+    "T2_base_3bps": 1.3880764829785546,
+    "T3_base_3bps": 1.1566457880947238
+  }
+}

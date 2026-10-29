@@ -1,0 +1,3 @@
+universe,alpha_ann,t_alpha_HAC6,beta,n_months,benchmark
+CN21,0.24596391247120056,3.253477298378501,-0.2316905059491366,79,same risk-budget passive long; not original multi-factor alpha
+US9,0.03461727776341753,0.836773999419457,0.4432041646204074,300,same risk-budget passive long; not original multi-factor alpha

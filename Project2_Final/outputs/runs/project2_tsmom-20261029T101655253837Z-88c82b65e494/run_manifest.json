@@ -1,0 +1,276 @@
+{
+  "artifacts": [
+    {
+      "metadata": {},
+      "path": "asset_class_removal_attribution.csv",
+      "role": "attribution",
+      "sha256": "76ab0300765efff137296e67b8eb09b2c4d3d6ed1a58fbbaf82e3135874946d6",
+      "size_bytes": 1402
+    },
+    {
+      "metadata": {},
+      "path": "asset_class_variance_decomposition.csv",
+      "role": "variance_decomposition",
+      "sha256": "33e4659922d624b2db4b9d0c42c26dd6ac5c660c8e59ecffc5b9aea53cfd070a",
+      "size_bytes": 722
+    },
+    {
+      "metadata": {},
+      "path": "difference_experiments.csv",
+      "role": "experiments",
+      "sha256": "80a913496aba1350d82218ea8df6b3fae892697b1ba9b06f1afdea03bb879524",
+      "size_bytes": 4019
+    },
+    {
+      "metadata": {},
+      "path": "experiments_inventory.csv",
+      "role": "inventory",
+      "sha256": "d2856245507fe5e109b799446e379e52ed803dd7c2cfdb9af6ca6defe2892e2f",
+      "size_bytes": 4426
+    },
+    {
+      "metadata": {},
+      "path": "key_result_trace.csv",
+      "role": "trace",
+      "sha256": "716c4dc00e390390cf5fd09fd12379a4d1a839ffdd9406fb82f2154ef080f698",
+      "size_bytes": 3034
+    },
+    {
+      "metadata": {},
+      "path": "metrics.json",
+      "role": "metrics",
+      "sha256": "4cc764f343e715f4767e1dd7721af02b4c8d0caa5a1a923fececc97df1703ff0",
+      "size_bytes": 29
+    },
+    {
+      "metadata": {},
+      "path": "original_vs_replication.csv",
+      "role": "comparison",
+      "sha256": "49dddc73513f00995c6233088e9a748f018e2f950089cfab4e03dca628d9f5a8",
+      "size_bytes": 2727
+    },
+    {
+      "metadata": {},
+      "path": "strategy_summary.csv",
+      "role": "summary",
+      "sha256": "ee77b6c8f248a2a019eefd8ade12e30d21e46fc282c41becfa4f77b83ba7e2be",
+      "size_bytes": 5661
+    }
+  ],
+  "completed_at": "2026-10-29T10:17:06.710551Z",
+  "config": {
+    "author": "杨皓博、袁思扬、缪梓航",
+    "data": {
+      "adjustment_reference_date": "2026-09-18",
+      "adjustment_snapshot": "data/raw/adjustment_raw.parquet",
+      "assets": [
+        "510050.SH",
+        "510300.SH",
+        "510500.SH",
+        "511010.SH",
+        "511220.SH",
+        "511260.SH",
+        "512000.SH",
+        "512010.SH",
+        "512100.SH",
+        "512200.SH",
+        "512480.SH",
+        "512660.SH",
+        "512690.SH",
+        "512880.SH",
+        "513050.SH",
+        "513100.SH",
+        "513500.SH",
+        "515030.SH",
+        "515050.SH",
+        "515700.SH",
+        "518880.SH"
+      ],
+      "calendar": "union",
+      "end": "2026-09-18",
+      "evaluation_end": "2026-08-31",
+      "evaluation_start": "2020-01-01",
+      "holding_end": "2026-08-31",
+      "holding_start": "2020-02-01",
+      "manifest": "data/manifests/source_manifest.json",
+      "min_active_coverage": 0.95,
+      "prices_snapshot": "data/raw/prices_raw.parquet",
+      "require_manifest": true,
+      "source": "tushare",
+      "start": "2019-01-01",
+      "warmup_calendar_days": 420
+    },
+    "execution": {
+      "adv_window": 20,
+      "allow_fractional_units": true,
+      "buy_fee": 0.0003,
+      "capacity_limited": false,
+      "end": "2026-08-31",
+      "execution_time": "next_open",
+      "initial_cash": 1000000.0,
+      "invest_fraction": 0.99,
+      "max_stale_days": 5,
+      "participation_rate": 0.001,
+      "sell_fee": 0.0003,
+      "signal_time": "close",
+      "slippage_bps": 0.0,
+      "start": "2020-02-03"
+    },
+    "experiments": {
+      "asset_subsets": {
+        "broad_market_core": [
+          "510050.SH",
+          "510300.SH",
+          "510500.SH"
+        ]
+      },
+      "cost_levels": [
+        0.0,
+        0.0003,
+        0.001
+      ],
+      "subperiods": [
+        {
+          "end": "2022-12-31",
+          "name": "2020-2022",
+          "start": "2020-02-01"
+        },
+        {
+          "end": "2026-08-31",
+          "name": "2023-2026",
+          "start": "2023-01-01"
+        }
+      ]
+    },
+    "metrics": {
+      "annualization_daily": 252,
+      "annualization_monthly": 12,
+      "daily_risk_free": 0.0,
+      "monthly_risk_free": 0.0
+    },
+    "project_name": "CF2026 Project 2 - Time Series Momentum Replication & Extension",
+    "random_seed": 20261029,
+    "tsmom": {
+      "horizons": [
+        3,
+        6,
+        12
+      ],
+      "min_eligible_assets": 6,
+      "multi_horizon_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "primary_horizon": 12,
+      "target_volatility": 0.4,
+      "volatility_annualization": 261,
+      "volatility_decay": 0.9836065573770492,
+      "volatility_min_days": 252
+    }
+  },
+  "data_files": [
+    {
+      "path": "adjustment_snapshot",
+      "sha256": "dacda1b36dc0e6130175bade9726ac31a9073e63e9370472811375277f35d9af",
+      "size_bytes": 73847
+    },
+    {
+      "path": "aqr_excel",
+      "sha256": "91bdbae6366ccb0693581b690236dc14862562a98ee83052c4f440f8b6ae0db8",
+      "size_bytes": 40014
+    },
+    {
+      "path": "prices_snapshot",
+      "sha256": "2b1821608563a5b531e287097497099f4bca20fdb291fe0fc146bd3f6d8bacd4",
+      "size_bytes": 1524786
+    }
+  ],
+  "duration_seconds": 11.456714,
+  "environment": {
+    "executable_name": "python.exe",
+    "implementation": "CPython",
+    "packages": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.3.5",
+      "pandas": "2.3.3",
+      "pyarrow": "22.0.0",
+      "python-dotenv": "1.2.4",
+      "reportlab": "4.4.4",
+      "scipy": "1.16.3",
+      "tushare": null
+    },
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9"
+  },
+  "experiment_fingerprint": "88c82b65e494d9e77ce9bc091bcd00fa98d7a14e48708c270da36b5ab37a29a6",
+  "hashes": {
+    "config_sha256": "d1b2f7f0eb140895b502e792bcc7b26a32a5edcc7831285d9cffd429d0db0c68",
+    "data_sha256": "d2e1360d7549f7dbd362602737d16752b32c51cf8c82e5f6c80901b28fd75d34",
+    "environment_sha256": "d7b3261025826ad445f3359a53c4128a7ee7a1c487c1b762d6695db566546c64",
+    "source_sha256": "4732846976d49ca2368df0ea624a305de157a4f646a47b18f9e5c9f4a7c273c2"
+  },
+  "metrics_file": "metrics.json",
+  "run_id": "project2_tsmom-20261029T101655253837Z-88c82b65e494",
+  "run_name": "project2_tsmom",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "path": "build_report_project2.py",
+      "sha256": "7b67a8038e8bd45036a0b5d580bd3030c07bdb26a3a9e142f78056774e96d2cb",
+      "size_bytes": 800
+    },
+    {
+      "path": "pipeline_p2.py",
+      "sha256": "ca2bd2922f2718dddd261cbf1d5103d0a51ec71a60d4facca35ec3e926dc8e15",
+      "size_bytes": 85019
+    },
+    {
+      "path": "portfolio.py",
+      "sha256": "cc3d06f5fb4310c6355544bbdc290c2fa046a1579a820384620a28a3fb46a259",
+      "size_bytes": 15010
+    },
+    {
+      "path": "protocol.md",
+      "sha256": "06d0a7db97f784b55dc58c25f48c3a9f147332819a8364766d59290a56dee930",
+      "size_bytes": 2138
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "5b41d06505720858a6bc8f06c43e3a75e00986192c5174e87cacf9213298576e",
+      "size_bytes": 600
+    },
+    {
+      "path": "reference_data.py",
+      "sha256": "991ab1fe819504f436cce0a45ad7753183cf1ea21324f0630e41a83a173923fc",
+      "size_bytes": 6275
+    },
+    {
+      "path": "report_p2.py",
+      "sha256": "7258b037f8fd135e528d9b30c8891ac583899697babde0e16afc84068465217b",
+      "size_bytes": 254
+    },
+    {
+      "path": "research_backtest.py",
+      "sha256": "c5067a7792ad01e0600e509eb669be84ed88280357427a61dfcaf1ed2ba023f2",
+      "size_bytes": 17144
+    },
+    {
+      "path": "run_project2.py",
+      "sha256": "5bdd22f53768b174c4cd54319e090f790a86e4069270a50bbc1b1dbfad3f61fb",
+      "size_bytes": 1257
+    },
+    {
+      "path": "tsmom.py",
+      "sha256": "feb6692dc8aad1307d1572320891184644da634f14bc6324c2fd26b520792caf",
+      "size_bytes": 15399
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "55688e598be374073b8d385335d37c52e6e8d03a979a0571d35c8b10c395437e",
+      "size_bytes": 168912
+    }
+  ],
+  "started_at": "2026-10-29T10:16:55.253837Z",
+  "status": "completed"
+}
