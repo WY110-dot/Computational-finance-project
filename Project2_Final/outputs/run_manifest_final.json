@@ -1,6 +1,6 @@
 {
-  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
-  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
   "packages": {
     "numpy": "2.3.5",
     "pandas": "2.3.3",

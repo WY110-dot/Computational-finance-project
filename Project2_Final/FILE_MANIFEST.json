@@ -459,7 +459,7 @@
     },
     "outputs/report/Project2_Final_Report.pdf": {
       "bytes": 978821,
-      "sha256": "883a8028f87b3878840e34c3b70d3738847f8c0ccf6bbdd2b960a6ecafc66f72"
+      "sha256": "ff25bc195d3695755a189ba3a3ca4a083ec5cd74b5322c629c651be379006ee4"
     },
     "outputs/report/report_facts.json": {
       "bytes": 425,
@@ -610,20 +610,20 @@
       "sha256": "1ed0a07283566ed257e0a548d252d8d82e8ddb421401b8716dca85681f329817"
     },
     "outputs/run_manifest_final.json": {
-      "bytes": 6821,
-      "sha256": "253287035dc9e5f48b9d156b68a5915af773bce35752ae7e98a3ad0801f87ab3"
+      "bytes": 6806,
+      "sha256": "dbdfe4c7700453f09f62427bd080d4b50ac2aecc1a5d15385ce3fa5663e89a71"
     },
-    "outputs/runs/project2_tsmom-20261029T101655253837Z-88c82b65e494/artifact_manifest.json": {
+    "outputs/runs/project2_tsmom-20261029T144651680229Z-413b74e8748b/artifact_manifest.json": {
       "bytes": 1835,
-      "sha256": "c1c9e430f47d983c1d09a94b418f66cef045452183d5d5f8a504bdd66e264681"
+      "sha256": "43542b048a0f6473d4e7446fd0f71813c6962ca9a55f175ff84a0f07864ec85c"
     },
-    "outputs/runs/project2_tsmom-20261029T101655253837Z-88c82b65e494/metrics.json": {
+    "outputs/runs/project2_tsmom-20261029T144651680229Z-413b74e8748b/metrics.json": {
       "bytes": 29,
       "sha256": "4cc764f343e715f4767e1dd7721af02b4c8d0caa5a1a923fececc97df1703ff0"
     },
-    "outputs/runs/project2_tsmom-20261029T101655253837Z-88c82b65e494/run_manifest.json": {
-      "bytes": 7925,
-      "sha256": "0f6ab7ad290f80e0f9270049ee3290cec9728d4485d5fddd4725da83e8cb60c1"
+    "outputs/runs/project2_tsmom-20261029T144651680229Z-413b74e8748b/run_manifest.json": {
+      "bytes": 7926,
+      "sha256": "8208f04a99ee3cb6a777a07a93a6e1327d007c11ff49f8764a6cbbcf2cfe3e53"
     },
     "outputs/signals/tsmom_monthly_signals.csv": {
       "bytes": 442703,
@@ -642,8 +642,8 @@
       "sha256": "cd6aefe5277a860e9e16f076b14bc359f9c18088b4adfd23d6c67308fa782c0a"
     },
     "outputs/tests.xml": {
-      "bytes": 7765,
-      "sha256": "6faf013981e9b26c89df8334f07e53529ea84c46b61c5de1667524cf0bbeef3f"
+      "bytes": 7767,
+      "sha256": "59fc8f64184318d72173713ee0b45c9311d6b374fbb36ab0e20c7b1c6f8db54b"
     },
     "outputs/verification.json": {
       "bytes": 6060,
