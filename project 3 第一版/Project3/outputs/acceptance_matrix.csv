@@ -1,0 +1,21 @@
+id,check_item,standard,status,evidence_path,reason
+R01,正确P2起点,ZIP与205/206项manifest核对；原包未改,PASS,outputs/p2_baseline_verification.json,"CF2026_Project2_Final.zip SHA256 (c1f3bd29...) verified against attachment txt, original read-only and unmodified (206 files)"
+R02,P2继承核验,既有测试实际运行，基线差异有解释,PASS,outputs/p2_baseline_verification.json,"P2 original 64 tests rerun in locked environment all passed (64 passed, 0 failures, 0 errors, 0 skipped), delta 0.0"
+R03,假设卡与因子卡,关键内容齐全，产生于本轮评估之前,PASS,docs/HYPOTHESIS_CARD.md; docs/FACTOR_CARDS.md,"Complete research hypothesis, trend path efficiency formula, F1/F2/F3 cards, hand-calculation examples and falsification rules"
+R04,新增贡献,不是重复3/6/12平均；A与A0区别准确,PASS,docs/P2_TO_P3_MAPPING.md; docs/CANDIDATE_REGISTER.csv,New factor F1 interacts 12M momentum with 63-day ER; A is continuous standardized momentum; A0 is P2 discrete sign
+R05,P1接入,标准因子长表、参数配置、统一入口及真实账本,PASS,outputs/factors/factors_long.csv; outputs/backtests/,"Standard factor long table (date, asset, factor, value, universe, split) persisted and shared quantcf.backtest broker executed and audited"
+R06,公式和日期,独立手算、未来扰动、月度标签测试通过,PASS,tests/test_project3_factors.py; tests/test_project3_counterexamples.py,"Unit test suite executed: 90 passed, 0 failed, 0 skipped; ER boundary and counterexample assertions verified"
+R07,数据与覆盖,来源/哈希/复权/缺失及共同样本可追溯,PASS,outputs/coverage.csv; outputs/data_audit.csv,"Complete coverage table persisted tracking total, qualified assets, coverage ratio and exclusion reasons per month"
+R08,A/B/C公平性,同样本同标签同组合规则同费用，标准化明确,PASS,outputs/experiments_inventory.csv,"A/B/C evaluated on identical asset universes, identical open-to-open labels, identical inverse-vol weights, and identical cost scenarios"
+R09,因子与组合诊断,IC/Rank IC/分组/净收益/风险/换手/成本及有效数齐全,PASS,outputs/diagnostics/factor_ic_summary.csv; outputs/diagnostics/tercile_returns.csv,"Factor IC, Rank IC, t-stats, tercile spreads, and portfolio risk/return diagnostics completely reported"
+R10,增量检验,相关时间序列+C−A；残差诊断及解释边界,PASS,outputs/diagnostics/residual_factor_summary.csv; outputs/diagnostics/daily_correlations.csv,Cross-sectional residual regression (B on A) verified with exact orthogonality (mean residual and covariance < 1e-8)
+R11,两维稳健性,时间、成本两类均有实际输出,PASS,outputs/robustness/subperiod_robustness.csv; outputs/robustness/cost_robustness.csv,"Subperiod robustness (US 2020-2022, 2023-2024; CN 2023, 2024) and cost scenarios (0, 3, 10 bps) fully executed and audited"
+R12,费用与复利对账,互不重叠费用归属，成交/账本/月费一致，连乘严格匹配开盘净值比,PASS,outputs/reconciliation.csv; outputs/reconciliation.json,All 48 backtest runs reconciled independently: fees conserved and telescoping compounding exact
+R13,时间子区间稳健性,US前后期与CN分年度完整子区间重跑,PASS,outputs/robustness/subperiod_robustness.csv,All 4 subperiods evaluated with pairwise C-A differences and Sharpe ratios
+R14,成本情景稳健性,"0, 3, 10 bps 单边费用阶梯全部重算",PASS,outputs/robustness/cost_robustness.csv,"0, 3, and 10 bps cost scenarios evaluated across all candidate strategies"
+R15,共同区间横向可比,US9与CN21在预定共同2023-2024区间进行严格同期比较,PASS,outputs/diagnostics/common_period_comparison.csv,Synchronized head-to-head comparison table produced for both markets over identical 2023-01 to 2024-12 period
+R16,分块Bootstrap检验,成对循环分块重采样，敏感性块长3/6/12M，置信区间如实输出,PASS,outputs/diagnostics/block_bootstrap.csv,"Circular block bootstrap executed (2000 reps, block sizes 3, 6, 12); 95% CIs cross zero"
+R17,冻结清单与工程入口,含run_project3.py及backtest共享代码，哈希100%匹配,PASS,outputs/freeze_manifest.json,Freeze manifest verified: 14 files matched exactly
+R18,报告同源追溯,报告正文/表格/PDF全部来自同一批运行产物，禁止硬编码,PASS,outputs/report/report_trace.csv; outputs/report/Project3_Report.pdf,Report trace verified: 376 displayed values match source data exactly
+R19,干净独立重跑,临时隔离目录不预复制旧表，从原始快照重跑，逐键比对delta=0.0,PASS,outputs/verification.json,Clean rerun executed in empty temp directory; compared 260 regenerated tables with max delta 0.0
+R20,AI与人工贡献声明,真实记录复核与反例采纳，人工分工与学号由学生确认，不伪造签名,PENDING_HUMAN_REVIEW,docs/AI_ASSISTANCE.md; docs/CONTRIBUTIONS.md,AI tool usage and ChatGPT review findings recorded truthfully; pending final human review and signature confirmation by student team members

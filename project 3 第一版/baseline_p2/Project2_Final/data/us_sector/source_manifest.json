@@ -1,0 +1,72 @@
+{
+  "provider": "Public repository snapshot; repository documents Yahoo Finance-format ETF prices",
+  "repository": "miguel-merlin/etf-directional-forecasting",
+  "commit": "b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+  "retrieved_utc": "2026-09-20T11:27:46.828322+00:00",
+  "files": [
+    {
+      "asset": "XLB",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLB.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "6ab359cc2c05f4742e6e0dfa0fe479b9f68a169b",
+      "sha256": "8a791971ec1fb82868146b06ebfda267c13fafd909017e4347e3d057c2464320",
+      "bytes": 844782
+    },
+    {
+      "asset": "XLE",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLE.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "5803c39f9a63dfa04734843529c3e7ea866d5f53",
+      "sha256": "ad0deb56c6f966ff838a9bab5da83ae35c3bf62fa4ca6437d258c363f00e7821",
+      "bytes": 848634
+    },
+    {
+      "asset": "XLF",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLF.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "254b205c29feb2bbc465eda308ed3d9593ea493e",
+      "sha256": "36a99ee87505f1ae3f21a58ddf249d08c95277ce2dd34d6069e068216d9a0339",
+      "bytes": 852103
+    },
+    {
+      "asset": "XLI",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLI.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "a2fcb3503465e8e9e9573c92c625cd59fb3ad402",
+      "sha256": "954c7ac7815f35b422803d50745ed9c5ddd92d5beb39f1bc5c1c4602b52535a9",
+      "bytes": 843285
+    },
+    {
+      "asset": "XLK",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLK.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "8b65d9af20b1aec470e5579f142670f8e22c6fea",
+      "sha256": "05ff8f45ad1bfc983a400111964fa758c9b7536f5ea6b6883e428797081b83bb",
+      "bytes": 844079
+    },
+    {
+      "asset": "XLP",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLP.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "600a25b03208a670aa489e308875db3f2b4fea80",
+      "sha256": "79aebfbad3509a5f22f4637664fcef28ebd67e1f3492b22390fb55d59ca9eca4",
+      "bytes": 844020
+    },
+    {
+      "asset": "XLU",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLU.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "ade59cd50a173caccf12b2920e0e015ca1991e68",
+      "sha256": "4991b1d55f69bfe9dee5956d7502793d526162eed81938f0162c1db5b4998073",
+      "bytes": 844775
+    },
+    {
+      "asset": "XLV",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLV.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "641141d7e0ea0020ead36ee2c4d31d6c116b1a83",
+      "sha256": "e23edbaf0fdc39f46b486be154cce826f82689ae934c69e2726639d3a0f26892",
+      "bytes": 843271
+    },
+    {
+      "asset": "XLY",
+      "url": "https://api.github.com/repos/miguel-merlin/etf-directional-forecasting/contents/data/etfs/XLY.csv?ref=b3b583b10cce9a29cb97ab65d08f5854c0ffd001",
+      "blob_sha": "fbbd5080ae6b1703df888579bdb8b88489484177",
+      "sha256": "3dcaa347f34ffedce2997fcacd0ca93383df472d77e29c1d9b94d68ca4ac8a31",
+      "bytes": 843514
+    }
+  ],
+  "limitation": "Third-party archived vendor data, not exchange-certified or point-in-time corporate-action data. Educational personal use; no claim to redistribution rights."
+}

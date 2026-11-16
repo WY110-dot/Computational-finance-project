@@ -1,0 +1,3 @@
+universe,n_assets,n_trading_days,start_date,end_date,total_records,missing_close_adj,missing_open_adj,status
+CN21,21,1456,2019-01-02,2024-12-31,29650,0,0,PASS
+US9,9,6548,1998-12-22,2024-12-31,58932,0,0,PASS

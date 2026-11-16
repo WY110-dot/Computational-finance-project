@@ -1,0 +1,29 @@
+[project]
+name = "cf2026-project2-final"
+version = "2.0.0"
+description = "Auditable two-universe TSMOM replication and controlled extensions"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy==2.3.5",
+  "pandas==2.3.3",
+  "scipy==1.16.3",
+  "matplotlib==3.10.8",
+  "statsmodels==0.14.5",
+  "pyarrow==22.0.0",
+  "python-dotenv==1.2.4",
+  "reportlab==4.4.4",
+  "openpyxl==3.1.5",
+  "pymupdf==1.28.2",
+  "pytest==9.2.0",
+]
+
+[dependency-groups]
+dev = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.uv]
+package = false

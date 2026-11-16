@@ -1,0 +1,26 @@
+[project]
+name = "cf2026-final-project"
+version = "1.0.0"
+description = "Reproducible Tushare-based factor research and next-open portfolio backtesting"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy>=2.2,<3",
+  "pandas>=2.2,<3",
+  "scipy>=1.14,<2",
+  "matplotlib>=3.9,<4",
+  "pyarrow>=17,<23",
+  "tushare>=1.4,<2",
+  "python-dotenv>=1,<2",
+  "reportlab>=4.2,<5",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.uv]
+package = false

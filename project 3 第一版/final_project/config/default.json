@@ -1,0 +1,60 @@
+{
+  "project_name": "CF2026 Project 1 Final",
+  "random_seed": 20260921,
+  "data": {
+    "source": "tushare",
+    "start": "2019-01-01",
+    "end": "2026-09-18",
+    "adjustment_reference_date": "2026-09-18",
+    "assets": [
+      "510050.SH", "510300.SH", "510500.SH", "511010.SH", "511220.SH",
+      "511260.SH", "512000.SH", "512010.SH", "512100.SH", "512200.SH",
+      "512480.SH", "512660.SH", "512690.SH", "512880.SH", "513050.SH",
+      "513100.SH", "513500.SH", "515030.SH", "515050.SH", "515700.SH",
+      "518880.SH"
+    ],
+    "prices_snapshot": "data/raw/prices_raw.parquet",
+"adjustment_snapshot": "data/raw/adjustment_raw.parquet",
+"manifest": "data/manifests/source_manifest.json",
+    "require_manifest": true,
+    "min_active_coverage": 0.95,
+    "warmup_calendar_days": 120,
+    "calendar": "union"
+  },
+  "factors": {
+    "windows": {
+      "momentum": 20,
+      "reversal": 5,
+      "low_volatility": 20
+    },
+    "label_horizons": [1, 5],
+    "groups": 5,
+    "min_assets": 6,
+    "preprocess": "cross_sectional_rank"
+  },
+  "strategy": {
+    "primary_factor": "momentum",
+    "top_n": 5,
+    "invest_fraction": 0.99,
+    "baseline_frequency": "monthly",
+    "experiment_frequency": "weekly",
+    "benchmark_frequency": "monthly"
+  },
+  "execution": {
+    "signal_time": "close",
+    "execution_time": "next_open",
+    "initial_cash": 1000000.0,
+    "buy_fee": 0.0003,
+    "sell_fee": 0.0003,
+    "slippage_bps": 0.0,
+    "adv_window": 20,
+    "participation_rate": 0.001,
+    "capacity_limited": false,
+    "max_stale_days": 5,
+    "allow_fractional_units": true
+  },
+  "metrics": {
+    "annualization": 252,
+    "daily_risk_free": 0.0
+  }
+}

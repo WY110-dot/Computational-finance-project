@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "tolerance": 1e-06,
+  "checks": {
+    "returns": true,
+    "compound": true,
+    "valuation": true,
+    "cash_ledger": true,
+    "cost": true,
+    "position_ledger": true,
+    "execution_conservation": true,
+    "no_borrowing": true,
+    "no_shorting": true,
+    "timing": true,
+    "capacity": true,
+    "missing_open": true,
+    "rejected_orders_are_free": true,
+    "stale_limit": true
+  },
+  "max_errors": {
+    "return": 0.0,
+    "compound": 1.3322676295501878e-15,
+    "valuation": 2.3283064365386963e-10,
+    "cash": 1.6007106751203537e-10,
+    "fee_reconciliation": 7.105427357601002e-15,
+    "fee_formula": 0.0,
+    "position": 0.0,
+    "position_valuation": 0.0,
+    "execution_conservation": 6.643006145168329e-10
+  },
+  "violations": {
+    "timing": 0,
+    "capacity": 0,
+    "missing_open": 0,
+    "rejected_order_fee": 0
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "project": "CF2026_Project3",
+  "frozen_at": "2026-11-16T09:31:49.532228+00:00",
+  "git_commit": "8cd7eede9d09fb0da699c25f92aef69e46b2e8e9",
+  "files_count": 12,
+  "files": [
+    {
+      "path": "config/project3.json",
+      "sha256": "e26676722f22261d930fba3f0ce6311d0431855d7b303673c53e5f758cc035ae",
+      "bytes": 1875
+    },
+    {
+      "path": "docs/HYPOTHESIS_CARD.md",
+      "sha256": "2b6262dbbf60d6098ddc5de11e472405c3cec70fa512dd3a4253c40abaa0a5d6",
+      "bytes": 5162
+    },
+    {
+      "path": "docs/FACTOR_CARDS.md",
+      "sha256": "90b81dbb363526616ef9794e68b00b75ec98f8b53b64e7121bf2f264c1c75dc5",
+      "bytes": 7610
+    },
+    {
+      "path": "docs/PROTOCOL.md",
+      "sha256": "4799b9e09a3d2976fa85f8fd7e615c9dd5940573925de060ae212ec8827c4050",
+      "bytes": 6658
+    },
+    {
+      "path": "docs/DATA.md",
+      "sha256": "c84d2dd1b6172dc7d389966f67e22530edb3e9aac8f1502cd55a40894877d00a",
+      "bytes": 3282
+    },
+    {
+      "path": "docs/P2_TO_P3_MAPPING.md",
+      "sha256": "126441c446b22e0efbc1c2eecf77e0bac93e4120374389a6fb41f9a26ac504cb",
+      "bytes": 3127
+    },
+    {
+      "path": "docs/CANDIDATE_REGISTER.csv",
+      "sha256": "9a4675026d80ce1a1d91706767f2803ab501c397d136dae76d0066c401950e93",
+      "bytes": 2327
+    },
+    {
+      "path": "src/quantcf/project3_factors.py",
+      "sha256": "832605ade7d2ca54827be622d1d2d9a9c9b4d17fdead150c09451575e81b7695",
+      "bytes": 11884
+    },
+    {
+      "path": "src/quantcf/project3_pipeline.py",
+      "sha256": "950f088723a16b47f8bb3f663fb214db239c85a950818f4c277491405955e6ca",
+      "bytes": 22046
+    },
+    {
+      "path": "src/quantcf/project3_diagnostics.py",
+      "sha256": "3f6f4f17602182e664195759cb519b59db1692f1439595c1e9d1260a72885f08",
+      "bytes": 15550
+    },
+    {
+      "path": "data/manifests/source_manifest.json",
+      "sha256": "1f5d74657a3e0958191c3cbc135d7b7f81e1d43bfe3398f8b7eb7e677d1b8261",
+      "bytes": 881
+    },
+    {
+      "path": "data/us_sector/source_manifest.json",
+      "sha256": "c0080a3a7a8832eb5c1810011112943cecbb7b01072f6df4e5afd73dabf86c25",
+      "bytes": 3797
+    }
+  ],
+  "research_discipline": {
+    "evaluation_split_untuned": true,
+    "p5_quarantined": true,
+    "candidate_budget_locked": true
+  }
+}

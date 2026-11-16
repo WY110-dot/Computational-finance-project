@@ -1,0 +1,5 @@
+asset_class,ann_mean_return_contribution,covariance_with_portfolio,variance_contribution_ratio,pct_of_total_risk,interpretation
+Bonds,0.10194362180824218,0.0002168005897178942,0.0456067801971655,4.56%,Bonds contributes 4.56% of total portfolio return variance.
+Domestic_Equity,0.030550375678884273,0.004029062769758619,0.8475649461104655,84.76%,Domestic_Equity contributes 84.76% of total portfolio return variance.
+Cross_Border_Equity,0.032233322422136196,0.00047727105122507874,0.10040007712163387,10.04%,Cross_Border_Equity contributes 10.04% of total portfolio return variance.
+Gold,0.024392270096638524,3.0557667112933965e-05,0.006428196570734257,0.64%,Gold contributes 0.64% of total portfolio return variance.

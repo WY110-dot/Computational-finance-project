@@ -1,0 +1,78 @@
+{
+  "project": "CF2026_Project3",
+  "version": "1.0.0",
+  "seed": 20261116,
+  "samples": {
+    "US9": {
+      "develop": {
+        "start": "2000-01-01",
+        "end": "2014-12-31"
+      },
+      "validate": {
+        "start": "2015-01-01",
+        "end": "2019-12-31"
+      },
+      "evaluate": {
+        "start": "2020-01-01",
+        "end": "2024-12-31"
+      },
+      "quarantine_p5": {
+        "start": "2025-01-01",
+        "end": "2099-12-31"
+      }
+    },
+    "CN21": {
+      "develop": {
+        "start": "2020-02-01",
+        "end": "2021-12-31"
+      },
+      "validate": {
+        "start": "2022-01-01",
+        "end": "2022-12-31"
+      },
+      "evaluate": {
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "quarantine_p5": {
+        "start": "2025-01-01",
+        "end": "2026-09-18"
+      }
+    }
+  },
+  "common_evaluate": {
+    "start": "2023-01-01",
+    "end": "2024-12-31"
+  },
+  "parameters": {
+    "momentum_lookback_months": 12,
+    "min_history_months": 13,
+    "min_history_days": 252,
+    "min_qualified_assets": 6,
+    "er_window_f1": 63,
+    "er_window_f2": 126,
+    "winsorize_std": 3.0,
+    "std_tolerance": 1e-12,
+    "ewma_lambda": 0.9836065573770492,
+    "ewma_ann_factor": 261.0,
+    "ann_factor_monthly": 12.0,
+    "ann_factor_daily": 252.0,
+    "budget_nav_ratio": 0.99,
+    "cash_buffer_ratio": 0.01,
+    "base_cost_bps": 3.0,
+    "cost_scenarios_bps": [0.0, 3.0, 10.0]
+  },
+  "bootstrap": {
+    "seed": 20261116,
+    "repetitions": 2000,
+    "primary_block_size": 3,
+    "sensitivity_block_sizes": [6, 12]
+  },
+  "data": {
+    "cn_prices_raw": "data/raw/prices_raw.parquet",
+    "cn_adjustments_raw": "data/raw/adjustment_raw.parquet",
+    "cn_source_manifest": "data/manifests/source_manifest.json",
+    "us_sector_dir": "data/us_sector",
+    "us_source_manifest": "data/us_sector/source_manifest.json"
+  }
+}

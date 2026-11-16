@@ -1,0 +1,377 @@
+report_location,metric_name,universe,strategy,fee_bps,source_file,filter_key,source_column,raw_value,displayed_value,assertion_passed
+Table 1 Performance (US9_A_0.0bps),ann_return,US9,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_0bps',ann_return,0.1707400180713518,17.07%,True
+Table 1 Performance (US9_A_0.0bps),cagr,US9,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_0bps',cagr,0.169353893740398,16.94%,True
+Table 1 Performance (US9_A_0.0bps),sharpe,US9,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_0bps',sharpe,1.0359002546317797,1.036,True
+Table 1 Performance (US9_A_0.0bps),max_drawdown,US9,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_0bps',max_drawdown,-0.1860953206147325,-18.61%,True
+Table 1 Performance (US9_A_0.0bps),fees,US9,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_A_3.0bps),ann_return,US9,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_3bps',ann_return,0.1691678944511119,16.92%,True
+Table 1 Performance (US9_A_3.0bps),cagr,US9,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_3bps',cagr,0.1675355445722355,16.75%,True
+Table 1 Performance (US9_A_3.0bps),sharpe,US9,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_3bps',sharpe,1.0262865797052882,1.026,True
+Table 1 Performance (US9_A_3.0bps),max_drawdown,US9,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_3bps',max_drawdown,-0.1867544462481898,-18.68%,True
+Table 1 Performance (US9_A_3.0bps),fees,US9,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_3bps',fees,10960.023494967749,10960.02,True
+Table 1 Performance (US9_A_10.0bps),ann_return,US9,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_10bps',ann_return,0.1654985781133216,16.55%,True
+Table 1 Performance (US9_A_10.0bps),cagr,US9,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_10bps',cagr,0.1633005660760411,16.33%,True
+Table 1 Performance (US9_A_10.0bps),sharpe,US9,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_10bps',sharpe,1.0038205492730448,1.004,True
+Table 1 Performance (US9_A_10.0bps),max_drawdown,US9,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_10bps',max_drawdown,-0.1882917278880705,-18.83%,True
+Table 1 Performance (US9_A_10.0bps),fees,US9,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A_10bps',fees,36194.31893290265,36194.32,True
+Table 1 Performance (US9_B_0.0bps),ann_return,US9,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_0bps',ann_return,0.1182986573748225,11.83%,True
+Table 1 Performance (US9_B_0.0bps),cagr,US9,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_0bps',cagr,0.1080780790429711,10.81%,True
+Table 1 Performance (US9_B_0.0bps),sharpe,US9,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_0bps',sharpe,0.6753098527094256,0.675,True
+Table 1 Performance (US9_B_0.0bps),max_drawdown,US9,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_0bps',max_drawdown,-0.2354604864549695,-23.55%,True
+Table 1 Performance (US9_B_0.0bps),fees,US9,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_B_3.0bps),ann_return,US9,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_3bps',ann_return,0.115706776463353,11.57%,True
+Table 1 Performance (US9_B_3.0bps),cagr,US9,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_3bps',cagr,0.1052106347200909,10.52%,True
+Table 1 Performance (US9_B_3.0bps),sharpe,US9,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_3bps',sharpe,0.6601483829793534,0.660,True
+Table 1 Performance (US9_B_3.0bps),max_drawdown,US9,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_3bps',max_drawdown,-0.2363997597539228,-23.64%,True
+Table 1 Performance (US9_B_3.0bps),fees,US9,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_3bps',fees,15592.21805500685,15592.22,True
+Table 1 Performance (US9_B_10.0bps),ann_return,US9,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_10bps',ann_return,0.1096560110727281,10.97%,True
+Table 1 Performance (US9_B_10.0bps),cagr,US9,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_10bps',cagr,0.0985417979180849,9.85%,True
+Table 1 Performance (US9_B_10.0bps),sharpe,US9,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_10bps',sharpe,0.624797717634616,0.625,True
+Table 1 Performance (US9_B_10.0bps),max_drawdown,US9,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_10bps',max_drawdown,-0.2385900957030799,-23.86%,True
+Table 1 Performance (US9_B_10.0bps),fees,US9,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_B_10bps',fees,51189.94080102603,51189.94,True
+Table 1 Performance (US9_C_0.0bps),ann_return,US9,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_0bps',ann_return,0.1606042768740135,16.06%,True
+Table 1 Performance (US9_C_0.0bps),cagr,US9,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_0bps',cagr,0.1571969939719011,15.72%,True
+Table 1 Performance (US9_C_0.0bps),sharpe,US9,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_0bps',sharpe,0.957916214704248,0.958,True
+Table 1 Performance (US9_C_0.0bps),max_drawdown,US9,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_0bps',max_drawdown,-0.1860953206147325,-18.61%,True
+Table 1 Performance (US9_C_0.0bps),fees,US9,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_C_3.0bps),ann_return,US9,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_3bps',ann_return,0.1586134903342358,15.86%,True
+Table 1 Performance (US9_C_3.0bps),cagr,US9,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_3bps',cagr,0.1549153047555147,15.49%,True
+Table 1 Performance (US9_C_3.0bps),sharpe,US9,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_3bps',sharpe,0.94587360291035,0.946,True
+Table 1 Performance (US9_C_3.0bps),max_drawdown,US9,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_3bps',max_drawdown,-0.1867544462481898,-18.68%,True
+Table 1 Performance (US9_C_3.0bps),fees,US9,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_3bps',fees,13917.09527348988,13917.10,True
+Table 1 Performance (US9_C_10.0bps),ann_return,US9,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_10bps',ann_return,0.1539670155730255,15.40%,True
+Table 1 Performance (US9_C_10.0bps),cagr,US9,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_10bps',cagr,0.1496047725775877,14.96%,True
+Table 1 Performance (US9_C_10.0bps),sharpe,US9,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_10bps',sharpe,0.9177506236256452,0.918,True
+Table 1 Performance (US9_C_10.0bps),max_drawdown,US9,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_10bps',max_drawdown,-0.1882917278880705,-18.83%,True
+Table 1 Performance (US9_C_10.0bps),fees,US9,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_C_10bps',fees,45847.35339707375,45847.35,True
+Table 1 Performance (US9_F2_0.0bps),ann_return,US9,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_0bps',ann_return,0.1482491033962736,14.82%,True
+Table 1 Performance (US9_F2_0.0bps),cagr,US9,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_0bps',cagr,0.1422794117855268,14.23%,True
+Table 1 Performance (US9_F2_0.0bps),sharpe,US9,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_0bps',sharpe,0.8619446912612223,0.862,True
+Table 1 Performance (US9_F2_0.0bps),max_drawdown,US9,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_0bps',max_drawdown,-0.18594156964862,-18.59%,True
+Table 1 Performance (US9_F2_0.0bps),fees,US9,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_F2_3.0bps),ann_return,US9,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_3bps',ann_return,0.1460883981257488,14.61%,True
+Table 1 Performance (US9_F2_3.0bps),cagr,US9,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_3bps',cagr,0.1398555418146165,13.99%,True
+Table 1 Performance (US9_F2_3.0bps),sharpe,US9,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_3bps',sharpe,0.8498178229838335,0.850,True
+Table 1 Performance (US9_F2_3.0bps),max_drawdown,US9,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_3bps',max_drawdown,-0.1861475792856614,-18.61%,True
+Table 1 Performance (US9_F2_3.0bps),fees,US9,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_3bps',fees,14517.843654880238,14517.84,True
+Table 1 Performance (US9_F2_10.0bps),ann_return,US9,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_10bps',ann_return,0.141044942001603,14.10%,True
+Table 1 Performance (US9_F2_10.0bps),cagr,US9,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_10bps',cagr,0.1342150191844828,13.42%,True
+Table 1 Performance (US9_F2_10.0bps),sharpe,US9,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_10bps',sharpe,0.8214350753253512,0.821,True
+Table 1 Performance (US9_F2_10.0bps),max_drawdown,US9,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_10bps',max_drawdown,-0.1866287198488849,-18.66%,True
+Table 1 Performance (US9_F2_10.0bps),fees,US9,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F2_10bps',fees,47788.77564522599,47788.78,True
+Table 1 Performance (US9_F3_0.0bps),ann_return,US9,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_0bps',ann_return,0.1769397442835752,17.69%,True
+Table 1 Performance (US9_F3_0.0bps),cagr,US9,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_0bps',cagr,0.1759792369373611,17.60%,True
+Table 1 Performance (US9_F3_0.0bps),sharpe,US9,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_0bps',sharpe,1.055467910471987,1.055,True
+Table 1 Performance (US9_F3_0.0bps),max_drawdown,US9,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_0bps',max_drawdown,-0.18594156964862,-18.59%,True
+Table 1 Performance (US9_F3_0.0bps),fees,US9,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_F3_3.0bps),ann_return,US9,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_3bps',ann_return,0.175304673667746,17.53%,True
+Table 1 Performance (US9_F3_3.0bps),cagr,US9,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_3bps',cagr,0.1740811991358719,17.41%,True
+Table 1 Performance (US9_F3_3.0bps),sharpe,US9,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_3bps',sharpe,1.0457228702170511,1.046,True
+Table 1 Performance (US9_F3_3.0bps),max_drawdown,US9,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_3bps',max_drawdown,-0.1861633273374074,-18.62%,True
+Table 1 Performance (US9_F3_3.0bps),fees,US9,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_3bps',fees,12168.131564356156,12168.13,True
+Table 1 Performance (US9_F3_10.0bps),ann_return,US9,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_10bps',ann_return,0.1714882900315537,17.15%,True
+Table 1 Performance (US9_F3_10.0bps),cagr,US9,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_10bps',cagr,0.1696609027593438,16.97%,True
+Table 1 Performance (US9_F3_10.0bps),sharpe,US9,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_10bps',sharpe,1.022943328046399,1.023,True
+Table 1 Performance (US9_F3_10.0bps),max_drawdown,US9,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_10bps',max_drawdown,-0.1866811832130284,-18.67%,True
+Table 1 Performance (US9_F3_10.0bps),fees,US9,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_F3_10bps',fees,40171.03886351914,40171.04,True
+Table 1 Performance (US9_A0_0.0bps),ann_return,US9,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_0bps',ann_return,0.06290224166718,6.29%,True
+Table 1 Performance (US9_A0_0.0bps),cagr,US9,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_0bps',cagr,0.0579328710894784,5.79%,True
+Table 1 Performance (US9_A0_0.0bps),sharpe,US9,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_0bps',sharpe,0.5524045840097227,0.552,True
+Table 1 Performance (US9_A0_0.0bps),max_drawdown,US9,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_0bps',max_drawdown,-0.1755008132739832,-17.55%,True
+Table 1 Performance (US9_A0_0.0bps),fees,US9,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_A0_3.0bps),ann_return,US9,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_3bps',ann_return,0.0622970552833545,6.23%,True
+Table 1 Performance (US9_A0_3.0bps),cagr,US9,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_3bps',cagr,0.0572978044191643,5.73%,True
+Table 1 Performance (US9_A0_3.0bps),sharpe,US9,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_3bps',sharpe,0.5471806731141999,0.547,True
+Table 1 Performance (US9_A0_3.0bps),max_drawdown,US9,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_3bps',max_drawdown,-0.1758357715162525,-17.58%,True
+Table 1 Performance (US9_A0_3.0bps),fees,US9,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_3bps',fees,3038.568132530507,3038.57,True
+Table 1 Performance (US9_A0_10.0bps),ann_return,US9,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_10bps',ann_return,0.0608848423397177,6.09%,True
+Table 1 Performance (US9_A0_10.0bps),cagr,US9,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_10bps',cagr,0.0558170871522418,5.58%,True
+Table 1 Performance (US9_A0_10.0bps),sharpe,US9,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_10bps',sharpe,0.5349783818896036,0.535,True
+Table 1 Performance (US9_A0_10.0bps),max_drawdown,US9,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_10bps',max_drawdown,-0.1766171559612923,-17.66%,True
+Table 1 Performance (US9_A0_10.0bps),fees,US9,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_A0_10bps',fees,10093.914956906705,10093.91,True
+Table 1 Performance (US9_passive_equal_0.0bps),ann_return,US9,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_0bps',ann_return,0.1456929644188308,14.57%,True
+Table 1 Performance (US9_passive_equal_0.0bps),cagr,US9,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_0bps',cagr,0.1363709971941267,13.64%,True
+Table 1 Performance (US9_passive_equal_0.0bps),sharpe,US9,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_0bps',sharpe,0.7853956148198115,0.785,True
+Table 1 Performance (US9_passive_equal_0.0bps),max_drawdown,US9,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_0bps',max_drawdown,-0.2655673226951722,-26.56%,True
+Table 1 Performance (US9_passive_equal_0.0bps),fees,US9,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_passive_equal_3.0bps),ann_return,US9,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_3bps',ann_return,0.1455318843014844,14.55%,True
+Table 1 Performance (US9_passive_equal_3.0bps),cagr,US9,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_3bps',cagr,0.1361887251676237,13.62%,True
+Table 1 Performance (US9_passive_equal_3.0bps),sharpe,US9,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_3bps',sharpe,0.7845060132907542,0.785,True
+Table 1 Performance (US9_passive_equal_3.0bps),max_drawdown,US9,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_3bps',max_drawdown,-0.2658028684738633,-26.58%,True
+Table 1 Performance (US9_passive_equal_3.0bps),fees,US9,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_3bps',fees,930.593482949582,930.59,True
+Table 1 Performance (US9_passive_equal_10.0bps),ann_return,US9,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_10bps',ann_return,0.1451560252487151,14.52%,True
+Table 1 Performance (US9_passive_equal_10.0bps),cagr,US9,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_10bps',cagr,0.1357634424379641,13.58%,True
+Table 1 Performance (US9_passive_equal_10.0bps),sharpe,US9,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_10bps',sharpe,0.7824288686912567,0.782,True
+Table 1 Performance (US9_passive_equal_10.0bps),max_drawdown,US9,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_10bps',max_drawdown,-0.2663525286086842,-26.64%,True
+Table 1 Performance (US9_passive_equal_10.0bps),fees,US9,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_equal_10bps',fees,3099.1893303266816,3099.19,True
+Table 1 Performance (US9_passive_inv_vol_0.0bps),ann_return,US9,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_0bps',ann_return,0.1372186725668293,13.72%,True
+Table 1 Performance (US9_passive_inv_vol_0.0bps),cagr,US9,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_0bps',cagr,0.1284483056751355,12.84%,True
+Table 1 Performance (US9_passive_inv_vol_0.0bps),sharpe,US9,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_0bps',sharpe,0.7711075898423941,0.771,True
+Table 1 Performance (US9_passive_inv_vol_0.0bps),max_drawdown,US9,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_0bps',max_drawdown,-0.2502279445029505,-25.02%,True
+Table 1 Performance (US9_passive_inv_vol_0.0bps),fees,US9,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_0bps',fees,0.0,0.00,True
+Table 1 Performance (US9_passive_inv_vol_3.0bps),ann_return,US9,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_3bps',ann_return,0.1370207035682251,13.70%,True
+Table 1 Performance (US9_passive_inv_vol_3.0bps),cagr,US9,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_3bps',cagr,0.1282262901238549,12.82%,True
+Table 1 Performance (US9_passive_inv_vol_3.0bps),sharpe,US9,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_3bps',sharpe,0.7699813066670069,0.770,True
+Table 1 Performance (US9_passive_inv_vol_3.0bps),max_drawdown,US9,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_3bps',max_drawdown,-0.2504752009596118,-25.05%,True
+Table 1 Performance (US9_passive_inv_vol_3.0bps),fees,US9,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_3bps',fees,1169.0155697385685,1169.02,True
+Table 1 Performance (US9_passive_inv_vol_10.0bps),ann_return,US9,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_10bps',ann_return,0.1365588008805928,13.66%,True
+Table 1 Performance (US9_passive_inv_vol_10.0bps),cagr,US9,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_10bps',cagr,0.1277083645954773,12.77%,True
+Table 1 Performance (US9_passive_inv_vol_10.0bps),sharpe,US9,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_10bps',sharpe,0.7673520436863862,0.767,True
+Table 1 Performance (US9_passive_inv_vol_10.0bps),max_drawdown,US9,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_10bps',max_drawdown,-0.2510520173087617,-25.11%,True
+Table 1 Performance (US9_passive_inv_vol_10.0bps),fees,US9,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_US9_passive_inv_vol_10bps',fees,3892.1078944552432,3892.11,True
+Table 1 Performance (CN21_A_0.0bps),ann_return,CN21,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_0bps',ann_return,0.0224133495847226,2.24%,True
+Table 1 Performance (CN21_A_0.0bps),cagr,CN21,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_0bps',cagr,0.0220788369735847,2.21%,True
+Table 1 Performance (CN21_A_0.0bps),sharpe,CN21,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_0bps',sharpe,0.6587733553656303,0.659,True
+Table 1 Performance (CN21_A_0.0bps),max_drawdown,CN21,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_0bps',max_drawdown,-0.0393854099824009,-3.94%,True
+Table 1 Performance (CN21_A_0.0bps),fees,CN21,A,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_A_3.0bps),ann_return,CN21,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_3bps',ann_return,0.020092483518169,2.01%,True
+Table 1 Performance (CN21_A_3.0bps),cagr,CN21,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_3bps',cagr,0.0197017464471989,1.97%,True
+Table 1 Performance (CN21_A_3.0bps),sharpe,CN21,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_3bps',sharpe,0.5845721346294614,0.585,True
+Table 1 Performance (CN21_A_3.0bps),max_drawdown,CN21,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_3bps',max_drawdown,-0.0416550897469927,-4.17%,True
+Table 1 Performance (CN21_A_3.0bps),fees,CN21,A,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_3bps',fees,4420.416685180804,4420.42,True
+Table 1 Performance (CN21_A_10.0bps),ann_return,CN21,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_10bps',ann_return,0.0146745892913174,1.47%,True
+Table 1 Performance (CN21_A_10.0bps),cagr,CN21,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_10bps',cagr,0.0141705527822191,1.42%,True
+Table 1 Performance (CN21_A_10.0bps),sharpe,CN21,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_10bps',sharpe,0.4166308086406269,0.417,True
+Table 1 Performance (CN21_A_10.0bps),max_drawdown,CN21,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_10bps',max_drawdown,-0.0471562810652632,-4.72%,True
+Table 1 Performance (CN21_A_10.0bps),fees,CN21,A,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A_10bps',fees,14669.567434045566,14669.57,True
+Table 1 Performance (CN21_B_0.0bps),ann_return,CN21,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_0bps',ann_return,0.0212580855738859,2.13%,True
+Table 1 Performance (CN21_B_0.0bps),cagr,CN21,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_0bps',cagr,0.0205095257346656,2.05%,True
+Table 1 Performance (CN21_B_0.0bps),sharpe,CN21,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_0bps',sharpe,0.4852265381902371,0.485,True
+Table 1 Performance (CN21_B_0.0bps),max_drawdown,CN21,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_0bps',max_drawdown,-0.0485686481037278,-4.86%,True
+Table 1 Performance (CN21_B_0.0bps),fees,CN21,B,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_B_3.0bps),ann_return,CN21,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_3bps',ann_return,0.0189453555449051,1.89%,True
+Table 1 Performance (CN21_B_3.0bps),cagr,CN21,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_3bps',cagr,0.0181398676374682,1.81%,True
+Table 1 Performance (CN21_B_3.0bps),sharpe,CN21,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_3bps',sharpe,0.4289434208176631,0.429,True
+Table 1 Performance (CN21_B_3.0bps),max_drawdown,CN21,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_3bps',max_drawdown,-0.0491409560828933,-4.91%,True
+Table 1 Performance (CN21_B_3.0bps),fees,CN21,B,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_3bps',fees,4519.908040391872,4519.91,True
+Table 1 Performance (CN21_B_10.0bps),ann_return,CN21,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_10bps',ann_return,0.0135466009573682,1.35%,True
+Table 1 Performance (CN21_B_10.0bps),cagr,CN21,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_10bps',cagr,0.0126262204452769,1.26%,True
+Table 1 Performance (CN21_B_10.0bps),sharpe,CN21,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_10bps',sharpe,0.3008652432273851,0.301,True
+Table 1 Performance (CN21_B_10.0bps),max_drawdown,CN21,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_10bps',max_drawdown,-0.0504762597012398,-5.05%,True
+Table 1 Performance (CN21_B_10.0bps),fees,CN21,B,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_B_10bps',fees,14998.96579117481,14998.97,True
+Table 1 Performance (CN21_C_0.0bps),ann_return,CN21,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_0bps',ann_return,0.0382299734994641,3.82%,True
+Table 1 Performance (CN21_C_0.0bps),cagr,CN21,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_0bps',cagr,0.0384161382766397,3.84%,True
+Table 1 Performance (CN21_C_0.0bps),sharpe,CN21,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_0bps',sharpe,1.2138596323098492,1.214,True
+Table 1 Performance (CN21_C_0.0bps),max_drawdown,CN21,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_0bps',max_drawdown,-0.0217527802857805,-2.18%,True
+Table 1 Performance (CN21_C_0.0bps),fees,CN21,C,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_C_3.0bps),ann_return,CN21,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_3bps',ann_return,0.0357583462089691,3.58%,True
+Table 1 Performance (CN21_C_3.0bps),cagr,CN21,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_3bps',cagr,0.035849335038838,3.58%,True
+Table 1 Performance (CN21_C_3.0bps),sharpe,CN21,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_3bps',sharpe,1.122894894445849,1.123,True
+Table 1 Performance (CN21_C_3.0bps),max_drawdown,CN21,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_3bps',max_drawdown,-0.0227253672758586,-2.27%,True
+Table 1 Performance (CN21_C_3.0bps),fees,CN21,C,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_3bps',fees,4811.92751791233,4811.93,True
+Table 1 Performance (CN21_C_10.0bps),ann_return,CN21,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_10bps',ann_return,0.029988611429829,3.00%,True
+Table 1 Performance (CN21_C_10.0bps),cagr,CN21,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_10bps',cagr,0.0298782527132703,2.99%,True
+Table 1 Performance (CN21_C_10.0bps),sharpe,CN21,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_10bps',sharpe,0.917010359336409,0.917,True
+Table 1 Performance (CN21_C_10.0bps),max_drawdown,CN21,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_10bps',max_drawdown,-0.0249941541811994,-2.50%,True
+Table 1 Performance (CN21_C_10.0bps),fees,CN21,C,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_C_10bps',fees,15962.820288780798,15962.82,True
+Table 1 Performance (CN21_F2_0.0bps),ann_return,CN21,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_0bps',ann_return,0.0224307275133609,2.24%,True
+Table 1 Performance (CN21_F2_0.0bps),cagr,CN21,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_0bps',cagr,0.0210417399802851,2.10%,True
+Table 1 Performance (CN21_F2_0.0bps),sharpe,CN21,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_0bps',sharpe,0.3938878109005502,0.394,True
+Table 1 Performance (CN21_F2_0.0bps),max_drawdown,CN21,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_0bps',max_drawdown,-0.060402185894673,-6.04%,True
+Table 1 Performance (CN21_F2_0.0bps),fees,CN21,F2,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_F2_3.0bps),ann_return,CN21,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_3bps',ann_return,0.0204982090144249,2.05%,True
+Table 1 Performance (CN21_F2_3.0bps),cagr,CN21,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_3bps',cagr,0.0190577288371061,1.91%,True
+Table 1 Performance (CN21_F2_3.0bps),sharpe,CN21,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_3bps',sharpe,0.3582774630818297,0.358,True
+Table 1 Performance (CN21_F2_3.0bps),max_drawdown,CN21,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_3bps',max_drawdown,-0.0609406242712176,-6.09%,True
+Table 1 Performance (CN21_F2_3.0bps),fees,CN21,F2,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_3bps',fees,3740.6819004122463,3740.68,True
+Table 1 Performance (CN21_F2_10.0bps),ann_return,CN21,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_10bps',ann_return,0.0159867908433646,1.60%,True
+Table 1 Performance (CN21_F2_10.0bps),cagr,CN21,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_10bps',cagr,0.0144383738241433,1.44%,True
+Table 1 Performance (CN21_F2_10.0bps),sharpe,CN21,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_10bps',sharpe,0.2763239062953714,0.276,True
+Table 1 Performance (CN21_F2_10.0bps),max_drawdown,CN21,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_10bps',max_drawdown,-0.0621970396655816,-6.22%,True
+Table 1 Performance (CN21_F2_10.0bps),fees,CN21,F2,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F2_10bps',fees,12423.908184183048,12423.91,True
+Table 1 Performance (CN21_F3_0.0bps),ann_return,CN21,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_0bps',ann_return,0.0147337698116881,1.47%,True
+Table 1 Performance (CN21_F3_0.0bps),cagr,CN21,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_0bps',cagr,0.0141469145584378,1.41%,True
+Table 1 Performance (CN21_F3_0.0bps),sharpe,CN21,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_0bps',sharpe,0.391962000382598,0.392,True
+Table 1 Performance (CN21_F3_0.0bps),max_drawdown,CN21,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_0bps',max_drawdown,-0.0365058326577791,-3.65%,True
+Table 1 Performance (CN21_F3_0.0bps),fees,CN21,F3,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_F3_3.0bps),ann_return,CN21,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_3bps',ann_return,0.0121834629204331,1.22%,True
+Table 1 Performance (CN21_F3_3.0bps),cagr,CN21,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_3bps',cagr,0.0115538996010244,1.16%,True
+Table 1 Performance (CN21_F3_3.0bps),sharpe,CN21,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_3bps',sharpe,0.3212213129083302,0.321,True
+Table 1 Performance (CN21_F3_3.0bps),max_drawdown,CN21,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_3bps',max_drawdown,-0.0386074094025402,-3.86%,True
+Table 1 Performance (CN21_F3_3.0bps),fees,CN21,F3,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_3bps',fees,4857.332821416777,4857.33,True
+Table 1 Performance (CN21_F3_10.0bps),ann_return,CN21,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_10bps',ann_return,0.0062301149499588,0.62%,True
+Table 1 Performance (CN21_F3_10.0bps),cagr,CN21,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_10bps',cagr,0.0055227992528426,0.55%,True
+Table 1 Performance (CN21_F3_10.0bps),sharpe,CN21,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_10bps',sharpe,0.1607668523071706,0.161,True
+Table 1 Performance (CN21_F3_10.0bps),max_drawdown,CN21,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_10bps',max_drawdown,-0.0441550720297985,-4.42%,True
+Table 1 Performance (CN21_F3_10.0bps),fees,CN21,F3,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_F3_10bps',fees,16110.91921060524,16110.92,True
+Table 1 Performance (CN21_A0_0.0bps),ann_return,CN21,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_0bps',ann_return,0.0318764548194886,3.19%,True
+Table 1 Performance (CN21_A0_0.0bps),cagr,CN21,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_0bps',cagr,0.0322408448413913,3.22%,True
+Table 1 Performance (CN21_A0_0.0bps),sharpe,CN21,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_0bps',sharpe,2.176310225541009,2.176,True
+Table 1 Performance (CN21_A0_0.0bps),max_drawdown,CN21,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_0bps',max_drawdown,-0.0074564311218187,-0.75%,True
+Table 1 Performance (CN21_A0_0.0bps),fees,CN21,A0,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_A0_3.0bps),ann_return,CN21,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_3bps',ann_return,0.0313503369395728,3.14%,True
+Table 1 Performance (CN21_A0_3.0bps),cagr,CN21,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_3bps',cagr,0.0316989041854449,3.17%,True
+Table 1 Performance (CN21_A0_3.0bps),sharpe,CN21,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_3bps',sharpe,2.136170782747618,2.136,True
+Table 1 Performance (CN21_A0_3.0bps),max_drawdown,CN21,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_3bps',max_drawdown,-0.0075429611596154,-0.75%,True
+Table 1 Performance (CN21_A0_3.0bps),fees,CN21,A0,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_3bps',fees,1027.4008004885447,1027.40,True
+Table 1 Performance (CN21_A0_10.0bps),ann_return,CN21,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_10bps',ann_return,0.030122916090548,3.01%,True
+Table 1 Performance (CN21_A0_10.0bps),cagr,CN21,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_10bps',cagr,0.0304354890759424,3.04%,True
+Table 1 Performance (CN21_A0_10.0bps),sharpe,CN21,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_10bps',sharpe,2.042278644635798,2.042,True
+Table 1 Performance (CN21_A0_10.0bps),max_drawdown,CN21,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_10bps',max_drawdown,-0.0077448483960662,-0.77%,True
+Table 1 Performance (CN21_A0_10.0bps),fees,CN21,A0,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_A0_10bps',fees,3420.586329410096,3420.59,True
+Table 1 Performance (CN21_passive_equal_0.0bps),ann_return,CN21,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_0bps',ann_return,0.0970159744722674,9.70%,True
+Table 1 Performance (CN21_passive_equal_0.0bps),cagr,CN21,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_0bps',cagr,0.0728763690434317,7.29%,True
+Table 1 Performance (CN21_passive_equal_0.0bps),sharpe,CN21,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_0bps',sharpe,0.3902051166620291,0.390,True
+Table 1 Performance (CN21_passive_equal_0.0bps),max_drawdown,CN21,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_0bps',max_drawdown,-0.1763583090259186,-17.64%,True
+Table 1 Performance (CN21_passive_equal_0.0bps),fees,CN21,passive_equal,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_passive_equal_3.0bps),ann_return,CN21,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_3bps',ann_return,0.0966868139010361,9.67%,True
+Table 1 Performance (CN21_passive_equal_3.0bps),cagr,CN21,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_3bps',cagr,0.0725334827410548,7.25%,True
+Table 1 Performance (CN21_passive_equal_3.0bps),sharpe,CN21,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_3bps',sharpe,0.3889340312945909,0.389,True
+Table 1 Performance (CN21_passive_equal_3.0bps),max_drawdown,CN21,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_3bps',max_drawdown,-0.1764196742203255,-17.64%,True
+Table 1 Performance (CN21_passive_equal_3.0bps),fees,CN21,passive_equal,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_3bps',fees,640.6867212357885,640.69,True
+Table 1 Performance (CN21_passive_equal_10.0bps),ann_return,CN21,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_10bps',ann_return,0.0959186453099428,9.59%,True
+Table 1 Performance (CN21_passive_equal_10.0bps),cagr,CN21,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_10bps',cagr,0.0717335170143982,7.17%,True
+Table 1 Performance (CN21_passive_equal_10.0bps),sharpe,CN21,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_10bps',sharpe,0.3859652787438201,0.386,True
+Table 1 Performance (CN21_passive_equal_10.0bps),max_drawdown,CN21,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_10bps',max_drawdown,-0.1765628475507941,-17.66%,True
+Table 1 Performance (CN21_passive_equal_10.0bps),fees,CN21,passive_equal,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_equal_10bps',fees,2134.7166367395203,2134.72,True
+Table 1 Performance (CN21_passive_inv_vol_0.0bps),ann_return,CN21,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_0bps',ann_return,0.0737993564549901,7.38%,True
+Table 1 Performance (CN21_passive_inv_vol_0.0bps),cagr,CN21,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_0bps',cagr,0.0732379988391076,7.32%,True
+Table 1 Performance (CN21_passive_inv_vol_0.0bps),sharpe,CN21,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_0bps',sharpe,0.9244821952200832,0.924,True
+Table 1 Performance (CN21_passive_inv_vol_0.0bps),max_drawdown,CN21,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_0bps',max_drawdown,-0.044650306255469,-4.47%,True
+Table 1 Performance (CN21_passive_inv_vol_0.0bps),fees,CN21,passive_inv_vol,0.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_0bps',fees,0.0,0.00,True
+Table 1 Performance (CN21_passive_inv_vol_3.0bps),ann_return,CN21,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_3bps',ann_return,0.0733172059245141,7.33%,True
+Table 1 Performance (CN21_passive_inv_vol_3.0bps),cagr,CN21,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_3bps',cagr,0.0727264481528129,7.27%,True
+Table 1 Performance (CN21_passive_inv_vol_3.0bps),sharpe,CN21,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_3bps',sharpe,0.918851068227742,0.919,True
+Table 1 Performance (CN21_passive_inv_vol_3.0bps),max_drawdown,CN21,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_3bps',max_drawdown,-0.0447508649079954,-4.48%,True
+Table 1 Performance (CN21_passive_inv_vol_3.0bps),fees,CN21,passive_inv_vol,3.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_3bps',fees,960.856468658669,960.86,True
+Table 1 Performance (CN21_passive_inv_vol_10.0bps),ann_return,CN21,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_10bps',ann_return,0.0721923669153435,7.22%,True
+Table 1 Performance (CN21_passive_inv_vol_10.0bps),cagr,CN21,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_10bps',cagr,0.0715337250191376,7.15%,True
+Table 1 Performance (CN21_passive_inv_vol_10.0bps),sharpe,CN21,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_10bps',sharpe,0.905671543315177,0.906,True
+Table 1 Performance (CN21_passive_inv_vol_10.0bps),max_drawdown,CN21,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_10bps',max_drawdown,-0.044985486968491,-4.50%,True
+Table 1 Performance (CN21_passive_inv_vol_10.0bps),fees,CN21,passive_inv_vol,10.0,outputs/experiments_inventory.csv,experiment_id == 'EXP_CN21_passive_inv_vol_10bps',fees,3199.4654604961697,3199.47,True
+Table 2 Factor IC (US9_A),rank_ic_mean,US9,A,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'US9' and factor == 'A',rank_ic_mean,0.0302259887005649,+0.0302,True
+Table 2 Factor IC (US9_A0),rank_ic_mean,US9,A0,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'US9' and factor == 'A0',rank_ic_mean,-0.0182163670859771,-0.0182,True
+Table 2 Factor IC (US9_B),rank_ic_mean,US9,B,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'US9' and factor == 'B',rank_ic_mean,-0.0590395480225988,-0.0590,True
+Table 2 Factor IC (US9_C),rank_ic_mean,US9,C,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'US9' and factor == 'C',rank_ic_mean,-0.0059322033898305,-0.0059,True
+Table 2 Factor IC (US9_F2),rank_ic_mean,US9,F2,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'US9' and factor == 'F2',rank_ic_mean,0.0101694915254237,+0.0102,True
+Table 2 Factor IC (US9_F3),rank_ic_mean,US9,F3,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'US9' and factor == 'F3',rank_ic_mean,0.0271186440677966,+0.0271,True
+Table 2 Factor IC (CN21_A),rank_ic_mean,CN21,A,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'CN21' and factor == 'A',rank_ic_mean,0.1103369258057338,+0.1103,True
+Table 2 Factor IC (CN21_A0),rank_ic_mean,CN21,A0,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'CN21' and factor == 'A0',rank_ic_mean,0.0917031350342629,+0.0917,True
+Table 2 Factor IC (CN21_B),rank_ic_mean,CN21,B,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'CN21' and factor == 'B',rank_ic_mean,0.0959326657887996,+0.0959,True
+Table 2 Factor IC (CN21_C),rank_ic_mean,CN21,C,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'CN21' and factor == 'C',rank_ic_mean,0.119531248167734,+0.1195,True
+Table 2 Factor IC (CN21_F2),rank_ic_mean,CN21,F2,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'CN21' and factor == 'F2',rank_ic_mean,0.0981712953954017,+0.0982,True
+Table 2 Factor IC (CN21_F3),rank_ic_mean,CN21,F3,0.0,outputs/diagnostics/factor_ic_summary.csv,universe == 'CN21' and factor == 'F3',rank_ic_mean,0.1057745184981402,+0.1058,True
+Table 3 Common Period (US9_A),ann_return,US9,A,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'A',ann_return,0.1936546746125857,+19.37%,True
+Table 3 Common Period (US9_B),ann_return,US9,B,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'B',ann_return,0.1462105753974688,+14.62%,True
+Table 3 Common Period (US9_C),ann_return,US9,C,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'C',ann_return,0.1698085013162527,+16.98%,True
+Table 3 Common Period (US9_F2),ann_return,US9,F2,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'F2',ann_return,0.1613811276217987,+16.14%,True
+Table 3 Common Period (US9_F3),ann_return,US9,F3,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'F3',ann_return,0.1808733078953129,+18.09%,True
+Table 3 Common Period (US9_A0),ann_return,US9,A0,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'A0',ann_return,0.099023991861068,+9.90%,True
+Table 3 Common Period (US9_passive_equal),ann_return,US9,passive_equal,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'passive_equal',ann_return,0.1790301638853251,+17.90%,True
+Table 3 Common Period (US9_passive_inv_vol),ann_return,US9,passive_inv_vol,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'passive_inv_vol',ann_return,0.1638203574771038,+16.38%,True
+Table 3 Common Period (US9_C_minus_A),ann_return,US9,C_minus_A,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'US9' and strategy == 'C_minus_A',ann_return,-0.023846173296333,-2.38%,True
+Table 3 Common Period (CN21_A),ann_return,CN21,A,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'A',ann_return,0.020092483518169,+2.01%,True
+Table 3 Common Period (CN21_B),ann_return,CN21,B,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'B',ann_return,0.0189453555449051,+1.89%,True
+Table 3 Common Period (CN21_C),ann_return,CN21,C,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'C',ann_return,0.0357583462089691,+3.58%,True
+Table 3 Common Period (CN21_F2),ann_return,CN21,F2,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'F2',ann_return,0.0204982090144249,+2.05%,True
+Table 3 Common Period (CN21_F3),ann_return,CN21,F3,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'F3',ann_return,0.0121834629204331,+1.22%,True
+Table 3 Common Period (CN21_A0),ann_return,CN21,A0,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'A0',ann_return,0.0313503369395728,+3.14%,True
+Table 3 Common Period (CN21_passive_equal),ann_return,CN21,passive_equal,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'passive_equal',ann_return,0.0966868139010361,+9.67%,True
+Table 3 Common Period (CN21_passive_inv_vol),ann_return,CN21,passive_inv_vol,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'passive_inv_vol',ann_return,0.0733172059245141,+7.33%,True
+Table 3 Common Period (CN21_C_minus_A),ann_return,CN21,C_minus_A,3.0,outputs/diagnostics/common_period_comparison.csv,universe == 'CN21' and strategy == 'C_minus_A',ann_return,0.0156658626908001,+1.57%,True
+Table 7 Reconciliation (EXP_US9_A_0bps),monthly_fees_sum,US9,A,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_A_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_A_3bps),monthly_fees_sum,US9,A,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_A_3bps',monthly_fees_sum,10960.023494967749,10960.02,True
+Table 7 Reconciliation (EXP_US9_A_10bps),monthly_fees_sum,US9,A,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_A_10bps',monthly_fees_sum,36194.31893290265,36194.32,True
+Table 7 Reconciliation (EXP_US9_B_0bps),monthly_fees_sum,US9,B,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_B_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_B_3bps),monthly_fees_sum,US9,B,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_B_3bps',monthly_fees_sum,15592.21805500685,15592.22,True
+Table 7 Reconciliation (EXP_US9_B_10bps),monthly_fees_sum,US9,B,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_B_10bps',monthly_fees_sum,51189.94080102603,51189.94,True
+Table 7 Reconciliation (EXP_US9_C_0bps),monthly_fees_sum,US9,C,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_C_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_C_3bps),monthly_fees_sum,US9,C,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_C_3bps',monthly_fees_sum,13917.09527348988,13917.10,True
+Table 7 Reconciliation (EXP_US9_C_10bps),monthly_fees_sum,US9,C,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_C_10bps',monthly_fees_sum,45847.35339707375,45847.35,True
+Table 7 Reconciliation (EXP_US9_F2_0bps),monthly_fees_sum,US9,F2,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_F2_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_F2_3bps),monthly_fees_sum,US9,F2,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_F2_3bps',monthly_fees_sum,14517.843654880238,14517.84,True
+Table 7 Reconciliation (EXP_US9_F2_10bps),monthly_fees_sum,US9,F2,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_F2_10bps',monthly_fees_sum,47788.77564522599,47788.78,True
+Table 7 Reconciliation (EXP_US9_F3_0bps),monthly_fees_sum,US9,F3,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_F3_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_F3_3bps),monthly_fees_sum,US9,F3,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_F3_3bps',monthly_fees_sum,12168.131564356156,12168.13,True
+Table 7 Reconciliation (EXP_US9_F3_10bps),monthly_fees_sum,US9,F3,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_F3_10bps',monthly_fees_sum,40171.03886351914,40171.04,True
+Table 7 Reconciliation (EXP_US9_A0_0bps),monthly_fees_sum,US9,A0,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_A0_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_A0_3bps),monthly_fees_sum,US9,A0,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_A0_3bps',monthly_fees_sum,3038.568132530507,3038.57,True
+Table 7 Reconciliation (EXP_US9_A0_10bps),monthly_fees_sum,US9,A0,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_A0_10bps',monthly_fees_sum,10093.914956906705,10093.91,True
+Table 7 Reconciliation (EXP_US9_passive_equal_0bps),monthly_fees_sum,US9,passive_equal,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_passive_equal_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_passive_equal_3bps),monthly_fees_sum,US9,passive_equal,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_passive_equal_3bps',monthly_fees_sum,930.593482949582,930.59,True
+Table 7 Reconciliation (EXP_US9_passive_equal_10bps),monthly_fees_sum,US9,passive_equal,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_passive_equal_10bps',monthly_fees_sum,3099.1893303266816,3099.19,True
+Table 7 Reconciliation (EXP_US9_passive_inv_vol_0bps),monthly_fees_sum,US9,passive_inv_vol,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_passive_inv_vol_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_US9_passive_inv_vol_3bps),monthly_fees_sum,US9,passive_inv_vol,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_passive_inv_vol_3bps',monthly_fees_sum,1169.0155697385685,1169.02,True
+Table 7 Reconciliation (EXP_US9_passive_inv_vol_10bps),monthly_fees_sum,US9,passive_inv_vol,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_US9_passive_inv_vol_10bps',monthly_fees_sum,3892.1078944552432,3892.11,True
+Table 7 Reconciliation (EXP_CN21_A_0bps),monthly_fees_sum,CN21,A,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_A_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_A_3bps),monthly_fees_sum,CN21,A,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_A_3bps',monthly_fees_sum,4420.416685180804,4420.42,True
+Table 7 Reconciliation (EXP_CN21_A_10bps),monthly_fees_sum,CN21,A,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_A_10bps',monthly_fees_sum,14669.567434045566,14669.57,True
+Table 7 Reconciliation (EXP_CN21_B_0bps),monthly_fees_sum,CN21,B,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_B_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_B_3bps),monthly_fees_sum,CN21,B,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_B_3bps',monthly_fees_sum,4519.908040391872,4519.91,True
+Table 7 Reconciliation (EXP_CN21_B_10bps),monthly_fees_sum,CN21,B,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_B_10bps',monthly_fees_sum,14998.96579117481,14998.97,True
+Table 7 Reconciliation (EXP_CN21_C_0bps),monthly_fees_sum,CN21,C,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_C_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_C_3bps),monthly_fees_sum,CN21,C,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_C_3bps',monthly_fees_sum,4811.92751791233,4811.93,True
+Table 7 Reconciliation (EXP_CN21_C_10bps),monthly_fees_sum,CN21,C,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_C_10bps',monthly_fees_sum,15962.820288780798,15962.82,True
+Table 7 Reconciliation (EXP_CN21_F2_0bps),monthly_fees_sum,CN21,F2,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_F2_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_F2_3bps),monthly_fees_sum,CN21,F2,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_F2_3bps',monthly_fees_sum,3740.6819004122463,3740.68,True
+Table 7 Reconciliation (EXP_CN21_F2_10bps),monthly_fees_sum,CN21,F2,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_F2_10bps',monthly_fees_sum,12423.908184183048,12423.91,True
+Table 7 Reconciliation (EXP_CN21_F3_0bps),monthly_fees_sum,CN21,F3,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_F3_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_F3_3bps),monthly_fees_sum,CN21,F3,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_F3_3bps',monthly_fees_sum,4857.332821416777,4857.33,True
+Table 7 Reconciliation (EXP_CN21_F3_10bps),monthly_fees_sum,CN21,F3,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_F3_10bps',monthly_fees_sum,16110.91921060524,16110.92,True
+Table 7 Reconciliation (EXP_CN21_A0_0bps),monthly_fees_sum,CN21,A0,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_A0_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_A0_3bps),monthly_fees_sum,CN21,A0,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_A0_3bps',monthly_fees_sum,1027.4008004885447,1027.40,True
+Table 7 Reconciliation (EXP_CN21_A0_10bps),monthly_fees_sum,CN21,A0,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_A0_10bps',monthly_fees_sum,3420.586329410096,3420.59,True
+Table 7 Reconciliation (EXP_CN21_passive_equal_0bps),monthly_fees_sum,CN21,passive_equal,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_passive_equal_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_passive_equal_3bps),monthly_fees_sum,CN21,passive_equal,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_passive_equal_3bps',monthly_fees_sum,640.6867212357885,640.69,True
+Table 7 Reconciliation (EXP_CN21_passive_equal_10bps),monthly_fees_sum,CN21,passive_equal,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_passive_equal_10bps',monthly_fees_sum,2134.7166367395203,2134.72,True
+Table 7 Reconciliation (EXP_CN21_passive_inv_vol_0bps),monthly_fees_sum,CN21,passive_inv_vol,0.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_passive_inv_vol_0bps',monthly_fees_sum,0.0,0.00,True
+Table 7 Reconciliation (EXP_CN21_passive_inv_vol_3bps),monthly_fees_sum,CN21,passive_inv_vol,3.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_passive_inv_vol_3bps',monthly_fees_sum,960.856468658669,960.86,True
+Table 7 Reconciliation (EXP_CN21_passive_inv_vol_10bps),monthly_fees_sum,CN21,passive_inv_vol,10.0,outputs/reconciliation.csv,experiment_id == 'EXP_CN21_passive_inv_vol_10bps',monthly_fees_sum,3199.4654604961697,3199.47,True
+Table 4 Subperiod (US9_US_2020_2022),ann_mean_diff_C_minus_A,US9,C-A,3.0,outputs/robustness/subperiod_robustness.csv,universe == 'US9' and subperiod == 'US_2020_2022',ann_mean_diff_C_minus_A,-0.0008500495618799,-0.09%,True
+Table 4 Subperiod (US9_US_2023_2024),ann_mean_diff_C_minus_A,US9,C-A,3.0,outputs/robustness/subperiod_robustness.csv,universe == 'US9' and subperiod == 'US_2023_2024',ann_mean_diff_C_minus_A,-0.023846173296333,-2.38%,True
+Table 4 Subperiod (CN21_CN_2023),ann_mean_diff_C_minus_A,CN21,C-A,3.0,outputs/robustness/subperiod_robustness.csv,universe == 'CN21' and subperiod == 'CN_2023',ann_mean_diff_C_minus_A,0.0450619777391857,+4.51%,True
+Table 4 Subperiod (CN21_CN_2024),ann_mean_diff_C_minus_A,CN21,C-A,3.0,outputs/robustness/subperiod_robustness.csv,universe == 'CN21' and subperiod == 'CN_2024',ann_mean_diff_C_minus_A,-0.0122098481075981,-1.22%,True
+Table 5 Cost (US9_A_0.0bps),ann_return,US9,A,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'A' and cost_bps == 0.0,ann_return,0.1707400180713518,17.07%,True
+Table 5 Cost (US9_A_3.0bps),ann_return,US9,A,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'A' and cost_bps == 3.0,ann_return,0.1691678944511119,16.92%,True
+Table 5 Cost (US9_A_10.0bps),ann_return,US9,A,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'A' and cost_bps == 10.0,ann_return,0.1654985781133216,16.55%,True
+Table 5 Cost (US9_B_0.0bps),ann_return,US9,B,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'B' and cost_bps == 0.0,ann_return,0.1182986573748225,11.83%,True
+Table 5 Cost (US9_B_3.0bps),ann_return,US9,B,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'B' and cost_bps == 3.0,ann_return,0.115706776463353,11.57%,True
+Table 5 Cost (US9_B_10.0bps),ann_return,US9,B,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'B' and cost_bps == 10.0,ann_return,0.1096560110727281,10.97%,True
+Table 5 Cost (US9_C_0.0bps),ann_return,US9,C,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'C' and cost_bps == 0.0,ann_return,0.1606042768740135,16.06%,True
+Table 5 Cost (US9_C_3.0bps),ann_return,US9,C,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'C' and cost_bps == 3.0,ann_return,0.1586134903342358,15.86%,True
+Table 5 Cost (US9_C_10.0bps),ann_return,US9,C,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'C' and cost_bps == 10.0,ann_return,0.1539670155730255,15.40%,True
+Table 5 Cost (US9_F2_0.0bps),ann_return,US9,F2,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'F2' and cost_bps == 0.0,ann_return,0.1482491033962736,14.82%,True
+Table 5 Cost (US9_F2_3.0bps),ann_return,US9,F2,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'F2' and cost_bps == 3.0,ann_return,0.1460883981257488,14.61%,True
+Table 5 Cost (US9_F2_10.0bps),ann_return,US9,F2,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'F2' and cost_bps == 10.0,ann_return,0.141044942001603,14.10%,True
+Table 5 Cost (US9_F3_0.0bps),ann_return,US9,F3,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'F3' and cost_bps == 0.0,ann_return,0.1769397442835752,17.69%,True
+Table 5 Cost (US9_F3_3.0bps),ann_return,US9,F3,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'F3' and cost_bps == 3.0,ann_return,0.175304673667746,17.53%,True
+Table 5 Cost (US9_F3_10.0bps),ann_return,US9,F3,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'F3' and cost_bps == 10.0,ann_return,0.1714882900315537,17.15%,True
+Table 5 Cost (US9_A0_0.0bps),ann_return,US9,A0,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'A0' and cost_bps == 0.0,ann_return,0.06290224166718,6.29%,True
+Table 5 Cost (US9_A0_3.0bps),ann_return,US9,A0,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'A0' and cost_bps == 3.0,ann_return,0.0622970552833545,6.23%,True
+Table 5 Cost (US9_A0_10.0bps),ann_return,US9,A0,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'A0' and cost_bps == 10.0,ann_return,0.0608848423397177,6.09%,True
+Table 5 Cost (US9_passive_equal_0.0bps),ann_return,US9,passive_equal,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'passive_equal' and cost_bps == 0.0,ann_return,0.1456929644188308,14.57%,True
+Table 5 Cost (US9_passive_equal_3.0bps),ann_return,US9,passive_equal,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'passive_equal' and cost_bps == 3.0,ann_return,0.1455318843014844,14.55%,True
+Table 5 Cost (US9_passive_equal_10.0bps),ann_return,US9,passive_equal,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'passive_equal' and cost_bps == 10.0,ann_return,0.1451560252487151,14.52%,True
+Table 5 Cost (US9_passive_inv_vol_0.0bps),ann_return,US9,passive_inv_vol,0.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'passive_inv_vol' and cost_bps == 0.0,ann_return,0.1372186725668293,13.72%,True
+Table 5 Cost (US9_passive_inv_vol_3.0bps),ann_return,US9,passive_inv_vol,3.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'passive_inv_vol' and cost_bps == 3.0,ann_return,0.1370207035682251,13.70%,True
+Table 5 Cost (US9_passive_inv_vol_10.0bps),ann_return,US9,passive_inv_vol,10.0,outputs/robustness/cost_robustness.csv,universe == 'US9' and strategy == 'passive_inv_vol' and cost_bps == 10.0,ann_return,0.1365588008805928,13.66%,True
+Table 5 Cost (CN21_A_0.0bps),ann_return,CN21,A,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'A' and cost_bps == 0.0,ann_return,0.0224133495847226,2.24%,True
+Table 5 Cost (CN21_A_3.0bps),ann_return,CN21,A,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'A' and cost_bps == 3.0,ann_return,0.020092483518169,2.01%,True
+Table 5 Cost (CN21_A_10.0bps),ann_return,CN21,A,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'A' and cost_bps == 10.0,ann_return,0.0146745892913174,1.47%,True
+Table 5 Cost (CN21_B_0.0bps),ann_return,CN21,B,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'B' and cost_bps == 0.0,ann_return,0.0212580855738859,2.13%,True
+Table 5 Cost (CN21_B_3.0bps),ann_return,CN21,B,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'B' and cost_bps == 3.0,ann_return,0.0189453555449051,1.89%,True
+Table 5 Cost (CN21_B_10.0bps),ann_return,CN21,B,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'B' and cost_bps == 10.0,ann_return,0.0135466009573682,1.35%,True
+Table 5 Cost (CN21_C_0.0bps),ann_return,CN21,C,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'C' and cost_bps == 0.0,ann_return,0.0382299734994641,3.82%,True
+Table 5 Cost (CN21_C_3.0bps),ann_return,CN21,C,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'C' and cost_bps == 3.0,ann_return,0.0357583462089691,3.58%,True
+Table 5 Cost (CN21_C_10.0bps),ann_return,CN21,C,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'C' and cost_bps == 10.0,ann_return,0.029988611429829,3.00%,True
+Table 5 Cost (CN21_F2_0.0bps),ann_return,CN21,F2,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'F2' and cost_bps == 0.0,ann_return,0.0224307275133609,2.24%,True
+Table 5 Cost (CN21_F2_3.0bps),ann_return,CN21,F2,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'F2' and cost_bps == 3.0,ann_return,0.0204982090144249,2.05%,True
+Table 5 Cost (CN21_F2_10.0bps),ann_return,CN21,F2,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'F2' and cost_bps == 10.0,ann_return,0.0159867908433646,1.60%,True
+Table 5 Cost (CN21_F3_0.0bps),ann_return,CN21,F3,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'F3' and cost_bps == 0.0,ann_return,0.0147337698116881,1.47%,True
+Table 5 Cost (CN21_F3_3.0bps),ann_return,CN21,F3,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'F3' and cost_bps == 3.0,ann_return,0.0121834629204331,1.22%,True
+Table 5 Cost (CN21_F3_10.0bps),ann_return,CN21,F3,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'F3' and cost_bps == 10.0,ann_return,0.0062301149499588,0.62%,True
+Table 5 Cost (CN21_A0_0.0bps),ann_return,CN21,A0,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'A0' and cost_bps == 0.0,ann_return,0.0318764548194886,3.19%,True
+Table 5 Cost (CN21_A0_3.0bps),ann_return,CN21,A0,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'A0' and cost_bps == 3.0,ann_return,0.0313503369395728,3.14%,True
+Table 5 Cost (CN21_A0_10.0bps),ann_return,CN21,A0,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'A0' and cost_bps == 10.0,ann_return,0.030122916090548,3.01%,True
+Table 5 Cost (CN21_passive_equal_0.0bps),ann_return,CN21,passive_equal,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'passive_equal' and cost_bps == 0.0,ann_return,0.0970159744722674,9.70%,True
+Table 5 Cost (CN21_passive_equal_3.0bps),ann_return,CN21,passive_equal,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'passive_equal' and cost_bps == 3.0,ann_return,0.0966868139010361,9.67%,True
+Table 5 Cost (CN21_passive_equal_10.0bps),ann_return,CN21,passive_equal,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'passive_equal' and cost_bps == 10.0,ann_return,0.0959186453099428,9.59%,True
+Table 5 Cost (CN21_passive_inv_vol_0.0bps),ann_return,CN21,passive_inv_vol,0.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'passive_inv_vol' and cost_bps == 0.0,ann_return,0.0737993564549901,7.38%,True
+Table 5 Cost (CN21_passive_inv_vol_3.0bps),ann_return,CN21,passive_inv_vol,3.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'passive_inv_vol' and cost_bps == 3.0,ann_return,0.0733172059245141,7.33%,True
+Table 5 Cost (CN21_passive_inv_vol_10.0bps),ann_return,CN21,passive_inv_vol,10.0,outputs/robustness/cost_robustness.csv,universe == 'CN21' and strategy == 'passive_inv_vol' and cost_bps == 10.0,ann_return,0.0721923669153435,7.22%,True
+Table 6 Bootstrap (US9_3M),delta_ann_mean,US9,C-A,3.0,outputs/diagnostics/block_bootstrap.csv,universe == 'US9' and block_size == 3,delta_ann_mean,-0.0108537442461306,-1.09%,True
+Table 6 Bootstrap (US9_6M),delta_ann_mean,US9,C-A,3.0,outputs/diagnostics/block_bootstrap.csv,universe == 'US9' and block_size == 6,delta_ann_mean,-0.0107308517264839,-1.07%,True
+Table 6 Bootstrap (US9_12M),delta_ann_mean,US9,C-A,3.0,outputs/diagnostics/block_bootstrap.csv,universe == 'US9' and block_size == 12,delta_ann_mean,-0.010363203102899,-1.04%,True
+Table 6 Bootstrap (CN21_3M),delta_ann_mean,CN21,C-A,3.0,outputs/diagnostics/block_bootstrap.csv,universe == 'CN21' and block_size == 3,delta_ann_mean,0.0157644929254154,+1.58%,True
+Table 6 Bootstrap (CN21_6M),delta_ann_mean,CN21,C-A,3.0,outputs/diagnostics/block_bootstrap.csv,universe == 'CN21' and block_size == 6,delta_ann_mean,0.0160832282492997,+1.61%,True
+Table 6 Bootstrap (CN21_12M),delta_ann_mean,CN21,C-A,3.0,outputs/diagnostics/block_bootstrap.csv,universe == 'CN21' and block_size == 12,delta_ann_mean,0.0166536159642658,+1.67%,True
